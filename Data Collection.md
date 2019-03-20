@@ -12,6 +12,16 @@
 - 方法三：用Google map的数据 参考：https://blog.csdn.net/qq_36091581/article/details/76944053
 
 # Rental
+- Airbnb Data(search for New York City)
+  http://insideairbnb.com/get-the-data.html
+- listings:
+Detailed listings data showing 96 attributes for each of the llistings. Some of the attributes used in the analysis are price(continuous), longitude (continuous), latitude (continuous), listing_type (categorical), is_superhost (categorical), neighbourhood (categorical), ratings (continuous) among others.
+- reviews:
+Detailed reviews given by the guests with 6 attributes. Key attributes include date (datetime), listing_id (discrete), reviewer_id (discrete) and comment (textual).
+--calendar
+Provides details about booking for the next year by listing. Four attributes in total including listing_id (discrete), date(datetime), available (categorical) and price (continuous).
+
+
 
 # Other
 - City of NY https://opendata.cityofnewyork.us/data/
