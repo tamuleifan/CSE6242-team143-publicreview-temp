@@ -31,6 +31,7 @@ def parse(location,filter=None,pagenum=None):
         print(url)
     elif filter == "cheapest":
         url = "https://www.zillow.com/homes/for_rent/{0}/6181_rid/paymenta_sort/{1}/".format(location,page_index)
+	print(url)
     elif filter =="expensive":
         url = "https://www.zillow.com/homes/for_rent/{0}/6181_rid/paymentd_sort/{1}/".format(location,page_index)
         print(url)
