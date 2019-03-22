@@ -20,6 +20,7 @@ Detailed listings data showing 96 attributes for each of the llistings. Some of 
 Detailed reviews given by the guests with 6 attributes. Key attributes include date (datetime), listing_id (discrete), reviewer_id (discrete) and comment (textual).
 --calendar
 Provides details about booking for the next year by listing. Four attributes in total including listing_id (discrete), date(datetime), available (categorical) and price (continuous).
+-通过爬zillow 网页可以获取相应的房源数据 包括（面积，bed num,bath num, address) 价格，但能够爬取的数据量不是很大，网页上显示有1万+条，但网页上能够显示的只有20个page。目前通过两个特性进行排序（newest, rent from low to high),两个特性显示的页面都分别是20个page， 两个特性出来的数据有一定的互补性，大概加总的数据为1000+。
 
 
 
