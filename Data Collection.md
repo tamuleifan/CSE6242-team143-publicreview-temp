@@ -33,3 +33,6 @@ Provides details about booking for the next year by listing. Four attributes in 
 
 # Other
 - City of NY https://opendata.cityofnewyork.us/data/
+- Interactive Document Clustering https://github.com/amirziai/cse6242-project
+- Visual Analytics on Global Terrorism https://github.com/mxu007/cse6242-project
+- Rental Recommendation for Commuters https://github.com/jionie/Rental-Recommendation-for-Commuters
