@@ -12,13 +12,13 @@
 
 # Google Map API
 - geocoding API
-  Convert address to geo lat and lng
-  https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
+  - Convert address to geo lat and lng
+  - https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
 - Directions API
-  Draw routes
+  - Draw routes
   
 - Distance Matrix API
-  calculate the distance between two locations
+  - calculate the distance between two locations
 
 
 
