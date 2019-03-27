@@ -19,7 +19,9 @@
   
 - Distance Matrix API
   - calculate the distance between two locations
-
+- Earthquake
+  - could be helpful for visulizing crime area
+  - https://developers.google.com/maps/documentation/javascript/earthquakes
 
 
 # Commute
