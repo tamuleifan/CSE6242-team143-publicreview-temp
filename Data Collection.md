@@ -10,6 +10,18 @@
 - City of NY: Street Centerline https://data.cityofnewyork.us/City-Government/NYC-Street-Centerline-CSCL-/exjm-f27b
 - Map house python project https://github.com/DIVIBEAR/pythonDemo/tree/master/demo/mapHouse
 
+# Google Map API
+- geocoding API
+  Convert address to geo lat and lng
+  https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
+- Directions API
+  Draw routes
+  
+- Distance Matrix API
+  calculate the distance between two locations
+
+
+
 # Commute
 - https://www.walkscore.com/professional/travel-time-js-api.php
 - https://gis.ny.gov/gisdata/inventories/results.cfm?SWIS=&sectorIDs=&themeIDs=24
