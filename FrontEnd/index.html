@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://fastcdn.org/Papa-Parse/4.1.2/papaparse.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A quick demo</title>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="geocoder.js"></script>
+</head>
+
+<body>
+  <h1>A quick demo</h1>
+
+    <table class="tbl-entry">
+      <tr>
+        <td>Address</td>
+        <td><input id="address" type="textbox" value="Central Park"></td>
+      </tr>
+      <tr>
+        <td>Ratings(test filter function,input 1 to 5)</td>
+        <td><input id="Filter" type="textbox" value ="5"></td>
+      </tr>
+      <tr>
+        <td><input id="submit" type="button" value="search"></td>
+        <td><input id="clear" type="button" value="clear(not function yet)"></td>
+      </tr>
+    </table>
+    <table class="tbl-map">
+      <tr>
+        <td><div id="map"></div></td>
+        <td><div id="panel-infodisplay"><h2>This block is reserved for info display</h2></div></td>
+      </tr>
+    </table>
+
+
+
+
+
+
+
+  <script>
+  /*
+// load csv file
+  var markers;
+
+  $(document).ready(function(){
+    $("button").click(function(){
+      $.get("toy.csv", function(data, status){
+        if(status == "success"){
+        alert("Data: " + data + "\nStatus: " + status);
+      }
+        Papa.parse(data, {
+          header: true,
+          complete: function(results){
+            markers = results.data;
+          }
+        });
+      });
+    });
+  });
+*/
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8f3gxQL4k8-jUVsNvq01HPVtqa0bbXpY&callback=initMap">
+  </script>
+</body>
+
+</html>
