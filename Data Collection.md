@@ -16,7 +16,7 @@
   - https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
 - Directions API
   - Draw routes
-  
+  - basic parameters: orgin, destination, key, mode, avoid, arrival_time, departure_time, traffic_model
 - Distance Matrix API
   - calculate the distance between two locations
 - Earthquake
