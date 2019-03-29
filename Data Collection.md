@@ -9,6 +9,9 @@
 - OpenStreetMap shapefile http://download.geofabrik.de/north-america/us/new-york.html
 - City of NY: Street Centerline https://data.cityofnewyork.us/City-Government/NYC-Street-Centerline-CSCL-/exjm-f27b
 - Map house python project https://github.com/DIVIBEAR/pythonDemo/tree/master/demo/mapHouse
+- Google Map 
+  - Custom Layer https://developers.google.com/maps/documentation/javascript/datalayer
+  - Get Bounds of Window https://developers.google.com/maps/documentation/javascript/reference/map#Map.getBounds
 
 # Google Map API
 - geocoding API
