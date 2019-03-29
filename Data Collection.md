@@ -59,6 +59,7 @@ Provides details about booking for the next year by listing. Four attributes in 
 
 # Other
 - City of NY https://opendata.cityofnewyork.us/data/
+- Free CSS Templates https://www.free-css.com/
 
 ## Reference of Past Project
 - Interactive Document Clustering https://github.com/amirziai/cse6242-project
