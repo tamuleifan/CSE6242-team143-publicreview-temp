@@ -30,3 +30,11 @@ table.tbl-map td{
     height: 500px;
     overflow-x:hidden;
 }
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

@@ -8,24 +8,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A quick demo</title>
   <link href="style.css" type="text/css" rel="stylesheet"/>
-  <script type="text/javascript" src="geocoder.js"></script>
+  <link href="main.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="googlemap.js"></script>
 </head>
 
 <body>
   <h1>A quick demo</h1>
 
-    <table class="tbl-entry">
+<div>
+  <table class="tbl-entry">
       <tr>
         <td>Address</td>
         <td><input id="address" type="textbox" value="Central Park"></td>
       </tr>
       <tr>
         <td>Ratings(test filter function,input 1 to 5)</td>
-        <td><input id="Filter" type="textbox" value ="5"></td>
+        <td><input id="filter" type="textbox" value ="5"></td>
       </tr>
       <tr>
-        <td><input id="submit" type="button" value="search"></td>
-        <td><input id="clear" type="button" value="clear(not function yet)"></td>
+        <td><input id="submit" type="button" value="search"/></td>
+        <td><input id="clear" type="button" value="clear(not function yet)" onclick="clearEntries()"/></td>
       </tr>
     </table>
     <table class="tbl-map">
@@ -35,8 +37,7 @@
       </tr>
     </table>
 
-
-
+</div>
 
 
 

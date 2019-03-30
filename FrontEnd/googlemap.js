@@ -24,13 +24,18 @@ function initMap() {
            $.each(data,function(i,field){
              //console.log(field.lat)
              //console.log(field.lng)
-             var userInput = document.getElementById('Filter').value;
+
+             // get the filter values and present the markers that is equal to the values
+             // need a eventlistener that may be put outside the function initMap
+             var userInput = document.getElementById('filter').value;
              console.log(userInput)
              console.log(field.rating)
              if (field.rating === userInput){
                var myLatLng = new google.maps.LatLng(field.lat,field.lng);
                console.log(myLatLng);
              }
+
+
              // Creating a marker and putting it on the maps
              var marker = new google.maps.Marker({
                position: myLatLng,
@@ -172,6 +177,12 @@ var houses = (function (){
           }
         });
       }
+
+      //clear entries and map display
+    function clearEntries(){
+      		$("#address, #filter").val("");
+      		//$("#map, #panel-direction").html("");
+      	}
 
 
       /*var markers;
