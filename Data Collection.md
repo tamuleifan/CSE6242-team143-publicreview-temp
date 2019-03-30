@@ -58,11 +58,13 @@ Provides details about booking for the next year by listing. Four attributes in 
       5. save to csv file
       
 
-
-
 # Other
 - City of NY https://opendata.cityofnewyork.us/data/
 - Free CSS Templates https://www.free-css.com/
+
+# Some intros to git commands
+- Branching and merging https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+- Basics https://www.youtube.com/watch?v=0fKg7e37bQE
 
 ## Reference of Past Project
 - Interactive Document Clustering https://github.com/amirziai/cse6242-project
