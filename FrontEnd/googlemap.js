@@ -17,15 +17,15 @@ function initMap() {
       if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
     });
 
-    /*/ geocoder
-    var geocoder = new google.maps.Geocoder();
-    document.getElementById('submit').addEventListener('click', function() {
-        geocodeAddress(geocoder, map);
-    });*/
+    // Listening bound_changed event. If bound changes, refresh crime data and rental data
+    /* map.addListener('bound_changed', function(){
+        refresh crime and rental data points
+    });
+    */
 
     // Crime heatmap
     heatmap = new google.maps.visualization.HeatmapLayer({
-      data: getPoints(),
+      data: getCrimtePoints(),
       map: map
     });
     heatmap.set('radius', 100);
@@ -167,7 +167,7 @@ var houses = (function (){
 
 
 // Get crime rate heatmap points
-function getPoints() {
+function getCrimePoints() {
   return [new google.maps.LatLng(40.7128, -74.0060)];
 }
 
@@ -223,3 +223,5 @@ $(document).ready(function(){
   });
 });
 */
+
+// slider filter

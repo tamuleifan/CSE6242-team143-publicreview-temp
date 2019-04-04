@@ -23,6 +23,10 @@ table.tbl-map td{
 	padding:10px;
 }
 
+.slider {
+	width: 200px;
+}
+
 #map {
     height: 500px;
 }

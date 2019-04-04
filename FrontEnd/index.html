@@ -35,6 +35,12 @@
       <button onclick="toggleHeatmap()">Crime Rate Heatmap</button>
     </div>
 
+    <div class="slidecontainer">
+      <p>Commute time filter</p>
+      <input type="range" min="5" max="120" value="20" class="slider" id="sliderbar">
+      <p>Value: <span id="slidervalue"></span></p>
+    </div>
+
     <table class="tbl-map">
       <tr>
         <td><div id="map"></div></td>
@@ -48,6 +54,14 @@
 
 
   <script>
+    var slider = document.getElementById("sliderbar");
+    var output = document.getElementById("slidervalue");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+      // update rental houses here
+    }
+    
   /*
 // load csv file
   var markers;

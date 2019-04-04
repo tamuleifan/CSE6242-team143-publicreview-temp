@@ -1,9 +1,12 @@
+# SlideBar
+- https://www.w3schools.com/howto/howto_js_rangeslider.asp
+- How to add slide bar and how to read the bar number from javascript
+
 # Crime
 - City of NY https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i
   - 从06年到17年，6M行数据，1.9G的csv文件，有犯罪发生地点的经纬度（有六位小数点，相当于0.1米）。犯罪类型:  分为三种： felony, misdemeanor, violation
   - 受害者年龄: 分为五类： <18, 18-24, 25-44, 45-64, 65+。
   - 交互界面可以考虑让用户输入年龄段和性别，根据不同用户给出不同的犯罪率数据，也可以作为我们的一个创新点。不同的犯罪类型可以给不同的权重，（怎么量化？我再找找看）。
-
 
 # Map
 - OpenStreetMap shapefile http://download.geofabrik.de/north-america/us/new-york.html
@@ -25,7 +28,8 @@
 - Earthquake
   - could be helpful for visulizing crime area
   - https://developers.google.com/maps/documentation/javascript/earthquakes
-
+- Heatmap Layer https://developers.google.com/maps/documentation/javascript/heatmaplayer
+- Event listener https://developers.google.com/maps/documentation/javascript/events
 
 # Commute
 - https://www.walkscore.com/professional/travel-time-js-api.php
