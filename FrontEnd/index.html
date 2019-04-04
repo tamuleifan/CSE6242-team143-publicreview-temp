@@ -30,6 +30,11 @@
         <td><input id="clear" type="button" value="clear(not function yet)" onclick="clearEntries()"/></td>
       </tr>
     </table>
+
+    <div id="floating-panel">
+      <button onclick="toggleHeatmap()">Crime Rate Heatmap</button>
+    </div>
+
     <table class="tbl-map">
       <tr>
         <td><div id="map"></div></td>
@@ -65,8 +70,9 @@
 */
   </script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8f3gxQL4k8-jUVsNvq01HPVtqa0bbXpY&callback=initMap">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8f3gxQL4k8-jUVsNvq01HPVtqa0bbXpY&callback=initMap&libraries=visualization">
   </script>
+
 </body>
 
 </html>

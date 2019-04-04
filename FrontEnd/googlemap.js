@@ -2,14 +2,22 @@
 function initMap() {
     // Map options
     var options = {
-      zoom: 11,
+      zoom: 15,
       center: {
         lat: 40.7128,
         lng: -74.0060
       }
     }
     // New map
-    var map = new google.maps.Map(document.getElementById('map'), options);
+    map = new google.maps.Map(document.getElementById('map'), options);
+
+    // Crime heatmap
+    heatmap = new google.maps.visualization.HeatmapLayer({
+      data: getPoints(),
+      map: map
+    });
+    heatmap.set('radius', 100);
+    heatmap.setMap(null);
 
     // geocoder
      var geocoder = new google.maps.Geocoder();
@@ -151,10 +159,15 @@ var houses = (function (){
 })*/
 
 
+// Get crime rate heatmap points
+function getPoints() {
+  return [new google.maps.LatLng(40.7128, -74.0060)];
+}
 
-
-
-
+// Display heatmap or not
+function toggleHeatmap() {
+  heatmap.setMap(heatmap.getMap() ? null : map);
+}
 
   // translate address to geo location of lat and lng
   var markers = []
