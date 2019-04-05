@@ -1,68 +1,78 @@
-//var map;
+
 function initMap() {
-    // Map options
-    options = {
-      zoom: 15,
-      center: {
-        lat: 40.7128,
-        lng: -74.0060
-      }
+  // Map options
+  options = {
+    zoom: 15,
+    center: {
+      lat: 40.7128,
+      lng: -74.0060
     }
-    // New map
-    map = new google.maps.Map(document.getElementById('map'), options);
+  }
 
-    // Limiting map scope (map zoom)
-    var minZoomLevel = 14;
-    map.addListener('zoom_changed', function(){
-      if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
-    });
+  // New map
+  map = new google.maps.Map(document.getElementById('map'), options);
 
-    // Listening bound_changed event. If bound changes, refresh crime data and rental data
-    /* map.addListener('bound_changed', function(){
-        refresh crime and rental data points
-    });
-    */
+  // Limiting map scope (map zoom)
+  minZoomLevel = 14;
+  map.addListener('zoom_changed', function(){
+    if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
+  });
 
-    // Crime heatmap
-    heatmap = new google.maps.visualization.HeatmapLayer({
-      data: getCrimtePoints(),
-      map: map
-    });
-    heatmap.set('radius', 100);
-    heatmap.setMap(null);
+  // Listening bound_changed event. If bound changes, refresh crime data and rental data
+  map.addListener('dragend', function(){
+    dataRefresh();
+  });
+
+  // Crime heatmap
+  heatmap = new google.maps.visualization.HeatmapLayer({
+    data: getCrimePoints(),
+    map: map
+  });
+  heatmap.set('radius', 100);
+  heatmap.setMap(null);
+
+  $(document).ready(function(){
+    //$("button").click(function(){
+      $.getJSON("toy.json",function(data){
+        //alert('data loaded')
+        $.each(data,function(i,field){
+          //console.log(field.lat)
+          //console.log(field.lng)
+
+          // get the filter values and present the markers that is equal to the values
+          // need a eventlistener that may be put outside the function initMap
+          var userInput = document.getElementById('filter').value;
+          console.log(userInput)
+          console.log(field.rating)
+          if (field.rating === userInput){
+            var myLatLng = new google.maps.LatLng(field.lat,field.lng);
+            console.log(myLatLng);
+          }
 
 
-     $(document).ready(function(){
-       //$("button").click(function(){
-         $.getJSON("toy.json",function(data){
-           //alert('data loaded')
-           $.each(data,function(i,field){
-             //console.log(field.lat)
-             //console.log(field.lng)
-
-             // get the filter values and present the markers that is equal to the values
-             // need a eventlistener that may be put outside the function initMap
-             var userInput = document.getElementById('filter').value;
-             console.log(userInput)
-             console.log(field.rating)
-             if (field.rating === userInput){
-               var myLatLng = new google.maps.LatLng(field.lat,field.lng);
-               console.log(myLatLng);
-             }
-
-
-             // Creating a marker and putting it on the maps
-             var marker = new google.maps.Marker({
-               position: myLatLng,
-               icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
-             });
-             marker.setMap(map);
-           })
-         })
-       //})
-     })
+          // Creating a marker and putting it on the maps
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+          });
+          marker.setMap(map);
+        })
+      })
+    //})
+  })
 
 };
+// End of initiateing map
+
+bounds = {};
+
+function getMapBounds() {
+  bounds['bottom'] = map.getBounds().getSouthWest().lat();
+  bounds['left'] = map.getBounds().getSouthWest().lng();
+  bounds['top'] = map.getBounds().getNorthEast().lat();
+  bounds['right'] = map.getBounds().getNorthEast().lng();
+  console.log(bounds);
+}
 
   // customized marker- goldstar
   /*var goldStar = {
@@ -165,10 +175,17 @@ var houses = (function (){
 })
 })*/
 
+// refresh crime and rental data points
+function dataRefresh() {
+  // Update bounds
+  getMapBounds();
+  heatmap.setData(getCrimePoints());
+}
 
 // Get crime rate heatmap points
 function getCrimePoints() {
-  return [new google.maps.LatLng(40.7128, -74.0060)];
+  crimePoints = [new google.maps.LatLng(40.7128, -74.0060)];
+  return crimePoints;
 }
 
 // Display heatmap or not
@@ -179,24 +196,26 @@ function toggleHeatmap() {
 // translate address to geo location of lat and lng
 var markers = []
 function geocodeAddress(address) {
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address': address}, function(results, status) {
-        if (status === 'OK') {
-            map.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location
-            });
-            markers.push(marker)
-            if(markers.length == 2){
-                markers[0].setMap(null);//delete the previous marker
-                markers.shift();//remove the first element in the array
-            }
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === 'OK') {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
       });
+      markers.push(marker)
+      if(markers.length == 2){
+        markers[0].setMap(null);//delete the previous marker
+        markers.shift();//remove the first element in the array
+      }
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
     }
+  });
+
+  getMapBounds();
+}
 
 //clear entries and map display
 function clearEntries(){
