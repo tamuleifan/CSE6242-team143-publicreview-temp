@@ -30,6 +30,8 @@
   - https://developers.google.com/maps/documentation/javascript/earthquakes
 - Heatmap Layer https://developers.google.com/maps/documentation/javascript/heatmaplayer
 - Event listener https://developers.google.com/maps/documentation/javascript/events
+- add Marker on map https://developers.google.com/maps/documentation/javascript/examples/marker-labels
+- Info Window https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
 
 # Commute
 - https://www.walkscore.com/professional/travel-time-js-api.php

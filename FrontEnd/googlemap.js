@@ -28,9 +28,10 @@ function initMap() {
     data: getCrimePoints(),
     map: map
   });
-  heatmap.set('radius', 100);
+  heatmap.set('radius', 10);
   heatmap.setMap(null);
 
+  // Recommend refine the following code: remove from iniMap()
   $(document).ready(function(){
     //$("button").click(function(){
       $.getJSON("toy.json",function(data){
@@ -65,6 +66,11 @@ function initMap() {
 // End of initiateing map
 
 bounds = {};
+slideValue = 20;
+
+function sliderVal(val) {
+  slideValue = val;
+}
 
 function getMapBounds() {
   bounds['bottom'] = map.getBounds().getSouthWest().lat();
@@ -73,6 +79,56 @@ function getMapBounds() {
   bounds['right'] = map.getBounds().getNorthEast().lng();
   console.log(bounds);
 }
+
+// refresh crime and rental data points
+function dataRefresh() {
+  // Update bounds
+  getMapBounds();
+  console.log(slideValue);
+  heatmap.setData(getCrimePoints());
+}
+
+// Get crime rate heatmap points
+function getCrimePoints() {
+  crimePoints = [new google.maps.LatLng(40.7128, -74.0060)];
+  return crimePoints;
+}
+
+// Display heatmap or not
+function toggleHeatmap() {
+  heatmap.setMap(heatmap.getMap() ? null : map);
+}
+
+// translate address to geo location of lat and lng
+var markers = []
+function geocodeAddress(address) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === 'OK') {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+      markers.push(marker)
+      if(markers.length == 2){
+        markers[0].setMap(null);//delete the previous marker
+        markers.shift();//remove the first element in the array
+      }
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+
+  dataRefresh();
+}
+
+//clear entries and map display
+function clearEntries(){
+    $("#address, #filter").val("");
+    //$("#map, #panel-direction").html("");
+}
+
 
   // customized marker- goldstar
   /*var goldStar = {
@@ -175,53 +231,6 @@ var houses = (function (){
 })
 })*/
 
-// refresh crime and rental data points
-function dataRefresh() {
-  // Update bounds
-  getMapBounds();
-  heatmap.setData(getCrimePoints());
-}
-
-// Get crime rate heatmap points
-function getCrimePoints() {
-  crimePoints = [new google.maps.LatLng(40.7128, -74.0060)];
-  return crimePoints;
-}
-
-// Display heatmap or not
-function toggleHeatmap() {
-  heatmap.setMap(heatmap.getMap() ? null : map);
-}
-
-// translate address to geo location of lat and lng
-var markers = []
-function geocodeAddress(address) {
-  var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({'address': address}, function(results, status) {
-    if (status === 'OK') {
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-      markers.push(marker)
-      if(markers.length == 2){
-        markers[0].setMap(null);//delete the previous marker
-        markers.shift();//remove the first element in the array
-      }
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-
-  getMapBounds();
-}
-
-//clear entries and map display
-function clearEntries(){
-    $("#address, #filter").val("");
-    //$("#map, #panel-direction").html("");
-}
 
 
 /*var markers;

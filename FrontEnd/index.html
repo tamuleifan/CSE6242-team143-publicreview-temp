@@ -18,35 +18,20 @@
 <div>
   <table class="tbl-entry">
       <tr>
-        <td>Address</td>
-        <td><input id="address" type="textbox" name="address" value="Central Park"></td>
-      </tr>
-      <tr>
-        <td>Ratings(test filter function,input 1 to 5)</td>
-        <td><input id="filter" type="textbox" value ="5"></td>
-      </tr>
-      <tr>
+        <td><input id="address" type="textbox" name="address" value="New York City Hall"></td>
         <td><input id="submit" type="button" value="search" onclick="geocodeAddress(document.getElementById('address').value)"/></td>
-        <td><input id="clear" type="button" value="clear(not function yet)" onclick="clearEntries()"/></td>
       </tr>
-    </table>
-
-    <div id="floating-panel">
-      <button onclick="toggleHeatmap()">Crime Rate Heatmap</button>
-    </div>
-
-    <div class="slidecontainer">
-      <p>Commute time filter</p>
-      <input type="range" min="5" max="120" value="20" class="slider" id="sliderbar">
-      <p>Value: <span id="slidervalue"></span></p>
-    </div>
-
-    <table class="tbl-map">
       <tr>
-        <td><div id="map"></div></td>
-        <td><div id="panel-infodisplay"><h2>This block is reserved for info display</h2></div></td>
+        <td>Commute time within: <span id="slidervalue" style="font-weight:bold;"></span> mins</td>
+        <td><input type="range" min="5" max="120" value="20" class="slider" id="sliderbar"></td>
+      </tr>
+      <tr>
+        <td><button onclick="toggleHeatmap()">Crime Rate Heatmap</button></td>
       </tr>
     </table>
+
+  <div id="map" width=600></div>
+
 
 </div>
 
@@ -59,6 +44,8 @@
     output.innerHTML = slider.value;
     slider.oninput = function() {
       output.innerHTML = this.value;
+      sliderVal(this.value);
+      dataRefresh();
       // update rental houses here
     }
     
