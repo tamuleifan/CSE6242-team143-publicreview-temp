@@ -1,3 +1,19 @@
+// Global Variable setting
+bounds = {};
+slideValue = 20;
+crimePoints = [];
+d3.csv('sample_crime_data.csv').then(function(data) {
+  data.forEach(function(d) {
+      crimePoints.push({
+        year: +d['year'],
+        LAW_CAT_CD: d['LAW_CAT_CD'],
+        VIC_AGE_GROUP: d['VIC_AGE_GROUP'],
+        VIC_SEX: d['VIC_SEX'],
+        lat: +d['Latitude'],
+        lng: +d['Longitude']
+      });
+  });
+});
 
 function initMap() {
   // Map options
@@ -16,19 +32,24 @@ function initMap() {
   minZoomLevel = 14;
   map.addListener('zoom_changed', function(){
     if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
+    heatmap.set('radius', (map.getZoom() - 13) * 10);
   });
 
   // Listening bound_changed event. If bound changes, refresh crime data and rental data
   map.addListener('dragend', function(){
     dataRefresh();
   });
+  
+  // Get initial bounds through listenting 'tilt_changed' (which should only happen when first loaded)
+  map.addListener('tilt_changed', function(){
+    dataRefresh();
+  });
 
   // Crime heatmap
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: getCrimePoints(),
+    radius: 20,
     map: map
   });
-  heatmap.set('radius', 10);
   heatmap.setMap(null);
 
   // Recommend refine the following code: remove from iniMap()
@@ -46,7 +67,7 @@ function initMap() {
           console.log(userInput)
           console.log(field.rating)
           if (field.rating === userInput){
-            var myLatLng = new google.maps.LatLng(field.lat,field.lng);
+            var myLatLng = new google.maps.LatLng(field.lat, field.lng);
             console.log(myLatLng);
           }
 
@@ -65,18 +86,17 @@ function initMap() {
 };
 // End of initiateing map
 
-bounds = {};
-slideValue = 20;
-
+// Setting and updating slideValue
 function sliderVal(val) {
   slideValue = val;
+  console.log(slideValue);
 }
 
 function getMapBounds() {
-  bounds['bottom'] = map.getBounds().getSouthWest().lat();
-  bounds['left'] = map.getBounds().getSouthWest().lng();
-  bounds['top'] = map.getBounds().getNorthEast().lat();
-  bounds['right'] = map.getBounds().getNorthEast().lng();
+  bounds.bottom = map.getBounds().getSouthWest().lat();
+  bounds.left = map.getBounds().getSouthWest().lng();
+  bounds.top = map.getBounds().getNorthEast().lat();
+  bounds.right = map.getBounds().getNorthEast().lng();
   console.log(bounds);
 }
 
@@ -84,14 +104,28 @@ function getMapBounds() {
 function dataRefresh() {
   // Update bounds
   getMapBounds();
-  console.log(slideValue);
   heatmap.setData(getCrimePoints());
+}
+
+// Is number x is between a and b? (Could be used for checking lat and lng)
+function inBetween(x, a, b) {
+  // x is the checked number
+  // a and b are bounds. No order in this function
+  return (x - a) * (x - b) <= 0;
 }
 
 // Get crime rate heatmap points
 function getCrimePoints() {
-  crimePoints = [new google.maps.LatLng(40.7128, -74.0060)];
-  return crimePoints;
+  var crimeOnMap = [];
+  var data = crimePoints.filter(function(d) {
+    return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left))
+  });
+
+  data.forEach(function(k) {
+    crimeOnMap.push(new google.maps.LatLng(k.lat, k.lng));
+  })
+  console.log(crimeOnMap);
+  return crimeOnMap;
 }
 
 // Display heatmap or not
@@ -120,7 +154,8 @@ function geocodeAddress(address) {
     }
   });
 
-  dataRefresh();
+  // I have no idea why I have to [wait 100 millisecond] to get right bounds.
+  setTimeout(function() {dataRefresh()}, 100);
 }
 
 //clear entries and map display
