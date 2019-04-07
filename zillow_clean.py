@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import re
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 
 df = pd.read_csv('properties-New-York-NY.csv')
 
@@ -12,7 +14,7 @@ df.dropna(subset=['address'],inplace=True)
 df['postal_code']=df['postal_code'].astype(int).astype(str)
 
 #combine the address,city,postal_code column into location
-df['location']=df['address']+','+df['city']+','+df['postal_code']
+df['location']=df['address']+','+df['city']+','+df['state']+','+df['postal_code']
 to_drop2=['address','city','state','postal_code']
 df.drop(columns=to_drop2, inplace=True)
 
@@ -57,7 +59,7 @@ df.drop(columns=to_drop3, inplace=True)
 # df['bath_num']=df['bath num'].apply(lambda x: re.sub(r'\D',"", x))
 df['sqft']=df['sqft'].apply(lambda x: re.sub(r'\D',"", x))
 
-print(df.head())
+#print(df.head())
 
 
 
@@ -84,6 +86,26 @@ df.sort_values(by=['price_per_month'],inplace=True)
 df.fillna(method='bfill',inplace=True)
 df.fillna(method='ffill',inplace=True)
 
+#change the location to latitude and longitude
+geolocator = Nominatim(user_agent="specify_your_app_name_here")
+df['latitude']=0
+df['longitude']=0
+
+geolocator = Nominatim(user_agent="yutinglu")
+
+for i in range(df.shape[0]):
+        print(df.iloc[i,0])
+
+        try:
+                target=geolocator.geocode(df.iloc[i,0],timeout=60)
+
+                df.iloc[i,6] = target.latitude
+                df.iloc[i,7] = target.longitude
+        except:
+                pass
+
+
+
 
 df.to_csv('cleaned_zillow_data.csv',index=False,index_label=False)
 
@@ -91,5 +113,5 @@ df.to_csv('cleaned_zillow_data.csv',index=False,index_label=False)
 
 #print(df.iloc[444,:])
 #print(df.head())
-print(df.shape)
+#print(df.shape)
 
