@@ -26,26 +26,53 @@ df['bath num']=new_feature[3]
 df['sqft']=new_feature[6]
 
 
+
+
+
+
+#deal with special case: Studio, represent 1 bed room and 1 bath room
+for i in range(df.shape[0]):
+    #print(df.iloc[i,2])
+    if df.iloc[i,5]=='Studio':
+        df.iloc[i,5]='1'
+        df.iloc[i,6]='1'
+        df.iloc[i,7]=new_feature.iloc[i,5]
+
+#df['bed num'].replace(to_replace='Studio',value='1',inplace=True)
+#df['bath num'].replace(to_replace='ba',value='1',inplace=True)
+
+#df['sqft'].replace(to_replace='--',value=np.nan,inplace=True)
+df['bed num'].replace(to_replace='--',value=np.nan,inplace=True)
+df['bath num'].replace(to_replace='--',value=np.nan,inplace=True)
+
+
+
+
+
+
 to_drop3=['facts and features','price']
 df.drop(columns=to_drop3, inplace=True)
-#exact the numbe from the strings via regular experssion synstax
-df['bed_num']=df['bed num'].apply(lambda x: re.sub(r'\D',"", x))
-df['bath_num']=df['bath num'].apply(lambda x: re.sub(r'\D',"", x))
-df['sqft_']=df['sqft'].apply(lambda x: re.sub(r'\D',"", x))
+#exact the numb from the strings via regular experssion synstax
+# df['bed_num']=df['bed num'].apply(lambda x: re.sub(r'\D',"", x))
+# df['bath_num']=df['bath num'].apply(lambda x: re.sub(r'\D',"", x))
+df['sqft']=df['sqft'].apply(lambda x: re.sub(r'\D',"", x))
+
+print(df.head())
 
 
 
 df['url of rental info']=df['url']
 
-to_drop4=['bed num','bath num','sqft','url']
+#to_drop4=['bed num','bath num','sqft','url']
+to_drop4=['url']
 df.drop(columns=to_drop4, inplace=True)
 
 
 df.drop_duplicates(inplace=True)
 
 
-#change some column data to be numeric data
-df[['price_per_month','bed_num','bath_num','sqft_']]=df[['price_per_month','bed_num','bath_num','sqft_']].apply(pd.to_numeric)
+# #change some column data to be numeric data
+df[['price_per_month','bed num','bath num','sqft']]=df[['price_per_month','bed num','bath num','sqft']].apply(pd.to_numeric)
 
 #drop the rows wth the price_per_month is nan
 
@@ -53,7 +80,7 @@ df.dropna(subset=['price_per_month'],inplace=True)
 #then sort by the price
 df.sort_values(by=['price_per_month'],inplace=True)
 
-# #fill nan with method  bfill first and then ffill
+#fill nan with method  bfill first and then ffill
 df.fillna(method='bfill',inplace=True)
 df.fillna(method='ffill',inplace=True)
 
@@ -62,6 +89,7 @@ df.to_csv('cleaned_zillow_data.csv',index=False,index_label=False)
 
 
 
-print(df.head())
+#print(df.iloc[444,:])
+#print(df.head())
 print(df.shape)
 
