@@ -39,7 +39,7 @@
 - 方法一：用以上为开源数据库
 - 方法二：也可以用esri Arcgis 建好的network dataset ， esri 提供21天免费试用，可以先在arcgis 里设置好network dataset 再导出，教程如下https://desktop.arcgis.com/en/arcmap/latest/extensions/network-analyst/exercise-1-creating-a-network-dataset.htm
 - 方法三：用Google map的数据 参考：https://blog.csdn.net/qq_36091581/article/details/76944053
-- Google Distance Matrix API: https://developers.google.com/maps/documentation/distance-matrix/intro
+- Google Distance Matrix API: https://developers.google.com/maps/documentation/javascript/distancematrix
   - traffic_model = best_guess (default), pessimistic, optimistic
   - mode (for travel mode) = driving (default), walking, bicycling, transit \[bus, subway, train, tram, rail]
 

@@ -1,19 +1,20 @@
 // Global Variable setting
 bounds = {};
 slideValue = 20;
-/* crimePoints = [];
-d3.csv('sample_crime_data.csv').then(function(data) {
+houses = [];
+var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
   data.forEach(function(d) {
-      crimePoints.push({
-        year: +d['year'],
-        LAW_CAT_CD: d['LAW_CAT_CD'],
-        VIC_AGE_GROUP: d['VIC_AGE_GROUP'],
-        VIC_SEX: d['VIC_SEX'],
-        lat: +d['Latitude'],
-        lng: +d['Longitude']
+      houses.push({
+        address: d['location'],
+        price: +d['price_per_month'],
+        bed: +d['bed_num'],
+        bath: +d['bath_num'],
+        size: +d['sqft_'],
+        url: d['url of rental info']
       });
   });
-}); */
+})]; 
+Promise.all(houseLoad).then(function(){console.log(houses);});
 
 function initMap() {
   // Map options
@@ -43,7 +44,7 @@ function initMap() {
 
   // Get initial bounds through listenting 'tilt_changed' (which should only happen when first loaded)
   map.addListener('tilt_changed', function () {
-    mapCenterMarkers = new google.maps.Marker({
+    destination = new google.maps.Marker({
       position: map.getCenter(),
       map: map
     });
@@ -102,7 +103,7 @@ function getMapBounds() {
   bounds.left = map.getBounds().getSouthWest().lng();
   bounds.top = map.getBounds().getNorthEast().lat();
   bounds.right = map.getBounds().getNorthEast().lng();
-  console.log(bounds);
+  // console.log(bounds);
 }
 
 // refresh crime and rental data points
@@ -117,6 +118,11 @@ function inBetween(x, a, b) {
   // x is the checked number
   // a and b are bounds. No order in this function
   return (x - a) * (x - b) <= 0;
+}
+
+// Draw house markers within bounds and then commute time to searched location (destination)
+function houseMarker() {
+
 }
 
 // Get crime rate heatmap points
@@ -145,7 +151,7 @@ function crimeHeatMap() {
       });
     });
   }).done(function () {
-    console.log(crimeOnMap)
+    // console.log(crimeOnMap)
     heatmap.setData(crimeOnMap);
   });
 }
@@ -160,8 +166,8 @@ function searchAddress(address) {
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       map.setCenter(results[0].geometry.location);
-      mapCenterMarkers.setMap(null);
-      mapCenterMarkers = new google.maps.Marker({
+      destination.setMap(null);
+      destination = new google.maps.Marker({
         position: results[0].geometry.location,
         map: map
       });
