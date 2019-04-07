@@ -43,6 +43,10 @@ function initMap() {
 
   // Get initial bounds through listenting 'tilt_changed' (which should only happen when first loaded)
   map.addListener('tilt_changed', function () {
+    mapCenterMarkers = new google.maps.Marker({
+      position: map.getCenter(),
+      map: map
+    });
     dataRefresh();
   });
 
@@ -152,28 +156,35 @@ function toggleHeatmap() {
 }
 
 // translate address to geo location of lat and lng
-var markers = []
-function geocodeAddress(address) {
+function searchAddress(address) {
+  var marker = address2marker(address, 1);
+  if (marker == false) alert('Geocode was not successful for the following reason: ' + status);
+
+  mapCenterMarkers.setMap(null);
+  mapCenterMarkers = marker;
+  
+  // I have no idea why I have to [wait 100 millisecond] to get right bounds.
+  setTimeout(function () { dataRefresh() }, 1000);
+}
+
+function address2marker(address, center=0) {
+  // [address] should be text
+  // [center] is default 0 and is optional. If center==1, it will set the map center to the address
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
-      map.setCenter(results[0].geometry.location);
+      if (center == 1) map.setCenter(results[0].geometry.location);
+
       var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
+        position: results[0].geometry.location,
+        map: map
       });
-      markers.push(marker)
-      if (markers.length == 2) {
-        markers[0].setMap(null);//delete the previous marker
-        markers.shift();//remove the first element in the array
-      }
+      return marker;
+
     } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      return false;
     }
   });
-
-  // I have no idea why I have to [wait 100 millisecond] to get right bounds.
-  setTimeout(function () { dataRefresh() }, 1000);
 }
 
 //clear entries and map display
