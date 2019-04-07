@@ -155,36 +155,23 @@ function toggleHeatmap() {
   heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
-// translate address to geo location of lat and lng
 function searchAddress(address) {
-  var marker = address2marker(address, 1);
-  if (marker == false) alert('Geocode was not successful for the following reason: ' + status);
-
-  mapCenterMarkers.setMap(null);
-  mapCenterMarkers = marker;
-  
-  // I have no idea why I have to [wait 100 millisecond] to get right bounds.
-  setTimeout(function () { dataRefresh() }, 1000);
-}
-
-function address2marker(address, center=0) {
-  // [address] should be text
-  // [center] is default 0 and is optional. If center==1, it will set the map center to the address
   var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': address }, function (results, status) {
+  geocoder.geocode({ 'address': address }, async function (results, status) {
     if (status === 'OK') {
-      if (center == 1) map.setCenter(results[0].geometry.location);
-
-      var marker = new google.maps.Marker({
+      map.setCenter(results[0].geometry.location);
+      mapCenterMarkers.setMap(null);
+      mapCenterMarkers = new google.maps.Marker({
         position: results[0].geometry.location,
         map: map
       });
-      return marker;
-
     } else {
-      return false;
+      alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+
+  // I have no idea why I have to [wait 500 millisecond] to get right bounds.
+  setTimeout(function () { dataRefresh() }, 500);
 }
 
 //clear entries and map display
