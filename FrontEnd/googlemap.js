@@ -157,7 +157,7 @@ function toggleHeatmap() {
 
 function searchAddress(address) {
   var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': address }, async function (results, status) {
+  geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       map.setCenter(results[0].geometry.location);
       mapCenterMarkers.setMap(null);
@@ -169,7 +169,6 @@ function searchAddress(address) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-
   // I have no idea why I have to [wait 500 millisecond] to get right bounds.
   setTimeout(function () { dataRefresh() }, 500);
 }
