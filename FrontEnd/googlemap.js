@@ -1,7 +1,7 @@
 // Global Variable setting
 bounds = {};
 slideValue = 20;
-crimePoints = [];
+/* crimePoints = [];
 d3.csv('sample_crime_data.csv').then(function(data) {
   data.forEach(function(d) {
       crimePoints.push({
@@ -13,7 +13,7 @@ d3.csv('sample_crime_data.csv').then(function(data) {
         lng: +d['Longitude']
       });
   });
-});
+}); */
 
 function initMap() {
   // Map options
@@ -29,19 +29,20 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), options);
 
   // Limiting map scope (map zoom)
-  minZoomLevel = 14;
-  map.addListener('zoom_changed', function(){
+  minZoomLevel = 15;
+  map.addListener('zoom_changed', function () {
     if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
     heatmap.set('radius', (map.getZoom() - 13) * 10);
+    dataRefresh();
   });
 
   // Listening bound_changed event. If bound changes, refresh crime data and rental data
-  map.addListener('dragend', function(){
+  map.addListener('dragend', function () {
     dataRefresh();
   });
-  
+
   // Get initial bounds through listenting 'tilt_changed' (which should only happen when first loaded)
-  map.addListener('tilt_changed', function(){
+  map.addListener('tilt_changed', function () {
     dataRefresh();
   });
 
@@ -53,33 +54,33 @@ function initMap() {
   heatmap.setMap(null);
 
   // Recommend refine the following code: remove from iniMap()
-  $(document).ready(function(){
+  $(document).ready(function () {
     //$("button").click(function(){
-      $.getJSON("toy.json",function(data){
-        //alert('data loaded')
-        $.each(data,function(i,field){
-          //console.log(field.lat)
-          //console.log(field.lng)
+    $.getJSON("toy.json", function (data) {
+      //alert('data loaded')
+      $.each(data, function (i, field) {
+        //console.log(field.lat)
+        //console.log(field.lng)
 
-          // get the filter values and present the markers that is equal to the values
-          // need a eventlistener that may be put outside the function initMap
-          var userInput = document.getElementById('filter').value;
-          console.log(userInput)
-          console.log(field.rating)
-          if (field.rating === userInput){
-            var myLatLng = new google.maps.LatLng(field.lat, field.lng);
-            console.log(myLatLng);
-          }
+        // get the filter values and present the markers that is equal to the values
+        // need a eventlistener that may be put outside the function initMap
+        var userInput = document.getElementById('filter').value;
+        console.log(userInput)
+        console.log(field.rating)
+        if (field.rating === userInput) {
+          var myLatLng = new google.maps.LatLng(field.lat, field.lng);
+          console.log(myLatLng);
+        }
 
 
-          // Creating a marker and putting it on the maps
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
-          });
-          marker.setMap(map);
-        })
+        // Creating a marker and putting it on the maps
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+        });
+        marker.setMap(map);
       })
+    })
     //})
   })
 
@@ -104,7 +105,7 @@ function getMapBounds() {
 function dataRefresh() {
   // Update bounds
   getMapBounds();
-  heatmap.setData(getCrimePoints());
+  crimeHeatMap();
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -115,17 +116,34 @@ function inBetween(x, a, b) {
 }
 
 // Get crime rate heatmap points
-function getCrimePoints() {
-  var crimeOnMap = [];
-  var data = crimePoints.filter(function(d) {
+function crimeHeatMap() {
+  crimeOnMap = [];
+  /*var data = crimePoints.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left))
   });
 
   data.forEach(function(k) {
     crimeOnMap.push(new google.maps.LatLng(k.lat, k.lng));
-  })
-  console.log(crimeOnMap);
-  return crimeOnMap;
+  })*/
+  var crimeURL = "https://data.cityofnewyork.us/resource/9s4h-37hy.json?$limit=1000000"; //totalling 468,988 rows in 2017
+  var apiCall = crimeURL
+    + "&$where="
+    + "rpt_dt between \'2017-01-01T00:00:00\' and \'2018-01-01T00:00:00\'"    // Date interval: year 2017
+    + " AND latitude between " + bounds.bottom + " and " + bounds.top         // Latitude between left and right bounds
+    + " AND longitude between " + bounds.left + " and " + bounds.right        // Longitude between bottom and top bounds
+    + " AND law_cat_cd in(\'FELONY\', \'VIOLATION\')";                        // Limiting felony and violation
+
+  $.getJSON(apiCall, function (data) {
+    data.forEach(function (d) {
+      crimeOnMap.push({
+        location: new google.maps.LatLng(+d['latitude'], +d['longitude']),
+        weight: (d['law_cat_cd'] == 'FELONY') ? 5 : 1
+      });
+    });
+  }).done(function () {
+    console.log(crimeOnMap)
+    heatmap.setData(crimeOnMap);
+  });
 }
 
 // Display heatmap or not
@@ -137,7 +155,7 @@ function toggleHeatmap() {
 var markers = []
 function geocodeAddress(address) {
   var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({'address': address}, function(results, status) {
+  geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
@@ -145,7 +163,7 @@ function geocodeAddress(address) {
         position: results[0].geometry.location
       });
       markers.push(marker)
-      if(markers.length == 2){
+      if (markers.length == 2) {
         markers[0].setMap(null);//delete the previous marker
         markers.shift();//remove the first element in the array
       }
@@ -155,53 +173,53 @@ function geocodeAddress(address) {
   });
 
   // I have no idea why I have to [wait 100 millisecond] to get right bounds.
-  setTimeout(function() {dataRefresh()}, 100);
+  setTimeout(function () { dataRefresh() }, 1000);
 }
 
 //clear entries and map display
-function clearEntries(){
-    $("#address, #filter").val("");
-    //$("#map, #panel-direction").html("");
+function clearEntries() {
+  $("#address, #filter").val("");
+  //$("#map, #panel-direction").html("");
 }
 
 
   // customized marker- goldstar
-  /*var goldStar = {
-    path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-    fillColor: 'yellow',
-    fillOpacity: 0.8,
-    scale: 0.1,
-    strokeColor: 'gold',
-    strokeWeight: 1
-  };*/
+/*var goldStar = {
+  path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+  fillColor: 'yellow',
+  fillOpacity: 0.8,
+  scale: 0.1,
+  strokeColor: 'gold',
+  strokeWeight: 1
+};*/
 
-  /*
-  // Array of markers
-  var markers = [{
-      coords: {
-        lat: 40.7128,
-        lng: -74.0060
-      },
-      iconImage: goldStar,
-      content: "<h3>Liberty Statue</h3>"
+/*
+// Array of markers
+var markers = [{
+    coords: {
+      lat: 40.7128,
+      lng: -74.0060
     },
-    {
-      coords: {
-        lat: 40.758896,
-        lng: -73.985130
-      },
-      iconImage: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-      content: "<h3>Times Square</h3>"
+    iconImage: goldStar,
+    content: "<h3>Liberty Statue</h3>"
+  },
+  {
+    coords: {
+      lat: 40.758896,
+      lng: -73.985130
     },
-    {
-      coords: {
-        lat: 40.8075,
-        lng: -73.9626
-      },
-      content: "<h3>Columbia University</h3>"
-    }
-  ];
-  */
+    iconImage: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    content: "<h3>Times Square</h3>"
+  },
+  {
+    coords: {
+      lat: 40.8075,
+      lng: -73.9626
+    },
+    content: "<h3>Columbia University</h3>"
+  }
+];
+*/
 
 
 
