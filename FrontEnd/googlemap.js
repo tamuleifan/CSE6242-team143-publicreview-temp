@@ -1,8 +1,12 @@
 // Global Variable setting
 bounds = {};
-slideValue = 20;
+sliderValue = 20;       // sliderValue in minutes
 houses = [];
-var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
+housesInBound = [];
+housesMarkers = [];
+destination = {};
+travelMode = 'DRIVING';
+var houseLoad = [d3.csv('toy_zillow_data.csv').then(function(data) {
   data.forEach(function(d) {
       houses.push({
         address: d['location'],
@@ -10,7 +14,9 @@ var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
         bed: +d['bed_num'],
         bath: +d['bath_num'],
         size: +d['sqft_'],
-        url: d['url of rental info']
+        url: d['url of rental info'],
+        lat: +d['lat'],
+        lng: +d['lng']
       });
   });
 })]; 
@@ -44,8 +50,9 @@ function initMap() {
 
   // Get initial bounds through listenting 'tilt_changed' (which should only happen when first loaded)
   map.addListener('tilt_changed', function () {
-    destination = new google.maps.Marker({
-      position: map.getCenter(),
+    destination.latlng = map.getCenter();
+    destination.marker = new google.maps.Marker({
+      position: destination.latlng,
       map: map
     });
     dataRefresh();
@@ -92,11 +99,6 @@ function initMap() {
 };
 // End of initiateing map
 
-// Setting and updating slideValue
-function sliderVal(val) {
-  slideValue = val;
-  console.log(slideValue);
-}
 
 function getMapBounds() {
   bounds.bottom = map.getBounds().getSouthWest().lat();
@@ -110,7 +112,10 @@ function getMapBounds() {
 function dataRefresh() {
   // Update bounds
   getMapBounds();
+  // Update crime heat map
   crimeHeatMap();
+  // Update houses markers
+  houseMarker();
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -121,7 +126,47 @@ function inBetween(x, a, b) {
 }
 
 // Draw house markers within bounds and then commute time to searched location (destination)
-function houseMarker() {
+async function houseMarker() {
+  var service = new google.maps.DistanceMatrixService();
+  var data = houses.filter(function(d) {
+    return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
+  });
+  
+  // Fetch commute time for each points within the boundary
+  data.forEach(function(k) {
+    var getCommute = {
+      origins: [new google.maps.LatLng(k.lat, k.lng)],
+      destinations: [destination.latlng],
+      travelMode: travelMode
+    };
+    service.getDistanceMatrix(getCommute, function(response, status) {
+      if (status === 'OK') {
+        k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
+      } else {
+        k.commute = null;
+      }
+      housesInBound.push(k);
+    });
+  });
+  
+  setTimeout(function() {sliderVal(sliderValue, housesInBound);}, 300);
+}
+
+// Setting and updating sliderValue
+function sliderVal(val, dataset=housesInBound) {
+  sliderValue = val;        // sliderValue in minutes
+  var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
+
+  for (var i = 0; i < housesMarkers.length; i++) housesMarkers[i].setMap(null);   // Removing all houses markers
+  housesMarkers = [];
+  data.forEach(function(k) {
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(k.lat, k.lng),
+      map: map,
+      icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    });
+    housesMarkers.push(marker);
+  });
 
 }
 
@@ -161,14 +206,16 @@ function toggleHeatmap() {
   heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
+// When user search an address (destination)
 function searchAddress(address) {
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
       map.setCenter(results[0].geometry.location);
-      destination.setMap(null);
-      destination = new google.maps.Marker({
-        position: results[0].geometry.location,
+      destination.marker.setMap(null);
+      destination.latlng = results[0].geometry.location;
+      destination.marker = new google.maps.Marker({
+        position: destination.latlng,
         map: map
       });
     } else {
