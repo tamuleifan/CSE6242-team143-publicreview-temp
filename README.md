@@ -7,12 +7,12 @@
 -  樊磊: 增加前端功能，marker按下去之後
     -  顯示clicked marker to destination的通勤路線(ex: 以藍色標出)
     -  顯示info window或在右方HTML顯示房源資訊，for example:
-    -  Price: 400.0/month
-    -  Bed: 1
-    -  Bath: 1
-    -  Size(sqft): 1,600.0
-    -  Commute Time: 22min by driving/walking/transit
-    -  [Zillow Link](https://www.zillow.com/homedetails/Main-St-Staten-Island-NY-10307/2088886871_zpid/)
+       -  Price: 400.0/month
+       -  Bed: 1
+       -  Bath: 1
+       -  Size(sqft): 1,600.0
+       -  Commute Time: 22min by driving/walking/transit
+       -  [Zillow Link](https://www.zillow.com/homedetails/Main-St-Staten-Island-NY-10307/2088886871_zpid/)
 ## Timeline
 -  **4/12 (Fri.): Next meeting**
 -  4/14 (Sun.): Has to finish all the front-end development
