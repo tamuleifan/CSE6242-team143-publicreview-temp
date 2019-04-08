@@ -26,6 +26,11 @@
       <tr>
         <td>Commute time within: <span id="slidervalue" style="font-weight:bold;"></span> mins</td>
         <td><input type="range" min="5" max="120" value="20" class="slider" id="sliderbar"></td>
+        <td>by: <select id="travelModeMenu" onchange="changeTravelMode(document.getElementById('travelModeMenu').value)">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="TRANSIT">Transit</option>
+        </select></td>
       </tr>
       <tr>
         <td><button onclick="toggleHeatmap()">Crime Rate Heatmap</button></td>

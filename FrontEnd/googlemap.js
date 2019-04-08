@@ -105,17 +105,21 @@ function getMapBounds() {
   bounds.left = map.getBounds().getSouthWest().lng();
   bounds.top = map.getBounds().getNorthEast().lat();
   bounds.right = map.getBounds().getNorthEast().lng();
-  // console.log(bounds);
+  console.log("Get bounds");
+  console.log(bounds);
 }
 
 // refresh crime and rental data points
 function dataRefresh() {
+  console.log("-----------------------");
+  console.log("Refreshing");
   // Update bounds
   getMapBounds();
   // Update crime heat map
   crimeHeatMap();
   // Update houses markers
   houseMarker();
+  console.log("-----------------------");
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -127,6 +131,7 @@ function inBetween(x, a, b) {
 
 // Draw house markers within bounds and then commute time to searched location (destination)
 async function houseMarker() {
+  console.log("Update houses within bounds")
   var service = new google.maps.DistanceMatrixService();
   var data = houses.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
@@ -153,10 +158,17 @@ async function houseMarker() {
       });
       housesMarkers.push(marker);
       housesInBound.push(k);
+      console.log(k);
     });
   });
   
   setTimeout(function() {sliderVal(sliderValue, housesInBound);}, 300);
+}
+
+function changeTravelMode(val) {
+  travelMode = val;
+  console.log(val);
+  houseMarker();
 }
 
 // Setting and updating sliderValue
@@ -168,7 +180,7 @@ function sliderVal(val, dataset=housesInBound) {
     if (dataset[i].commute > sliderValue*60) {
       housesMarkers[i].setMap(null);
     } else {
-      housesMarkers[i].setMap(map)
+      housesMarkers[i].setMap(map);
     }
   }
 
@@ -176,6 +188,7 @@ function sliderVal(val, dataset=housesInBound) {
 
 // Get crime rate heatmap points
 function crimeHeatMap() {
+  console.log("Update crime heat map")
   crimeOnMap = [];
   /*var data = crimePoints.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left))
@@ -190,7 +203,7 @@ function crimeHeatMap() {
     + "rpt_dt between \'2017-01-01T00:00:00\' and \'2018-01-01T00:00:00\'"    // Date interval: year 2017
     + " AND latitude between " + bounds.bottom + " and " + bounds.top         // Latitude between left and right bounds
     + " AND longitude between " + bounds.left + " and " + bounds.right        // Longitude between bottom and top bounds
-    + " AND law_cat_cd in(\'FELONY\', \'VIOLATION\')";                        // Limiting felony and violation
+    + " AND law_cat_cd in(\'FELONY\', \'MISDEMEANOR\')";                      // Limiting felony and misdemeanor
 
   $.getJSON(apiCall, function (data) {
     data.forEach(function (d) {
@@ -212,6 +225,7 @@ function toggleHeatmap() {
 
 // When user search an address (destination)
 function searchAddress(address) {
+  console.log("Search: " + address);
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
@@ -222,10 +236,12 @@ function searchAddress(address) {
         position: destination.latlng,
         map: map
       });
+      console.log("Result: (" + results[0].geometry.location.lat() + ", " + results[0].geometry.location.lng() + ")");
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
+  
   // I have no idea why I have to [wait 500 millisecond] to get right bounds.
   setTimeout(function () { dataRefresh() }, 500);
 }
