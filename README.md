@@ -2,7 +2,7 @@
 ## To-do
 - Mingting: Refine final report from progress report
 - Yuting: Cleansing 房源資訊，移除location中(undisclosed Address)的部分。clean後csv增加兩個欄位：由地址轉換出的經度、緯度
-- 晨曦: 撰寫README.txt。注意[Project Description](https://docs.google.com/document/d/e/2PACX-1vTc_2yqk8QfK-SkdDPxJVJcM31kogiVFsZKOuJ2qHHnRn5aaA4r74u-gErMTsE8jGVoYeVB83MtjFTN/pub#h.9rebwbttjkfm)的要求，可參考[過去組別](https://docs.google.com/document/d/e/2PACX-1vTc_2yqk8QfK-SkdDPxJVJcM31kogiVFsZKOuJ2qHHnRn5aaA4r74u-gErMTsE8jGVoYeVB83MtjFTN/pub#h.9rebwbttjkfm)撰寫的結構
+- 晨曦: 撰寫README.txt。注意[Project Description](https://docs.google.com/document/d/e/2PACX-1vTc_2yqk8QfK-SkdDPxJVJcM31kogiVFsZKOuJ2qHHnRn5aaA4r74u-gErMTsE8jGVoYeVB83MtjFTN/pub#h.9rebwbttjkfm)的要求，可參考[過去組別](https://github.com/Morek999/CSE6242team143/blob/master/Data%20Collection.md#reference-of-past-project)撰寫的結構
 -  李盾: 幫忙起草poster(架構、需要哪些內容，可先試著填寫)
 -  樊磊: 增加前端功能，marker按下去之後
     -  顯示clicked marker to destination的通勤路線(ex: 以藍色標出)
