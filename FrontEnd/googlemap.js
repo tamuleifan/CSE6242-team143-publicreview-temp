@@ -145,6 +145,13 @@ async function houseMarker() {
       } else {
         k.commute = null;
       }
+
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(k.lat, k.lng),
+        map: map,
+        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+      });
+      housesMarkers.push(marker);
       housesInBound.push(k);
     });
   });
@@ -155,18 +162,15 @@ async function houseMarker() {
 // Setting and updating sliderValue
 function sliderVal(val, dataset=housesInBound) {
   sliderValue = val;        // sliderValue in minutes
-  var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
+  //var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
 
-  for (var i = 0; i < housesMarkers.length; i++) housesMarkers[i].setMap(null);   // Removing all houses markers
-  housesMarkers = [];
-  data.forEach(function(k) {
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(k.lat, k.lng),
-      map: map,
-      icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-    });
-    housesMarkers.push(marker);
-  });
+  for (var i = 0; i < housesMarkers.length; i++) {
+    if (dataset[i].commute > sliderValue*60) {
+      housesMarkers[i].setMap(null);
+    } else {
+      housesMarkers[i].setMap(map)
+    }
+  }
 
 }
 
