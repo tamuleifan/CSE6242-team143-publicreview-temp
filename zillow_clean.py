@@ -3,6 +3,7 @@ import numpy as np
 import re
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
+from geopy import geocoders
 
 df = pd.read_csv('properties-New-York-NY.csv')
 
@@ -86,25 +87,52 @@ df.sort_values(by=['price_per_month'],inplace=True)
 df.fillna(method='bfill',inplace=True)
 df.fillna(method='ffill',inplace=True)
 
+
+#delete the row which location contains undisclosed Address
+special_string='(undisclosed Address)'
+condition=df['location'].apply(lambda y: special_string not in y)
+df=df[condition]
+
 #change the location to latitude and longitude
-geolocator = Nominatim(user_agent="specify_your_app_name_here")
+# geolocator = Nominatim(user_agent="specify_your_app_name_here")
+# df['latitude']=0
+# df['longitude']=0
+
+# geolocator = Nominatim(user_agent="yutinglu")
+
+# for i in range(df.shape[0]):
+#         print(df.iloc[i,0])
+
+#         try:
+#                 target=geolocator.geocode(df.iloc[i,0],timeout=60)
+
+#                 df.iloc[i,6] = target.latitude
+#                 df.iloc[i,7] = target.longitude
+#         except:
+#                 pass
+
+g = geocoders.GoogleV3(api_key='AIzaSyD8f3gxQL4k8-jUVsNvq01HPVtqa0bbXpY')
 df['latitude']=0
 df['longitude']=0
 
-geolocator = Nominatim(user_agent="yutinglu")
-
 for i in range(df.shape[0]):
         print(df.iloc[i,0])
+        target=g.geocode(df.iloc[i,0],timeout=10)
 
-        try:
-                target=geolocator.geocode(df.iloc[i,0],timeout=60)
+        df.iloc[i,6] = target.latitude
+        df.iloc[i,7] = target.longitude
 
-                df.iloc[i,6] = target.latitude
-                df.iloc[i,7] = target.longitude
-        except:
-                pass
+#create an input address string
+#you can also build this by reading from an input database and building a string
+# inputAddress = '175 5th Ave, New York,  NY' 
 
+# #do the geocode
+# location = g.geocode(inputAddress, timeout=10)
 
+# #some things you can get from the result
+# print(location.latitude, location.longitude)
+# print(location.raw)
+# print(location.address)
 
 
 df.to_csv('cleaned_zillow_data.csv',index=False,index_label=False)
