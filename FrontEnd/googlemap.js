@@ -4,6 +4,8 @@ sliderValue = 20;       // sliderValue in minutes
 houses = [];
 housesInBound = [];
 housesMarkers = [];
+iconBlue = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+iconGray = "http://labs.google.com/ridefinder/images/mm_20_gray.png";
 destination = {};
 travelMode = 'DRIVING';
 var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
@@ -20,7 +22,7 @@ var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
       });
   });
 })]; 
-Promise.all(houseLoad).then(function(){console.log(houses);});
+Promise.all(houseLoad).then(function(){console.log("");});
 
 function initMap() {
   // Map options
@@ -65,37 +67,6 @@ function initMap() {
   });
   heatmap.setMap(null);
 
-  // Recommend refine the following code: remove from iniMap()
-  $(document).ready(function () {
-    //$("button").click(function(){
-    $.getJSON("toy.json", function (data) {
-      //alert('data loaded')
-      $.each(data, function (i, field) {
-        //console.log(field.lat)
-        //console.log(field.lng)
-
-        // get the filter values and present the markers that is equal to the values
-        // need a eventlistener that may be put outside the function initMap
-        var userInput = document.getElementById('filter').value;
-        console.log(userInput)
-        console.log(field.rating)
-        if (field.rating === userInput) {
-          var myLatLng = new google.maps.LatLng(field.lat, field.lng);
-          console.log(myLatLng);
-        }
-
-
-        // Creating a marker and putting it on the maps
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
-        });
-        marker.setMap(map);
-      })
-    })
-    //})
-  })
-
 };
 // End of initiateing map
 
@@ -132,7 +103,7 @@ function inBetween(x, a, b) {
 }
 
 // Draw house markers within bounds and then commute time to searched location (destination)
-async function houseMarker() {
+function houseMarker() {
   //console.log("Update houses within bounds")
   var service = new google.maps.DistanceMatrixService();
   var data = houses.filter(function(d) {
@@ -155,8 +126,8 @@ async function houseMarker() {
 
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(k.lat, k.lng),
-        map: (k.commute > sliderValue*60) ? null : map,
-        icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        map: map,
+        icon: (k.commute > sliderValue*60)? iconGray : iconBlue
       });
       
       var content = "<table><tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
@@ -196,9 +167,9 @@ function sliderVal(val, dataset=housesInBound) {
 
   for (var i = 0; i < dataset.length; i++) {
     if (dataset[i].commute > sliderValue*60) {
-      housesMarkers[i].setMap(null);
+      housesMarkers[i].setIcon(iconGray);
     } else {
-      housesMarkers[i].setMap(map);
+      housesMarkers[i].setIcon(iconBlue);
     }
   }
 
@@ -208,13 +179,7 @@ function sliderVal(val, dataset=housesInBound) {
 function crimeHeatMap() {
   //console.log("Update crime heat map")
   crimeOnMap = [];
-  /*var data = crimePoints.filter(function(d) {
-    return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left))
-  });
 
-  data.forEach(function(k) {
-    crimeOnMap.push(new google.maps.LatLng(k.lat, k.lng));
-  })*/
   var crimeURL = "https://data.cityofnewyork.us/resource/9s4h-37hy.json?$limit=1000000"; //totalling 468,988 rows in 2017
   var apiCall = crimeURL
     + "&$where="
@@ -262,133 +227,3 @@ function searchAddress(address) {
   setTimeout(function () { dataRefresh() }, 500);
 }
 
-//clear entries and map display
-function clearEntries() {
-  $("#address, #filter").val("");
-  //$("#map, #panel-direction").html("");
-}
-
-
-  // customized marker- goldstar
-/*var goldStar = {
-  path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-  fillColor: 'yellow',
-  fillOpacity: 0.8,
-  scale: 0.1,
-  strokeColor: 'gold',
-  strokeWeight: 1
-};*/
-
-/*
-// Array of markers
-var markers = [{
-    coords: {
-      lat: 40.7128,
-      lng: -74.0060
-    },
-    iconImage: goldStar,
-    content: "<h3>Liberty Statue</h3>"
-  },
-  {
-    coords: {
-      lat: 40.758896,
-      lng: -73.985130
-    },
-    iconImage: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-    content: "<h3>Times Square</h3>"
-  },
-  {
-    coords: {
-      lat: 40.8075,
-      lng: -73.9626
-    },
-    content: "<h3>Columbia University</h3>"
-  }
-];
-*/
-
-
-
-
-/*  for (var i = 0; i < markers.features.length; i++) {
-    addMarker(markers[i]);
-  };
-
-  // Add Marker function
-  function addMarker(props) {
-    var marker = new google.maps.Marker({
-      position: props.coords,
-      map: map,
-      //icon:props.iconImage
-    });
-    // Check for customized icon
-    if (props.iconImage) {
-      // Set icon image
-      marker.setIcon(props.iconImage)
-    }
-
-    // Check content
-    if (props.content) {
-      var infoWindow = new google.maps.InfoWindow({
-        content: props.content
-      });
-
-      marker.addListener('click', function() {
-        infoWindow.open(map, marker);
-      });
-    }
-  }
-
-  // Listen for click on map
-  google.maps.event.addListener(map, 'click',
-    function(event) {
-      // Add markers
-      addMarker({
-        coords: event.latLng
-      });
-    });
-}
-*/
-
-//ajax asynchronous deprecated
-/*$(document).ready(function(){
-  $("button").click(function(){
-var houses = (function (){
-  console.log(1)
-    var json = null;
-    $.ajax({
-
-        'url': 'toy.json',
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-        }
-    });
-    return json;
-    alert("OK, data loaded");
-})();
-})
-})*/
-
-
-
-/*var markers;
-
-$(document).ready(function(){
-  $("button").click(function(){
-    $.get("toy.csv", function(data, status){
-      if(status == "success"){
-      alert("Data: " + data + "\nStatus: " + status);
-    }
-      Papa.parse(data, {
-        header: true,
-        complete: function(results){
-          markers = results.data;
-        }
-      });
-    });
-  });
-});
-*/
-
-// slider filter
