@@ -113,6 +113,8 @@ function getMapBounds() {
 function dataRefresh() {
   console.log("-----------------------");
   console.log("Refreshing");
+  sliderValue = document.getElementById("sliderbar").value;
+  travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
   getMapBounds();
   // Update crime heat map
@@ -153,12 +155,12 @@ async function houseMarker() {
 
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(k.lat, k.lng),
-        map: map,
+        map: (k.commute > sliderValue*60) ? null : map,
         icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
       });
       housesMarkers.push(marker);
       housesInBound.push(k);
-      console.log(k);
+      //console.log(k);
     });
   });
   
@@ -176,7 +178,8 @@ function sliderVal(val, dataset=housesInBound) {
   sliderValue = val;        // sliderValue in minutes
   //var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
 
-  for (var i = 0; i < housesMarkers.length; i++) {
+  for (var i = 0; i < dataset.length; i++) {
+  console.log(dataset[i].marker);
     if (dataset[i].commute > sliderValue*60) {
       housesMarkers[i].setMap(null);
     } else {
