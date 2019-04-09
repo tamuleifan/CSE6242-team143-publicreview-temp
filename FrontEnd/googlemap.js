@@ -6,21 +6,22 @@ housesInBound = [];
 housesMarkers = [];
 destination = {};
 travelMode = 'DRIVING';
-var houseLoad = [d3.csv('toy_zillow_data.csv').then(function(data) {
+var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
   data.forEach(function(d) {
       houses.push({
         address: d['location'],
         price: +d['price_per_month'],
-        bed: +d['bed_num'],
-        bath: +d['bath_num'],
-        size: +d['sqft_'],
+        bed: +d['bed num'],
+        bath: +d['bath num'],
+        size: +d['sqft'],
         url: d['url of rental info'],
-        lat: +d['lat'],
-        lng: +d['lng']
+        lat: +d['latitude'],
+        lng: +d['longitude']
       });
   });
 })]; 
 Promise.all(houseLoad).then(function(){console.log(houses);});
+console.log(houseLoad);
 
 function initMap() {
   // Map options
