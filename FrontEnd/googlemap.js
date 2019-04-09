@@ -21,7 +21,6 @@ var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
   });
 })]; 
 Promise.all(houseLoad).then(function(){console.log(houses);});
-console.log(houseLoad);
 
 function initMap() {
   // Map options
@@ -106,14 +105,14 @@ function getMapBounds() {
   bounds.left = map.getBounds().getSouthWest().lng();
   bounds.top = map.getBounds().getNorthEast().lat();
   bounds.right = map.getBounds().getNorthEast().lng();
-  console.log("Get bounds");
-  console.log(bounds);
+  //console.log("Get bounds");
+  //console.log(bounds);
 }
 
 // refresh crime and rental data points
 function dataRefresh() {
-  console.log("-----------------------");
-  console.log("Refreshing");
+  //console.log("-----------------------");
+  //console.log("Refreshing");
   sliderValue = document.getElementById("sliderbar").value;
   travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
@@ -122,7 +121,7 @@ function dataRefresh() {
   crimeHeatMap();
   // Update houses markers
   houseMarker();
-  console.log("-----------------------");
+  //console.log("-----------------------");
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -134,7 +133,7 @@ function inBetween(x, a, b) {
 
 // Draw house markers within bounds and then commute time to searched location (destination)
 async function houseMarker() {
-  console.log("Update houses within bounds")
+  //console.log("Update houses within bounds")
   var service = new google.maps.DistanceMatrixService();
   var data = houses.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
@@ -159,6 +158,22 @@ async function houseMarker() {
         map: (k.commute > sliderValue*60) ? null : map,
         icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
       });
+      
+      var content = "<table><tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
+        + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
+        + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
+        + "<tr><td><b>Room size:</b></td> <td>" + k.size.toLocaleString() + " (sqrt)</td></tr>"
+        + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute/60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
+        + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr></table>";
+      var infowindow = new google.maps.InfoWindow()
+
+      google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
+        return function () {
+          infowindow.setContent(content);
+          infowindow.open(map, marker);
+        };
+      })(marker, content, infowindow));
+
       housesMarkers.push(marker);
       housesInBound.push(k);
       //console.log(k);
@@ -170,7 +185,7 @@ async function houseMarker() {
 
 function changeTravelMode(val) {
   travelMode = val;
-  console.log(val);
+  //console.log(val);
   houseMarker();
 }
 
@@ -180,7 +195,6 @@ function sliderVal(val, dataset=housesInBound) {
   //var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
 
   for (var i = 0; i < dataset.length; i++) {
-  console.log(dataset[i].marker);
     if (dataset[i].commute > sliderValue*60) {
       housesMarkers[i].setMap(null);
     } else {
@@ -192,7 +206,7 @@ function sliderVal(val, dataset=housesInBound) {
 
 // Get crime rate heatmap points
 function crimeHeatMap() {
-  console.log("Update crime heat map")
+  //console.log("Update crime heat map")
   crimeOnMap = [];
   /*var data = crimePoints.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left))
@@ -229,7 +243,6 @@ function toggleHeatmap() {
 
 // When user search an address (destination)
 function searchAddress(address) {
-  console.log("Search: " + address);
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status === 'OK') {
@@ -240,12 +253,11 @@ function searchAddress(address) {
         position: destination.latlng,
         map: map
       });
-      console.log("Result: (" + results[0].geometry.location.lat() + ", " + results[0].geometry.location.lng() + ")");
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  
+
   // I have no idea why I have to [wait 500 millisecond] to get right bounds.
   setTimeout(function () { dataRefresh() }, 500);
 }
