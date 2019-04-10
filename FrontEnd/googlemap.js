@@ -161,6 +161,7 @@ function houseMarker() {
       marker.addListener('click', function () {
         directionsDisplay.set('directions', null);
         directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('panel-direction'));
         calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, k.latlng);
       });
 
