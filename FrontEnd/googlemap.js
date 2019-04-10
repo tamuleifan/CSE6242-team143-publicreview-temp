@@ -21,10 +21,16 @@ var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
         lng: +d['longitude']
       });
   });
-})]; 
+})];
 Promise.all(houseLoad).then(function(){console.log("");});
 
+
+
 function initMap() {
+  //variables for Directions API
+
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var directionsService = new google.maps.DirectionsService;
   // Map options
   options = {
     zoom: 15,
@@ -36,6 +42,26 @@ function initMap() {
 
   // New map
   map = new google.maps.Map(document.getElementById('map'), options);
+
+  directionsDisplay.setMap(map);
+  var start_p = document.getElementById('start').value;
+  document.getElementById('route').addEventListener('click', function() {
+       calculateAndDisplayRoute(directionsService, directionsDisplay, start_p)
+})
+  /*directionsDisplay.setMap(map);
+          directionsDisplay.setPanel(document.getElementById('panel-direction'));
+
+          var control = document.getElementById('floating-panel');
+          control.style.display = 'block';
+          map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+          var onChangeHandler = function() {
+            calculateAndDisplayRoute(directionsService, directionsDisplay);
+          };
+          document.getElementById('start').addEventListener('change', onChangeHandler);
+          document.getElementById('end').addEventListener('change', onChangeHandler);
+
+*/
 
   // Limiting map scope (map zoom)
   minZoomLevel = 15;
@@ -59,6 +85,11 @@ function initMap() {
     });
     dataRefresh();
   });
+
+  //map.addListener('click', function() {
+    //map.setCenter(destination.marker.getPosition());
+  //})
+
 
   // Crime heatmap
   heatmap = new google.maps.visualization.HeatmapLayer({
@@ -109,9 +140,12 @@ function houseMarker() {
   var data = houses.filter(function(d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
   });
-  
+
   // Fetch commute time for each points within the boundary
   data.forEach(function(k) {
+
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
     var getCommute = {
       origins: [new google.maps.LatLng(k.lat, k.lng)],
       destinations: [destination.latlng],
@@ -129,7 +163,7 @@ function houseMarker() {
         map: map,
         icon: (k.commute > sliderValue*60)? iconGray : iconBlue
       });
-      
+
       var content = "<table><tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
         + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
         + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
@@ -148,9 +182,18 @@ function houseMarker() {
       housesMarkers.push(marker);
       housesInBound.push(k);
       //console.log(k);
+
+
+      marker.addListener('click', function() {
+        directionsDisplay.setMap(map);
+        var start_point = marker.getPosition()
+        calculateAndDisplayRoute(directionsService, directionsDisplay,start_point,travelMode);
+
+      })
+
     });
   });
-  
+
   setTimeout(function() {sliderVal(sliderValue, housesInBound);}, 300);
 }
 
@@ -174,6 +217,23 @@ function sliderVal(val, dataset=housesInBound) {
   }
 
 }
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay, start, tavel_mode) {
+  var end = document.getElementById('address').value;
+  directionsService.route({
+		 origin: start,
+		 destination: end,
+		 travelMode: tavel_mode
+		}, function(response, status) {
+		  if (status === 'OK') {
+			directionsDisplay.setDirections(response);
+		  } else {
+			alert('Directions request failed due to ' + status);
+		  }
+		});
+	}
+
+
 
 // Get crime rate heatmap points
 function crimeHeatMap() {
@@ -206,6 +266,19 @@ function toggleHeatmap() {
   heatmap.setMap(heatmap.getMap() ? null : map);
 }
 
+// get the geocode for destination address
+function geocodeAddress(address) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ 'address': address }, function (results, status) {
+    if (status === 'OK') {
+      destination.latlng = results[0].geometry.location;
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+
 // When user search an address (destination)
 function searchAddress(address) {
   var geocoder = new google.maps.Geocoder();
@@ -226,4 +299,3 @@ function searchAddress(address) {
   // I have no idea why I have to [wait 500 millisecond] to get right bounds.
   setTimeout(function () { dataRefresh() }, 500);
 }
-

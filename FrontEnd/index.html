@@ -9,38 +9,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A quick demo</title>
-  <link href="style.css" type="text/css" rel="stylesheet"/>
-  <link href="main.css" type="text/css" rel="stylesheet"/>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="main.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="googlemap.js"></script>
 </head>
 
 <body>
   <h1>A quick demo</h1>
 
-<div>
-  <table class="tbl-entry">
+  <div>
+    <table class="tbl-entry">
       <tr>
         <td><input id="address" type="textbox" name="address" value="New York City Hall"></td>
-        <td><input id="submit" type="button" value="search" onclick="searchAddress(document.getElementById('address').value)"/></td>
+        <td><input id="start" type="textbox" name="address" value="Pace University"></td>
+        <td><input id="submit" type="button" value="search" onclick="searchAddress(document.getElementById('address').value)" /></td>
+        <td><input id="route" type="button" value="route"/></td>
+
       </tr>
       <tr>
         <td>Commute time within: <span id="slidervalue" style="font-weight:bold;"></span> mins</td>
         <td><input type="range" min="5" max="60" value="20" class="slider" id="sliderbar"></td>
         <td>by: <select id="travelModeMenu" onchange="changeTravelMode(document.getElementById('travelModeMenu').value)">
-          <option value="DRIVING">Driving</option>
-          <option value="WALKING">Walking</option>
-          <option value="TRANSIT">Transit</option>
-        </select></td>
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="TRANSIT">Transit</option>
+          </select></td>
       </tr>
       <tr>
         <td><button onclick="toggleHeatmap()">Crime Rate Heatmap</button></td>
       </tr>
     </table>
 
-  <div id="map" width=600></div>
+    <table class="tbl-map">
+      <tr>
+        <td>
+          <div id="map" width=600></div>
+        </td>
+        <td>
+          <div id="panel-direction"></div>
+        </td>
+      </tr>
+    </table>
 
 
-</div>
+
+
+  </div>
 
 
 
@@ -55,27 +69,6 @@
       dataRefresh();
       // update rental houses here
     }
-    
-  /*
-// load csv file
-  var markers;
-
-  $(document).ready(function(){
-    $("button").click(function(){
-      $.get("toy.csv", function(data, status){
-        if(status == "success"){
-        alert("Data: " + data + "\nStatus: " + status);
-      }
-        Papa.parse(data, {
-          header: true,
-          complete: function(results){
-            markers = results.data;
-          }
-        });
-      });
-    });
-  });
-*/
   </script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8f3gxQL4k8-jUVsNvq01HPVtqa0bbXpY&callback=initMap&libraries=visualization"></script>
