@@ -1,4 +1,5 @@
 // Global Variable setting
+var info_windows_container = [];
 bounds = {};
 sliderValue = 20;       // sliderValue in minutes
 houses = [];
@@ -133,6 +134,7 @@ function inBetween(x, a, b) {
   return (x - a) * (x - b) <= 0;
 }
 
+
 // Draw house markers within bounds and then commute time to searched location (destination)
 function houseMarker() {
   //console.log("Update houses within bounds")
@@ -146,6 +148,7 @@ function houseMarker() {
 
     var directionsDisplay = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
+
     var getCommute = {
       origins: [new google.maps.LatLng(k.lat, k.lng)],
       destinations: [destination.latlng],
@@ -164,18 +167,27 @@ function houseMarker() {
         icon: (k.commute > sliderValue*60)? iconGray : iconBlue
       });
 
+
+
       var content = "<table><tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
         + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
         + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
         + "<tr><td><b>Room size:</b></td> <td>" + k.size.toLocaleString() + " (sqrt)</td></tr>"
         + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute/60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
         + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr></table>";
-      var infowindow = new google.maps.InfoWindow()
+      var infowindow = new google.maps.InfoWindow
 
       google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
         return function () {
+          // remove previous infowindow
+          if(info_windows_container.length == 1){
+            info_windows_container[0].setMap(null);//delete the previous marker
+            info_windows_container.shift();//remove the first element in the array
+          }
+
           infowindow.setContent(content);
           infowindow.open(map, marker);
+          info_windows_container.push(marker)
         };
       })(marker, content, infowindow));
 
@@ -185,6 +197,7 @@ function houseMarker() {
 
 
       marker.addListener('click', function() {
+        directionsDisplay.set('directions', null);
         directionsDisplay.setMap(map);
         var start_point = marker.getPosition()
         calculateAndDisplayRoute(directionsService, directionsDisplay,start_point,travelMode);
