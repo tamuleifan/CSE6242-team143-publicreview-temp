@@ -93,7 +93,9 @@ function dataRefresh() {
   sliderValue = document.getElementById("sliderbar").value;
   travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
-  Promise.all([getMapBounds()]).then(houseMarker()).then(crimeHeatMap()).then(function(){console.log(housesInBound.length)});
+  Promise.all([getMapBounds()])
+    .then(houseMarker())
+    .then(crimeHeatMap());
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -108,6 +110,7 @@ function inBetween(x, a, b) {
 function houseMarker() {
   //console.log("Update houses within bounds")
   var service = new google.maps.DistanceMatrixService();
+  var i = 0;
   var data = houses.filter(function (d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
   });
@@ -115,7 +118,7 @@ function houseMarker() {
   // Fetch commute time for each points within the boundary
   data.forEach(function (k) {
     k.latlng = new google.maps.LatLng(k.lat, k.lng);
-
+    
     var getCommute = {
       origins: [k.latlng],
       destinations: [destination.latlng],
@@ -123,52 +126,63 @@ function houseMarker() {
     };
 
     service.getDistanceMatrix(getCommute, function (response, status) {
+      i += 1;   // counter for data processing index
+
       if (status === 'OK') {
         k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
       } else {
         k.commute = null;
       }
 
-      var marker = new google.maps.Marker({
-        position: k.latlng,
-        map: map,
-        icon: (k.commute > sliderValue * 60) ? iconGray : iconBlue
-      });
-      var content = "<table  class='tbl-marker'>"
-        + "<tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
-        + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
-        + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
-        + "<tr><td><b>Room size:</b></td> <td>" + k.size.toLocaleString() + " (sqrt)</td></tr>"
-        + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute / 60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
-        + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr>"
-        + "</table>";
-      var infowindow = new google.maps.InfoWindow
+      if (!inList(k, housesInBound)) {
+        var marker = new google.maps.Marker({
+          position: k.latlng,
+          map: map,
+          icon: iconGray//(k.commute > sliderValue * 60) ? iconGray : iconBlue
+        });
+        var content = "<table  class='tbl-marker'>"
+          + "<tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
+          + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
+          + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
+          + "<tr><td><b>Room size:</b></td> <td>" + k.size.toLocaleString() + " (sqrt)</td></tr>"
+          + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute / 60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
+          + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr>"
+          + "</table>";
+        var infowindow = new google.maps.InfoWindow
+  
+        google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
+          return function () {
+            info_windows_container.close();
+            infowindow.setContent(content);
+            infowindow.open(map, marker);
+            info_windows_container = infowindow;
+          };
+        })(marker, content, infowindow));
 
-      google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
-        return function () {
-          info_windows_container.close();
-          infowindow.setContent(content);
-          infowindow.open(map, marker);
-          info_windows_container = infowindow;
-        };
-      })(marker, content, infowindow));
+        // Add commute path when marker is clicked (remove previous and add a new one)
+        marker.addListener('click', function () {
+          directionsDisplay.set('directions', null);
+          directionsDisplay.setMap(map);
+          directionsDisplay.setPanel(document.getElementById('panel-direction'));
+          calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, k.latlng);
+        });
 
-      housesMarkers.push(marker);
-      housesInBound.push(k);
-      //console.log(k);
+        housesMarkers.push(marker);
+        housesInBound.push(k);
+        //console.log(k);
+      }
 
-      // Add commute path when marker is clicked (remove previous and add a new one)
-      marker.addListener('click', function () {
-        directionsDisplay.set('directions', null);
-        directionsDisplay.setMap(map);
-        directionsDisplay.setPanel(document.getElementById('panel-direction'));
-        calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, k.latlng);
-      });
+      if (i == data.length) sliderVal(sliderValue, housesInBound);
 
     });
   });
+}
 
-  setTimeout(function () { sliderVal(sliderValue, housesInBound); }, 500);
+function inList(obj, list) {
+  for (i = 0; i < list.length; i++) {
+    if (list[i] === obj) return true;
+  }
+  return false
 }
 
 function changeTravelMode(val) {
@@ -257,20 +271,27 @@ function geocodeAddress(address) {
 // When user search an address (destination)
 function searchAddress(address) {
   var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': address }, function (results, status) {
-    if (status === 'OK') {
-      map.setCenter(results[0].geometry.location);
-      destination.marker.setMap(null);
-      destination.latlng = results[0].geometry.location;
-      destination.marker = new google.maps.Marker({
-        position: destination.latlng,
-        map: map
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+  var ne = new google.maps.LatLng(40.919353, -73.6925357);
+  var sw = new google.maps.LatLng(40.4936881, -74.2591087);
 
-  // I have no idea why I have to [wait 500 millisecond] to get right bounds.
-  setTimeout(function () { dataRefresh() }, 500);
+  geocoder.geocode({
+      address: address,
+      bounds: new google.maps.LatLngBounds(sw, ne),
+      componentRestrictions: { country: 'US' }
+    }, function (results, status) {
+      if (status === 'OK') {
+        map.setCenter(results[0].geometry.location);
+        destination.marker.setMap(null);
+        destination.latlng = results[0].geometry.location;
+        destination.marker = new google.maps.Marker({
+          position: destination.latlng,
+          map: map
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+
+      dataRefresh()
+
+  });
 }
