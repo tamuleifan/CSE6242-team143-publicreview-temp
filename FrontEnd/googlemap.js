@@ -173,11 +173,14 @@ function houseMarker() {
       housesInBound.push(k);
       //console.log(k);
 
-
+      //click a housemarker, route will be automatically displayed
       marker.addListener('click', function() {
-        directionsDisplay.set('directions', null);
+        //directionsDisplay.setMap(null); // clear direction from the map
+        if (directionsDisplay != null) {
+          directionsDisplay.setMap(null);
+        }
         directionsDisplay.setMap(map);
-        var start_point = marker.getPosition()
+        start_point = marker.getPosition()
         calculateAndDisplayRoute(directionsService, directionsDisplay,start_point,travelMode);
 
       })
@@ -192,6 +195,8 @@ function changeTravelMode(val) {
   travelMode = val;
   //console.log(val);
   houseMarker();
+  info_windows_container[0].setMap(null);//delete the previous marker
+  info_windows_container.shift()
 }
 
 // Setting and updating sliderValue
@@ -209,6 +214,7 @@ function sliderVal(val, dataset=housesInBound) {
 
 }
 
+//Display route
 function calculateAndDisplayRoute(directionsService, directionsDisplay, start, tavel_mode) {
   var end = document.getElementById('address').value;
   directionsService.route({
