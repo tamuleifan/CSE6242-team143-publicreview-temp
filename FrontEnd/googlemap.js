@@ -175,8 +175,7 @@ function changeTravelMode(val) {
   travelMode = val;
   //console.log(val);
   houseMarker();
-  info_windows_container[0].setMap(null);//delete the previous marker
-  info_windows_container.shift()
+  info_windows_container.close();   //delete the previous marker
 }
 
 // Setting and updating sliderValue
