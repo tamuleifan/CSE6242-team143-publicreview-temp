@@ -19,17 +19,10 @@ table.tbl-entry{
 .input-entry{
 	padding:5px;
 	border-radius:5px;
-	min-width:300px;
 }
 
 table.tbl-map{
 	width:100%;
-}
-
-table.tbl-map td{
-	width:50%;
-	vertical-align:top;
-	padding:10px;
 }
 
 #map{

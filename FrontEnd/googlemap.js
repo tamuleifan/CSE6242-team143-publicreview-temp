@@ -1,30 +1,29 @@
 // Global Variable setting
 var info_windows_container = [];
-bounds = {};
-sliderValue = 20;       // sliderValue in minutes
-houses = [];
-housesInBound = [];
-housesMarkers = [];
-iconBlue = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
-iconGray = "http://labs.google.com/ridefinder/images/mm_20_gray.png";
-destination = {};
-travelMode = 'DRIVING';
-var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function(data) {
-  data.forEach(function(d) {
-      houses.push({
-        address: d['location'],
-        price: +d['price_per_month'],
-        bed: +d['bed num'],
-        bath: +d['bath num'],
-        size: +d['sqft'],
-        url: d['url of rental info'],
-        lat: +d['latitude'],
-        lng: +d['longitude']
-      });
+var directionsDisplay = {};
+var bounds = {};
+var sliderValue = 20;       // sliderValue in minutes
+var houses = [];
+var housesInBound = [];
+var housesMarkers = [];
+var iconBlue = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+var iconGray = "http://labs.google.com/ridefinder/images/mm_20_gray.png";
+var destination = {};
+var travelMode = 'DRIVING';
+var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function (data) {
+  data.forEach(function (d) {
+    houses.push({
+      address: d['location'],
+      price: +d['price_per_month'],
+      bed: +d['bed num'],
+      bath: +d['bath num'],
+      size: +d['sqft'],
+      url: d['url of rental info'],
+      lat: +d['latitude'],
+      lng: +d['longitude']
+    });
   });
 })];
-Promise.all(houseLoad).then(function(){console.log("");});
-
 
 
 function initMap() {
@@ -62,13 +61,9 @@ function initMap() {
       position: destination.latlng,
       map: map
     });
+    directionsDisplay = new google.maps.DirectionsRenderer({ preserveViewport: true, suppressMarkers: true });
     dataRefresh();
   });
-
-  //map.addListener('click', function() {
-    //map.setCenter(destination.marker.getPosition());
-  //})
-
 
   // Crime heatmap
   heatmap = new google.maps.visualization.HeatmapLayer({
@@ -97,12 +92,7 @@ function dataRefresh() {
   sliderValue = document.getElementById("sliderbar").value;
   travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
-  getMapBounds();
-  // Update crime heat map
-  crimeHeatMap();
-  // Update houses markers
-  houseMarker();
-  //console.log("-----------------------");
+  Promise.all([getMapBounds()]).then(houseMarker()).then(crimeHeatMap());
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -117,14 +107,13 @@ function inBetween(x, a, b) {
 function houseMarker() {
   //console.log("Update houses within bounds")
   var service = new google.maps.DistanceMatrixService();
-  var data = houses.filter(function(d) {
+  var data = houses.filter(function (d) {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
   });
 
   // Fetch commute time for each points within the boundary
-  data.forEach(function(k) {
+  data.forEach(function (k) {
 
-    var directionsDisplay = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
 
     var getCommute = {
@@ -132,7 +121,7 @@ function houseMarker() {
       destinations: [destination.latlng],
       travelMode: travelMode
     };
-    service.getDistanceMatrix(getCommute, function(response, status) {
+    service.getDistanceMatrix(getCommute, function (response, status) {
       if (status === 'OK') {
         k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
       } else {
@@ -142,50 +131,48 @@ function houseMarker() {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(k.lat, k.lng),
         map: map,
-        icon: (k.commute > sliderValue*60)? iconGray : iconBlue
+        icon: (k.commute > sliderValue * 60) ? iconGray : iconBlue
       });
-
-
-
-      var content = "<table><tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
+      var content = "<table  class='tbl-marker'>"
+        + "<tr><td><b>Price:</b></td> <td>" + k.price.toLocaleString() + "/month</td></tr>"
         + "<tr><td><b>Bed:</b></td> <td>" + k.bed + "</td></tr>"
         + "<tr><td><b>Bath:</b></td> <td>" + k.bath + "</td></tr>"
         + "<tr><td><b>Room size:</b></td> <td>" + k.size.toLocaleString() + " (sqrt)</td></tr>"
-        + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute/60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
-        + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr></table>";
+        + "<tr><td><b>Commute Time:</b></td> <td>" + Math.round(k.commute / 60) + "mins (" + travelMode.toLowerCase() + ")</td></tr>"
+        + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr>"
+        + "</table>";
       var infowindow = new google.maps.InfoWindow
 
       google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
         return function () {
           // remove previous infowindow
-          if(info_windows_container.length == 1){
-            info_windows_container[0].setMap(null);//delete the previous marker
-            info_windows_container.shift();//remove the first element in the array
+          if (info_windows_container.length == 1) {
+            info_windows_container[0].setMap(null);   //delete the previous marker
+            info_windows_container.shift();           //remove the first element in the array
           }
 
           infowindow.setContent(content);
           infowindow.open(map, marker);
-          info_windows_container.push(marker)
+          info_windows_container.push(marker);
         };
       })(marker, content, infowindow));
 
       housesMarkers.push(marker);
       housesInBound.push(k);
       //console.log(k);
-
-
-      marker.addListener('click', function() {
+      
+      // Add commute path when marker is clicked (remove previous and add a new one)
+      marker.addListener('click', function () {
         directionsDisplay.set('directions', null);
         directionsDisplay.setMap(map);
         var start_point = marker.getPosition()
-        calculateAndDisplayRoute(directionsService, directionsDisplay,start_point,travelMode);
-
-      })
+        calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, start_point, travelMode);
+      });
 
     });
   });
 
-  setTimeout(function() {sliderVal(sliderValue, housesInBound);}, 300);
+  setTimeout(function () { sliderVal(sliderValue, housesInBound); }, 300);
 }
 
 function changeTravelMode(val) {
@@ -195,12 +182,12 @@ function changeTravelMode(val) {
 }
 
 // Setting and updating sliderValue
-function sliderVal(val, dataset=housesInBound) {
+function sliderVal(val, dataset = housesInBound) {
   sliderValue = val;        // sliderValue in minutes
   //var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
 
   for (var i = 0; i < dataset.length; i++) {
-    if (dataset[i].commute > sliderValue*60) {
+    if (dataset[i].commute > sliderValue * 60) {
       housesMarkers[i].setIcon(iconGray);
     } else {
       housesMarkers[i].setIcon(iconBlue);
@@ -209,20 +196,19 @@ function sliderVal(val, dataset=housesInBound) {
 
 }
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay, start, tavel_mode) {
-  var end = document.getElementById('address').value;
-  directionsService.route({
-		 origin: start,
-		 destination: end,
-		 travelMode: tavel_mode
-		}, function(response, status) {
-		  if (status === 'OK') {
-			directionsDisplay.setDirections(response);
-		  } else {
-			alert('Directions request failed due to ' + status);
-		  }
-		});
-	}
+function calculateAndDisplayRoute(dirService, dirDisplay, start, tavel_mode) {
+  dirService.route({
+    origin: start,
+    destination: destination.latlng,
+    travelMode: tavel_mode
+  }, function (response, status) {
+    if (status === 'OK') {
+      dirDisplay.setDirections(response);
+    } else {
+      alert('Directions request failed due to ' + status);
+    }
+  });
+}
 
 
 
