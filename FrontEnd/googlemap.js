@@ -30,8 +30,6 @@ Promise.all(houseLoad).then(function(){console.log("");});
 function initMap() {
   //variables for Directions API
 
-  var directionsDisplay = new google.maps.DirectionsRenderer;
-  var directionsService = new google.maps.DirectionsService;
   // Map options
   options = {
     zoom: 15,
@@ -43,26 +41,6 @@ function initMap() {
 
   // New map
   map = new google.maps.Map(document.getElementById('map'), options);
-
-  directionsDisplay.setMap(map);
-  var start_p = document.getElementById('start').value;
-  document.getElementById('route').addEventListener('click', function() {
-       calculateAndDisplayRoute(directionsService, directionsDisplay, start_p)
-})
-  /*directionsDisplay.setMap(map);
-          directionsDisplay.setPanel(document.getElementById('panel-direction'));
-
-          var control = document.getElementById('floating-panel');
-          control.style.display = 'block';
-          map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
-
-          var onChangeHandler = function() {
-            calculateAndDisplayRoute(directionsService, directionsDisplay);
-          };
-          document.getElementById('start').addEventListener('change', onChangeHandler);
-          document.getElementById('end').addEventListener('change', onChangeHandler);
-
-*/
 
   // Limiting map scope (map zoom)
   minZoomLevel = 15;
