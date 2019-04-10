@@ -117,7 +117,7 @@ function houseMarker() {
     k.latlng = new google.maps.LatLng(k.lat, k.lng);
 
     var getCommute = {
-      origins: [k.lat],
+      origins: [k.latlng],
       destinations: [destination.latlng],
       travelMode: travelMode
     };
