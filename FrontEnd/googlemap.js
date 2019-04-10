@@ -93,7 +93,7 @@ function dataRefresh() {
   sliderValue = document.getElementById("sliderbar").value;
   travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
-  Promise.all([getMapBounds()]).then(houseMarker()).then(crimeHeatMap());
+  Promise.all([getMapBounds()]).then(houseMarker()).then(crimeHeatMap()).then(function(){console.log(housesInBound.length)});
 }
 
 // Is number x is between a and b? (Could be used for checking lat and lng)
@@ -114,14 +114,14 @@ function houseMarker() {
 
   // Fetch commute time for each points within the boundary
   data.forEach(function (k) {
-
-    var directionsService = new google.maps.DirectionsService;
+    k.latlng = new google.maps.LatLng(k.lat, k.lng);
 
     var getCommute = {
-      origins: [new google.maps.LatLng(k.lat, k.lng)],
+      origins: [k.lat],
       destinations: [destination.latlng],
       travelMode: travelMode
     };
+
     service.getDistanceMatrix(getCommute, function (response, status) {
       if (status === 'OK') {
         k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
@@ -129,7 +129,6 @@ function houseMarker() {
         k.commute = null;
       }
 
-      k.latlng = new google.maps.LatLng(k.lat, k.lng);
       var marker = new google.maps.Marker({
         position: k.latlng,
         map: map,
@@ -157,7 +156,7 @@ function houseMarker() {
       housesMarkers.push(marker);
       housesInBound.push(k);
       //console.log(k);
-      
+
       // Add commute path when marker is clicked (remove previous and add a new one)
       marker.addListener('click', function () {
         directionsDisplay.set('directions', null);
@@ -168,7 +167,7 @@ function houseMarker() {
     });
   });
 
-  setTimeout(function () { sliderVal(sliderValue, housesInBound); }, 300);
+  setTimeout(function () { sliderVal(sliderValue, housesInBound); }, 500);
 }
 
 function changeTravelMode(val) {
