@@ -62,6 +62,7 @@ function initMap() {
       map: map
     });
     directionsDisplay = new google.maps.DirectionsRenderer({ preserveViewport: true, suppressMarkers: true });
+    info_windows_container = new google.maps.InfoWindow;
     dataRefresh();
   });
 
@@ -128,8 +129,9 @@ function houseMarker() {
         k.commute = null;
       }
 
+      k.latlng = new google.maps.LatLng(k.lat, k.lng);
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(k.lat, k.lng),
+        position: k.latlng,
         map: map,
         icon: (k.commute > sliderValue * 60) ? iconGray : iconBlue
       });
@@ -145,15 +147,10 @@ function houseMarker() {
 
       google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
         return function () {
-          // remove previous infowindow
-          if (info_windows_container.length == 1) {
-            info_windows_container[0].setMap(null);   //delete the previous marker
-            info_windows_container.shift();           //remove the first element in the array
-          }
-
+          info_windows_container.close();
           infowindow.setContent(content);
           infowindow.open(map, marker);
-          info_windows_container.push(marker);
+          info_windows_container = infowindow;
         };
       })(marker, content, infowindow));
 
@@ -165,8 +162,7 @@ function houseMarker() {
       marker.addListener('click', function () {
         directionsDisplay.set('directions', null);
         directionsDisplay.setMap(map);
-        var start_point = marker.getPosition()
-        calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, start_point, travelMode);
+        calculateAndDisplayRoute(new google.maps.DirectionsService, directionsDisplay, k.latlng);
       });
 
     });
@@ -179,6 +175,8 @@ function changeTravelMode(val) {
   travelMode = val;
   //console.log(val);
   houseMarker();
+  info_windows_container[0].setMap(null);//delete the previous marker
+  info_windows_container.shift()
 }
 
 // Setting and updating sliderValue
@@ -196,11 +194,11 @@ function sliderVal(val, dataset = housesInBound) {
 
 }
 
-function calculateAndDisplayRoute(dirService, dirDisplay, start, tavel_mode) {
+function calculateAndDisplayRoute(dirService, dirDisplay, start) {
   dirService.route({
     origin: start,
     destination: destination.latlng,
-    travelMode: tavel_mode
+    travelMode: travelMode
   }, function (response, status) {
     if (status === 'OK') {
       dirDisplay.setDirections(response);
