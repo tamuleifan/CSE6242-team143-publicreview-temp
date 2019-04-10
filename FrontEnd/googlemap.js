@@ -3,6 +3,7 @@ var info_windows_container = [];
 var directionsDisplay = {};
 var bounds = {};
 var sliderValue = 20;       // sliderValue in minutes
+var minZoomLevel = 14;
 var houses = [];
 var housesInBound = [];
 var housesMarkers = [];
@@ -42,7 +43,6 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), options);
 
   // Limiting map scope (map zoom)
-  minZoomLevel = 15;
   map.addListener('zoom_changed', function () {
     if (map.getZoom() < minZoomLevel) map.setZoom(minZoomLevel);
     heatmap.set('radius', (map.getZoom() - 13) * 10);
