@@ -84,11 +84,11 @@ table.tbl-map{
 
 #mask {
   position: absolute;
-  visibility: hidden;
+  visibility: visible;
   background: #000;
   z-index: 999;
-  left: 11px;
-  top: 150px;
+  left: 41px;
+  top: 335px;
   width: 800px;
   height: 600px;
   opacity: 0.4;
