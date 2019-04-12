@@ -26,7 +26,6 @@ var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function (data) {
   });
 })];
 
-
 function initMap() {
   //variables for Directions API
 
@@ -90,6 +89,7 @@ function getMapBounds() {
 function dataRefresh() {
   //console.log("-----------------------");
   //console.log("Refreshing");
+  document.getElementById("mask").style.visibility = "visible";
   sliderValue = document.getElementById("sliderbar").value;
   travelMode = document.getElementById("travelModeMenu").value;
   // Update bounds
@@ -115,10 +115,12 @@ function houseMarker() {
     return (inBetween(d.lat, bounds.bottom, bounds.top) && inBetween(d.lng, bounds.right, bounds.left));
   });
 
+  if (data.length == 0) document.getElementById("mask").style.visibility = "hidden";
+
   // Fetch commute time for each points within the boundary
   data.forEach(function (k) {
     k.latlng = new google.maps.LatLng(k.lat, k.lng);
-    
+
     var getCommute = {
       origins: [k.latlng],
       destinations: [destination.latlng],
@@ -127,6 +129,7 @@ function houseMarker() {
 
     service.getDistanceMatrix(getCommute, function (response, status) {
       i += 1;   // counter for data processing index
+      console.log(i);
 
       if (status === 'OK') {
         k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
@@ -149,7 +152,7 @@ function houseMarker() {
           + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr>"
           + "</table>";
         var infowindow = new google.maps.InfoWindow
-  
+
         google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
           return function () {
             info_windows_container.close();
@@ -182,7 +185,7 @@ function inList(obj, list) {
   for (i = 0; i < list.length; i++) {
     if (list[i] === obj) return true;
   }
-  return false
+  return false;
 }
 
 function changeTravelMode(val) {
@@ -200,12 +203,12 @@ function sliderVal(val, dataset = housesInBound) {
 
   for (var i = 0; i < dataset.length; i++) {
     if (dataset[i].commute > sliderValue * 60) {
-      housesMarkers[i].setIcon(iconGray);
+      if (housesMarkers[i].getIcon() === iconBlue) housesMarkers[i].setIcon(iconGray);
     } else {
-      housesMarkers[i].setIcon(iconBlue);
+      if (housesMarkers[i].getIcon() === iconGray) housesMarkers[i].setIcon(iconBlue);
     }
   }
-
+  document.getElementById("mask").style.visibility = "hidden";
 }
 
 function calculateAndDisplayRoute(dirService, dirDisplay, start) {
@@ -275,23 +278,23 @@ function searchAddress(address) {
   var sw = new google.maps.LatLng(40.4936881, -74.2591087);
 
   geocoder.geocode({
-      address: address,
-      bounds: new google.maps.LatLngBounds(sw, ne),
-      componentRestrictions: { country: 'US' }
-    }, function (results, status) {
-      if (status === 'OK') {
-        map.setCenter(results[0].geometry.location);
-        destination.marker.setMap(null);
-        destination.latlng = results[0].geometry.location;
-        destination.marker = new google.maps.Marker({
-          position: destination.latlng,
-          map: map
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
+    address: address,
+    bounds: new google.maps.LatLngBounds(sw, ne),
+    componentRestrictions: { country: 'US' }
+  }, function (results, status) {
+    if (status === 'OK') {
+      map.setCenter(results[0].geometry.location);
+      destination.marker.setMap(null);
+      destination.latlng = results[0].geometry.location;
+      destination.marker = new google.maps.Marker({
+        position: destination.latlng,
+        map: map
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
 
-      dataRefresh()
+    dataRefresh()
 
   });
 }

@@ -16,6 +16,10 @@
 <body>
   <h1>A quick demo</h1>
 
+  <div id="mask">
+    Loading...
+  </div>
+
   <div>
     <table class="tbl-entry">
       <tr>
@@ -37,7 +41,6 @@
         <td>Crime Rate Heatmap: <input type="checkbox" id="heatmap" onclick="toggleHeatmap()"></td>
       </tr>
     </table>
-
     <table class="tbl-map">
       <tr>
         <td>
@@ -48,14 +51,7 @@
         </td>
       </tr>
     </table>
-
-
-
-
   </div>
-
-
-
 
   <script>
     var slider = document.getElementById("sliderbar");

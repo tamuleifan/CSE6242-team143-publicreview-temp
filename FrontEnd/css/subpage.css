@@ -34,3 +34,16 @@ table.tbl-map{
 	height:600px;
     overflow-x:hidden;
 }
+
+#mask {
+  position: absolute;
+  visibility: hidden;
+  background: #000;
+  z-index: 999;
+  left: 11px;
+  top: 150px;
+  width: 800px;
+  height: 600px;
+  opacity: 0.4;
+  text-align: center;
+}
