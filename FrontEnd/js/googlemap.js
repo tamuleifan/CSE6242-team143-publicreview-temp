@@ -118,7 +118,7 @@ function houseMarker() {
   // Fetch commute time for each points within the boundary
   data.forEach(function (k) {
     k.latlng = new google.maps.LatLng(k.lat, k.lng);
-    
+
     var getCommute = {
       origins: [k.latlng],
       destinations: [destination.latlng],
@@ -149,7 +149,7 @@ function houseMarker() {
           + "<tr><td><b><a href='" + k.url + "' target='_blank'>Link to Zillow</a></b> </td></tr>"
           + "</table>";
         var infowindow = new google.maps.InfoWindow
-  
+
         google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
           return function () {
             info_windows_container.close();
