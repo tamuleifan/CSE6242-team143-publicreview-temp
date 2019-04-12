@@ -1,0 +1,217 @@
+/*!
+ * SNOW Landing Page Theme
+ *
+ * Created by Visual Soldiers
+ * Visit us at http://www.visualsoldiers.com
+ *
+ * Handcrafted with love in Atlanta!
+ */
+
+
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, .lead {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  etter-spacing: -0.5px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #231f20;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+p {
+  font-size: 17px;
+  line-height: 22px;
+  color: #929496;
+  font-weight: 400;
+}
+
+
+
+/*------------------Buttons---------------------*/
+.btn:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+  outline: none;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-lg {
+  font-size: 13px;
+  line-height: 1.33;
+  padding: 22px 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+
+.btn-primary {
+  background-color:#70cbce;
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: #8be2e5;
+  color: #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+
+/*-----------------Margins------------------*/
+.margin-0 {
+    margin-bottom: 0 !important;
+}
+.margin-10 {
+    margin-bottom: 10px !important;
+}
+.margin-15 {
+    margin-bottom: 15px !important;
+}
+.margin-20 {
+    margin-bottom: 20px !important;
+}
+.margin-30 {
+    margin-bottom: 30px !important;
+}
+.margin-40 {
+    margin-bottom: 40px !important;
+}
+.margin-50 {
+    margin-bottom: 50px !important;
+}
+.margin-60 {
+    margin-bottom: 60px !important;
+}
+.margin-70 {
+    margin-bottom: 70px !important;
+}
+.margin-80 {
+    margin-bottom: 80px !important;
+}
+.margin-90 {
+    margin-bottom: 90px !important;
+}
+.margin-100 {
+    margin-bottom: 100px !important;
+}
+
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+header {
+  background: url(../img/background.png) no-repeat center center;
+  width: 100%;
+  padding: 20px 10px 60px 10px;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.header-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 0px;
+  margin-bottom: 15%;
+}
+
+
+
+footer {
+  background: #ffffff;
+  padding: 40px 0px;
+}
+
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+.btn-lg {
+  font-size: 12.5px;
+  line-height: 1.33;
+  padding: 16px 13px;
+  letter-spacing: 0px;
+}
+
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) { 
+
+
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+  
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+     
+
+
+/* Large screens ----------- */
+@media (min-width: 1200px) and (max-width: 3000px) {
+
+}   
+
+
+
+
+

@@ -1,0 +1,609 @@
+location,price_per_month,bed num,bath num,sqft,url of rental info,latitude,longitude
+"Main St,Staten Island,NY,10307",400.0,1,1.0,1775.0,https://www.zillow.com/homedetails/Main-St-Staten-Island-NY-10307/2088886871_zpid/,40.5060457,-74.245868
+"574 Crescent St,Brooklyn,NY,11208",600.0,1,1.0,2080.0,https://www.zillow.com/homedetails/574-Crescent-St-Brooklyn-NY-11208/30645774_zpid/,40.6737663,-73.8698283
+"24615 137th Ave,Jamaica,NY,11422",750.0,1,1.0,2300.0,https://www.zillow.com/homedetails/24615-137th-Ave-Jamaica-NY-11422/32206445_zpid/,40.667992,-73.730526
+"Saint Albans Pl,Staten Island,NY,10312",800.0,1,1.0,3180.0,https://www.zillow.com/homedetails/Saint-Albans-Pl-Staten-Island-NY-10312/2085155063_zpid/,40.5441533,-74.16112489999999
+"207 St,Cambria Heights,NY,11411",825.0,1,1.0,3180.0,https://www.zillow.com/homedetails/207-St-Cambria-Heights-NY-11411/2085141510_zpid/,40.7090365,-73.75092310000001
+"Vineland Ave,Staten Island,NY,10312",850.0,1,1.0,800.0,https://www.zillow.com/homedetails/Vineland-Ave-Staten-Island-NY-10312/2085296615_zpid/,40.5469328,-74.1879275
+"20th Ave,Brooklyn,NY,11214",850.0,1,1.0,800.0,https://www.zillow.com/homedetails/20th-Ave-Brooklyn-NY-11214/2103269678_zpid/,40.612004,-73.99055899999999
+"850 Greene Ave # 2,Brooklyn,NY,11221",865.0,3,1.0,1304.0,https://www.zillow.com/homedetails/850-Greene-Ave-2-Brooklyn-NY-11221/2085195983_zpid/,40.6901874,-73.93411329999999
+"13536 234th Pl,Jamaica,NY,11422",875.0,1,1.0,1304.0,https://www.zillow.com/homedetails/13536-234th-Pl-Jamaica-NY-11422/32205767_zpid/,40.671698,-73.737127
+"4355 166th St,Flushing,NY,11358",875.0,1,1.0,2184.0,https://www.zillow.com/homedetails/4355-166th-St-Flushing-NY-11358/32047267_zpid/,40.756874,-73.80038499999999
+"193 Beach 113th St # 3,Rockaway Park,NY,11694",900.0,1,1.0,350.0,https://www.zillow.com/homedetails/193-Beach-113th-St-3-Rockaway-Park-NY-11694/2085014733_zpid/,40.5803024,-73.8345911
+"Seguine Ave,Staten Island,NY,10309",900.0,1,1.0,430.0,https://www.zillow.com/homedetails/Seguine-Ave-Staten-Island-NY-10309/2085792756_zpid/,40.5191984,-74.1971456
+"78th St,Brooklyn,NY,11228",900.0,1,1.0,1600.0,https://www.zillow.com/homedetails/78th-St-Brooklyn-NY-11228/2085482878_zpid/,40.619914,-74.01142
+"El Camino Loop,Staten Island,NY,10309",900.0,1,1.0,2684.0,https://www.zillow.com/homedetails/El-Camino-Loop-Staten-Island-NY-10309/2100274329_zpid/,40.5373175,-74.2137797
+"638 E 23rd St,Brooklyn,NY,11210",900.0,1,1.0,2684.0,https://www.zillow.com/homedetails/638-E-23rd-St-Brooklyn-NY-11210/30670080_zpid/,40.6346806,-73.9553842
+"16504 Highland Ave,Jamaica,NY,11432",900.0,1,1.0,600.0,https://www.zillow.com/homedetails/16504-Highland-Ave-Jamaica-NY-11432/2085030895_zpid/,40.710705,-73.7985693
+"78th St,Brooklyn,NY,11214",900.0,1,1.0,600.0,https://www.zillow.com/homedetails/78th-St-Brooklyn-NY-11214/2086122778_zpid/,40.619914,-74.01142
+"82 Shale St # 1,Staten Island,NY,10314",900.0,1,1.0,600.0,https://www.zillow.com/homedetails/82-Shale-St-1-Staten-Island-NY-10314/2085339011_zpid/,40.583429,-74.151712
+"1550 Arden Ave # STUDIO,Staten Island,NY,10312",1100.0,1,1.0,550.0,https://www.zillow.com/homedetails/1550-Arden-Ave-STUDIO-Staten-Island-NY-10312/2085033278_zpid/,40.53362449999999,-74.16445689999999
+"185th St,Fresh Meadows,NY,11366",1100.0,1,1.0,600.0,https://www.zillow.com/homedetails/185th-St-Fresh-Meadows-NY-11366/2089564851_zpid/,40.7363789,-73.7875803
+"Throggs Neck Expy,BRONX,NY,10465",1100.0,1,1.0,600.0,https://www.zillow.com/homedetails/Throggs-Neck-Expy-Bronx-NY-10465/2085722373_zpid/,40.8258705,-73.81608709999999
+"Throggs Neck Expy,Bronx,NY,10465",1100.0,1,1.0,2324.0,https://www.zillow.com/homedetails/Throggs-Neck-Expy-Bronx-NY-10465/2085100094_zpid/,40.8258705,-73.81608709999999
+"500 Sheldon Ave,Staten Island,NY,10312",1100.0,1,1.0,2324.0,https://www.zillow.com/homedetails/500-Sheldon-Ave-Staten-Island-NY-10312/2085054411_zpid/,40.5422758,-74.1915865
+"24 Samantha Ln,Staten Island,NY,10309",1100.0,1,1.0,2700.0,https://www.zillow.com/homedetails/24-Samantha-Ln-Staten-Island-NY-10309/64909842_zpid/,40.554023,-74.21185659999999
+"138 Eltingville Blvd,Staten Island,NY,10312",1100.0,1,1.0,700.0,https://www.zillow.com/homedetails/138-Eltingville-Blvd-Staten-Island-NY-10312/79730768_zpid/,40.5479437,-74.16535139999999
+"Pheasant Ln,Staten Island,NY,10309",1100.0,1,1.0,2906.0,https://www.zillow.com/homedetails/Pheasant-Ln-Staten-Island-NY-10309/2096024468_zpid/,40.5328323,-74.2224703
+"Simon Ct,Staten Island,NY,10307",1100.0,1,1.0,3386.0,https://www.zillow.com/homedetails/Simon-Ct-Staten-Island-NY-10307/2085130382_zpid/,40.5158505,-74.2365195
+"Everett Ave,Staten Island,NY,10309",1100.0,1,1.0,3386.0,https://www.zillow.com/homedetails/Everett-Ave-Staten-Island-NY-10309/2094827195_zpid/,40.5181137,-74.2049475
+"Ocean Ave,Staten Island,NY,10305",1100.0,1,1.0,500.0,https://www.zillow.com/homedetails/Ocean-Ave-Staten-Island-NY-10305/2085127961_zpid/,40.59617470000001,-74.06354739999999
+"Holcomb Ave,Staten Island,NY,10312",1100.0,1,1.0,2143.0,https://www.zillow.com/homedetails/Holcomb-Ave-Staten-Island-NY-10312/2135700831_zpid/,40.5474,-74.190786
+"E 92nd St,Brooklyn,NY,11236",1100.0,1,1.0,2143.0,https://www.zillow.com/homedetails/E-92nd-St-Brooklyn-NY-11236/2092543291_zpid/,40.6461786,-73.9105454
+"701 Ralph Ave,Brooklyn,NY,11212",1136.0,1,1.0,2143.0,https://www.zillow.com/homedetails/701-Ralph-Ave-Brooklyn-NY-11212/2094472992_zpid/,40.66561249999999,-73.9220692
+"E 14th St,Brooklyn,NY,11229",1150.0,1,1.0,2143.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11229/2088673101_zpid/,40.6056978,-73.95865409999999
+"141 Haven Ave,Staten Island,NY,10306",1150.0,1,1.0,2143.0,https://www.zillow.com/homedetails/141-Haven-Ave-Staten-Island-NY-10306/82784341_zpid/,40.5790374,-74.0984281
+"Malibu Ct,Staten Island,NY,10309",1150.0,1,1.0,650.0,https://www.zillow.com/homedetails/Malibu-Ct-Staten-Island-NY-10309/2101901646_zpid/,40.5377586,-74.21383519999999
+"E 14th St,Brooklyn,NY,11229",1150.0,1,1.0,500.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11229/2085349127_zpid/,40.6056978,-73.95865409999999
+"903 E 92nd St,Brooklyn,NY,11236",1150.0,1,1.0,450.0,https://www.zillow.com/homedetails/903-E-92nd-St-Brooklyn-NY-11236/30772955_zpid/,40.64647799999999,-73.910383
+"Strang Ave,BRONX,NY,10466",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/Strang-Ave-Bronx-NY-10466/2085915379_zpid/,40.89094,-73.83908939999999
+"Getz Ave,Staten Island,NY,10312",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/Getz-Ave-Staten-Island-NY-10312/2085033603_zpid/,40.5543117,-74.165483
+"Oakley Pl,Staten Island,NY,10306",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/Oakley-Pl-Staten-Island-NY-10306/2085020808_zpid/,40.5739291,-74.12317449999999
+"Charleston Ave,STATEN ISLAND,NY,10309",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/Charleston-Ave-Staten-Island-NY-10309/2089189889_zpid/,40.5491659,-74.2176499
+"Bay Pkwy,Brooklyn,NY,11204",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/Bay-Pkwy-Brooklyn-NY-11204/2087596065_zpid/,40.6096878,-73.9857633
+"38 Alverson Ave FL B,Staten Island,NY,10309",1150.0,1,1.0,2688.0,https://www.zillow.com/homedetails/38-Alverson-Ave-FL-B-Staten-Island-NY-10309/2085141687_zpid/,40.55406310000001,-74.210756
+"26 Wagner St,Staten Island,NY,10305",1175.0,1,1.0,950.0,https://www.zillow.com/homedetails/26-Wagner-St-Staten-Island-NY-10305/58577750_zpid/,40.60794,-74.071551
+"Elson St,Staten Island,NY,10314",1199.0,1,1.0,1682.0,https://www.zillow.com/homedetails/Elson-St-Staten-Island-NY-10314/2085207476_zpid/,40.616391,-74.1663866
+"Courtney Loop,Staten Island,NY,10305",1200.0,1,1.0,4000.0,https://www.zillow.com/homedetails/Courtney-Loop-Staten-Island-NY-10305/2097771788_zpid/,40.6124665,-74.0626186
+"103rd Ave,Jamaica,NY,11419",1200.0,1,1.0,4000.0,https://www.zillow.com/homedetails/103rd-Ave-Jamaica-NY-11419/2085159709_zpid/,40.6855638,-73.8334203
+"Grant Ave,Brooklyn,NY,11208",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/Grant-Ave-Brooklyn-NY-11208/2085024740_zpid/,40.6830197,-73.8671366
+"E 14th St,Brooklyn,NY,11235",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11235/2085039427_zpid/,40.6056978,-73.95865409999999
+"Connecticut St,Staten Island,NY,10307",1200.0,1,1.0,550.0,https://www.zillow.com/homedetails/Connecticut-St-Staten-Island-NY-10307/2096105343_zpid/,40.5039422,-74.24994989999999
+"54 Lerer Ln,Staten Island,NY,10307",1200.0,1,1.0,2500.0,https://www.zillow.com/homedetails/54-Lerer-Ln-Staten-Island-NY-10307/59821277_zpid/,40.5070318,-74.23129899999999
+"North St,Bronx,NY,10468",1200.0,1,1.0,700.0,https://www.zillow.com/homedetails/North-St-Bronx-NY-10468/2085112702_zpid/,40.8599922,-73.90408819999999
+"627 Wainwright Ave,Staten Island,NY,10312",1200.0,1,1.0,300.0,https://www.zillow.com/homedetails/627-Wainwright-Ave-Staten-Island-NY-10312/32355563_zpid/,40.5449318,-74.1681952
+"Cruger Ave,Bronx,NY,10467",1200.0,1,1.0,700.0,https://www.zillow.com/homedetails/Cruger-Ave-Bronx-NY-10467/2094734102_zpid/,40.8624546,-73.86630900000002
+"11106 Corona Ave # 1,Corona,NY,11368",1200.0,1,1.0,700.0,https://www.zillow.com/homedetails/11106-Corona-Ave-1-Corona-NY-11368/2085269142_zpid/,40.7405578,-73.8497299
+"2099 Grand Concourse,Bronx,NY,10453",1200.0,1,1.0,700.0,https://www.zillow.com/homedetails/2099-Grand-Concourse-Bronx-NY-10453/2087304508_zpid/,40.8541081,-73.90266299999999
+"15 North St APT 3B,Bronx,NY,10468",1200.0,1,1.0,700.0,https://www.zillow.com/homedetails/15-North-St-APT-3B-Bronx-NY-10468/2085205776_zpid/,40.8600569,-73.9036299
+"E 234th St,Bronx,NY,10466",1200.0,1,1.0,650.0,https://www.zillow.com/homedetails/E-234th-St-Bronx-NY-10466/2085038756_zpid/,40.89537410000001,-73.8606994
+"38 Beard St FL 1ST,Staten Island,NY,10314",1200.0,1,1.0,650.0,https://www.zillow.com/homedetails/38-Beard-St-FL-1ST-Staten-Island-NY-10314/2087143120_zpid/,40.5874729,-74.1491589
+"Elson St,Staten Island,NY,10314",1200.0,1,1.0,1884.0,https://www.zillow.com/homedetails/Elson-St-Staten-Island-NY-10314/2085210579_zpid/,40.616391,-74.1663866
+"Elson St,Staten Island,NY,10314",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/Elson-St-Staten-Island-NY-10314/2085207500_zpid/,40.616391,-74.1663866
+"Elson St,Staten Island,NY,10314",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/Elson-St-Staten-Island-NY-10314/2085207479_zpid/,40.616391,-74.1663866
+"E 14th St,Brooklyn,NY,11235",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11235/2085293333_zpid/,40.6056978,-73.95865409999999
+"Darnell Ln,Staten Island,NY,10309",1200.0,1,1.0,1900.0,https://www.zillow.com/homedetails/Darnell-Ln-Staten-Island-NY-10309/2096260173_zpid/,40.536702,-74.2225181
+"E 13th St,Brooklyn,NY,11229",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/E-13th-St-Brooklyn-NY-11229/2085372085_zpid/,40.606776,-73.9597987
+"E 14th St,Brooklyn,NY,11229",1200.0,1,1.0,6000.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11229/2085383777_zpid/,40.6056978,-73.95865409999999
+"E 14th St,Brooklyn,NY,11229",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11229/2085383845_zpid/,40.6056978,-73.95865409999999
+"Bay Ridge Pkwy,Brooklyn,NY,11204",1200.0,1,1.0,1100.0,https://www.zillow.com/homedetails/Bay-Ridge-Pkwy-Brooklyn-NY-11204/2086123101_zpid/,40.62160799999999,-74.0096391
+"24th Ave,Brooklyn,NY,11204",1200.0,1,1.0,1100.0,https://www.zillow.com/homedetails/24th-Ave-Brooklyn-NY-11204/2085142288_zpid/,40.612885,-73.9752202
+"Elson St,Staten Island,NY,10314",1200.0,1,1.0,1100.0,https://www.zillow.com/homedetails/Elson-St-Staten-Island-NY-10314/2085206411_zpid/,40.616391,-74.1663866
+"77 Santa Monica Ln,Staten Island,NY,10309",1200.0,1,1.0,1100.0,https://www.zillow.com/homedetails/77-Santa-Monica-Ln-Staten-Island-NY-10309/64610465_zpid/,40.536596,-74.212175
+"E 14th St,Brooklyn,NY,11235",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/E-14th-St-Brooklyn-NY-11235/2085026765_zpid/,40.6056978,-73.95865409999999
+"234th St,Queens,NY,11422",1200.0,1,1.0,4450.0,https://www.zillow.com/homedetails/234th-St-Queens-NY-11422/2085769164_zpid/,40.6800537,-73.7331713
+"Rockaway St,Staten Island,NY,10307",1200.0,1,1.0,4450.0,https://www.zillow.com/homedetails/Rockaway-St-Staten-Island-NY-10307/2085384229_zpid/,40.5025332,-74.2398865
+"Avenue U,Brooklyn,NY,11229",1200.0,1,1.0,600.0,https://www.zillow.com/homedetails/Avenue-U-Brooklyn-NY-11229/2085064313_zpid/,40.60032,-73.94288619999999
+"1502 Sheridan Ave,Bronx,NY,10457",1225.0,1,1.0,550.0,https://www.zillow.com/homedetails/1502-Sheridan-Ave-Bronx-NY-10457/2085216722_zpid/,40.8406492,-73.9111981
+"2165 Ryer Ave # 1,Bronx,NY,10457",1225.0,1,1.0,550.0,https://www.zillow.com/homedetails/2165-Ryer-Ave-1-Bronx-NY-10457/2085454086_zpid/,40.8546116,-73.9004334
+"Stadium Ave,Bronx,NY,10465",1225.0,1,1.0,550.0,https://www.zillow.com/homedetails/Stadium-Ave-Bronx-NY-10465/2100188193_zpid/,40.8415982,-73.8202542
+"1455 Sheridan Ave # 1,Bronx,NY,10457",1225.0,1,1.0,365.0,https://www.zillow.com/homedetails/1455-Sheridan-Ave-1-Bronx-NY-10457/2085485768_zpid/,40.8398921,-73.91217089999999
+"439 Bainbridge St # 1,Brooklyn,NY,11233",1250.0,1,1.0,365.0,https://www.zillow.com/homedetails/439-Bainbridge-St-1-Brooklyn-NY-11233/2112732658_zpid/,40.682553,-73.919174
+"Sheldon Ave,Staten Island,NY,10312",1250.0,1,1.0,500.0,https://www.zillow.com/homedetails/Sheldon-Ave-Staten-Island-NY-10312/2101173435_zpid/,40.5411829,-74.1963908
+"139-09 84dr,Briarwood,NY,11435",1250.0,1,1.0,600.0,https://www.zillow.com/homedetails/139-09-84dr-Briarwood-NY-11435/2098824043_zpid/,40.7096751,-73.81750629999999
+"15th Ave,Brooklyn,NY,11219",1250.0,1,1.0,600.0,https://www.zillow.com/homedetails/15th-Ave-Brooklyn-NY-11219/2087779199_zpid/,40.621561,-73.998952
+"Bedford Ave,BROOKLYN,NY,11229",1250.0,1,1.0,500.0,https://www.zillow.com/homedetails/Bedford-Ave-Brooklyn-NY-11229/2085417469_zpid/,40.6537806,-73.956165
+"El Camino Loop,Staten island,NY,10309",1250.0,1,1.0,500.0,https://www.zillow.com/homedetails/El-Camino-Loop-Staten-Island-NY-10309/2085316133_zpid/,40.5373175,-74.2137797
+"214 Sheldon Ave # 1,Staten Island,NY,10312",1250.0,1,1.0,450.0,https://www.zillow.com/homedetails/214-Sheldon-Ave-1-Staten-Island-NY-10312/2085014941_zpid/,40.5471535,-74.1840649
+"Wilbur St,Staten Island,NY,10309",1250.0,1,1.0,600.0,https://www.zillow.com/homedetails/Wilbur-St-Staten-Island-NY-10309/2089651732_zpid/,40.515167,-74.1954296
+"95th Ave,Jamaica,NY,11416",1250.0,1,1.0,725.0,https://www.zillow.com/homedetails/95th-Ave-Jamaica-NY-11416/2088455229_zpid/,40.691154,-73.830595
+"Rensselaer Ave,STATEN ISLAND,NY,10309",1250.0,1,1.0,725.0,https://www.zillow.com/homedetails/Rensselaer-Ave-Staten-Island-NY-10309/2085558697_zpid/,40.5406912,-74.1954283
+"205 Gower St # 1,Staten Island,NY,10314",1250.0,1,1.0,725.0,https://www.zillow.com/homedetails/205-Gower-St-1-Staten-Island-NY-10314/2085334841_zpid/,40.60756019999999,-74.12374369999999
+"300 Cortelyou Ave APT B3,Staten Island,NY,10312",1250.0,1,1.0,500.0,https://www.zillow.com/homedetails/300-Cortelyou-Ave-APT-B3-Staten-Island-NY-10312/2086782520_zpid/,40.5521699,-74.16337899999999
+"34 Windsor Ct,Staten Island,NY,10314",1250.0,1,1.0,500.0,https://www.zillow.com/homedetails/34-Windsor-Ct-Staten-Island-NY-10314/32288802_zpid/,40.61307499999999,-74.11562099999999
+"Sinclair Ave,Staten Island,NY,10312",1250.0,1,1.0,1170.0,https://www.zillow.com/homedetails/Sinclair-Ave-Staten-Island-NY-10312/2085028010_zpid/,40.5421559,-74.19559
+"106 South Ave,Staten Island,NY,10303",1250.0,1,1.0,1170.0,https://www.zillow.com/homedetails/106-South-Ave-Staten-Island-NY-10303/64710696_zpid/,40.637402,-74.16651
+"E 213th St,Bronx,NY,10467",1250.0,1,1.0,556.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10467/2085013211_zpid/,40.8777726,-73.8593903
+"610 Victory Blvd APT 1B,Staten Island,NY,10301",1299.0,1,1.0,556.0,https://www.zillow.com/homedetails/610-Victory-Blvd-APT-1B-Staten-Island-NY-10301/2085551286_zpid/,40.6276638,-74.0904554
+"6 Garibaldi Ave # B,Staten Island,NY,10306",1300.0,1,1.0,2690.0,https://www.zillow.com/homedetails/6-Garibaldi-Ave-B-Staten-Island-NY-10306/2088289954_zpid/,40.5625467,-74.1024087
+"8700 109th St,Richmond Hill,NY,11418",1300.0,1,1.0,693.0,https://www.zillow.com/homedetails/8700-109th-St-Richmond-Hill-NY-11418/2085318002_zpid/,40.6956583,-73.8389563
+"133-10 101 Avenue Richmond Hill Ny # FL 1ST,Queens,NY,11419",1300.0,1,1.0,693.0,https://www.zillow.com/homedetails/133-10-101-Avenue-Richmond-Hill-Ny-FL-1ST-Queens-NY-11419/2085658147_zpid/,40.6931069,-73.81407229999999
+"4193 Amboy Rd APT 2A,Staten Island,NY,10308",1300.0,1,1.0,693.0,https://www.zillow.com/homedetails/4193-Amboy-Rd-APT-2A-Staten-Island-NY-10308/32352727_zpid/,40.54808209999999,-74.1562462
+"363 Darlington Ave,Staten Island,NY,10312",1300.0,1,1.0,750.0,https://www.zillow.com/homedetails/363-Darlington-Ave-Staten-Island-NY-10312/32368840_zpid/,40.53573790000001,-74.1977778
+"10710 Muriel Ct,Ozone Park,NY,11417",1300.0,1,1.0,1024.0,https://www.zillow.com/homedetails/10710-Muriel-Ct-Ozone-Park-NY-11417/2095458410_zpid/,40.6773624,-73.83197969999999
+"215 Van Name Ave,Staten Island,NY,10303",1300.0,1,1.0,1024.0,https://www.zillow.com/homedetails/215-Van-Name-Ave-Staten-Island-NY-10303/2095994595_zpid/,40.6307821,-74.1535904
+"12056 232nd St,Jamaica,NY,11411",1300.0,1,1.0,1024.0,https://www.zillow.com/homedetails/12056-232nd-St-Jamaica-NY-11411/32198163_zpid/,40.685611,-73.73323599999999
+"Putnam Pl,Bronx,NY,10467",1300.0,1,1.0,400.0,https://www.zillow.com/homedetails/Putnam-Pl-Bronx-NY-10467/2091477072_zpid/,40.8795739,-73.875367
+"232 Buttrick Ave # 1,Bronx,NY,10465",1300.0,1,1.0,400.0,https://www.zillow.com/homedetails/232-Buttrick-Ave-1-Bronx-NY-10465/2085073194_zpid/,40.814509,-73.823762
+"E 213th St,Bronx,NY,10469",1300.0,1,1.0,400.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10469/2085498108_zpid/,40.8777726,-73.8593903
+"Nelson Ave,Bronx,NY,10452",1300.0,1,1.0,400.0,https://www.zillow.com/homedetails/Nelson-Ave-Bronx-NY-10452/2102383560_zpid/,40.8407936,-73.9232107
+"Tysens Ln,Staten Island,NY,10306",1300.0,1,1.0,500.0,https://www.zillow.com/homedetails/Tysens-Ln-Staten-Island-NY-10306/2086142713_zpid/,40.5653606,-74.1187537
+"Bedell Ave,Staten Island,NY,10307",1300.0,1,1.0,500.0,https://www.zillow.com/homedetails/Bedell-Ave-Staten-Island-NY-10307/2085014149_zpid/,40.5086609,-74.23369389999999
+"Parsons Blvd,Fresh Meadows,NY,11366",1300.0,2,1.0,500.0,https://www.zillow.com/homedetails/Parsons-Blvd-Fresh-Meadows-NY-11366/2085072929_zpid/,40.7216453,-73.80958869999999
+"Ryer Ave,Bronx,NY,10457",1300.0,1,1.0,500.0,https://www.zillow.com/homedetails/Ryer-Ave-Bronx-NY-10457/2096135240_zpid/,40.8556728,-73.8996791
+"2299 A C Powell Blvd APT 2B,New York,NY,10030",1300.0,1,1.0,1200.0,https://www.zillow.com/homedetails/2299-A-C-Powell-Blvd-APT-2B-New-York-NY-10030/2086509993_zpid/,40.8150363,-73.94349199999999
+"E 213th St,Bronx,NY,10467",1300.0,1,1.0,1200.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10467/2085463172_zpid/,40.8777726,-73.8593903
+"E 213th St,Bronx,NY,10467",1300.0,1,1.0,1200.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10467/2100216879_zpid/,40.8777726,-73.8593903
+"E 213th St,Bronx,NY,10467",1300.0,1,1.0,250.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10467/2085474583_zpid/,40.8777726,-73.8593903
+"E 213th St,Bronx,NY,10467",1300.0,1,1.0,250.0,https://www.zillow.com/homedetails/E-213th-St-Bronx-NY-10467/2085443992_zpid/,40.8777726,-73.8593903
+"White Plains Rd,Bronx,NY,10470",1300.0,1,1.0,250.0,https://www.zillow.com/homedetails/White-Plains-Rd-Bronx-NY-10470/2107874683_zpid/,40.856614,-73.867633
+"3978 Amundson Ave FL GROUND,Bronx,NY,10466",1300.0,1,1.0,250.0,https://www.zillow.com/homedetails/3978-Amundson-Ave-FL-GROUND-Bronx-NY-10466/2086451518_zpid/,40.8913606,-73.83614
+"3831 Bronxwood Ave # 1,Bronx,NY,10469",1300.0,1,1.0,880.0,https://www.zillow.com/homedetails/3831-Bronxwood-Ave-1-Bronx-NY-10469/2085819380_zpid/,40.8828468,-73.8567331
+"Beaumont Ave,Bronx,NY,10458",1300.0,1,1.0,880.0,https://www.zillow.com/homedetails/Beaumont-Ave-Bronx-NY-10458/2085313827_zpid/,40.8541487,-73.8844548
+"Depew Pl,Staten Island,NY,10309",1300.0,1,1.0,880.0,https://www.zillow.com/homedetails/Depew-Pl-Staten-Island-NY-10309/2095494912_zpid/,40.5286852,-74.2100688
+"Sinclair Ave,STATEN ISLAND,NY,10309",1300.0,1,1.0,750.0,https://www.zillow.com/homedetails/Sinclair-Ave-Staten-Island-NY-10309/2087707526_zpid/,40.5421559,-74.19559
+"82nd St,Brooklyn,NY,11228",1300.0,1,1.0,750.0,https://www.zillow.com/homedetails/82nd-St-Brooklyn-NY-11228/2086165742_zpid/,40.616345,-74.011543
+"77th St,Brooklyn,NY,11214",1300.0,1,1.0,750.0,https://www.zillow.com/homedetails/77th-St-Brooklyn-NY-11214/2085486132_zpid/,40.6214669,-74.0124838
+"Sinclair Ave,Staten Island,NY,10309",1300.0,1,1.0,750.0,https://www.zillow.com/homedetails/Sinclair-Ave-Staten-Island-NY-10309/2085039749_zpid/,40.5421559,-74.19559
+"Klondike Ave,Staten Island,NY,10314",1300.0,1,1.0,600.0,https://www.zillow.com/homedetails/Klondike-Ave-Staten-Island-NY-10314/2091681808_zpid/,40.5885098,-74.15628
+"Pompey Ave,Staten Island,NY,10312",1300.0,1,1.0,1930.0,https://www.zillow.com/homedetails/Pompey-Ave-Staten-Island-NY-10312/2086709807_zpid/,40.5499932,-74.17209009999999
+"Roman Ave,Staten Island,NY,10314",1300.0,1,1.0,1930.0,https://www.zillow.com/homedetails/Roman-Ave-Staten-Island-NY-10314/2094335933_zpid/,40.6153513,-74.1639734
+"85th St,Woodhaven,NY,11421",1300.0,1,1.0,650.0,https://www.zillow.com/homedetails/85th-St-Woodhaven-NY-11421/2085202957_zpid/,40.689215,-73.857861
+"80th St,Brooklyn,NY,11228",1300.0,1,1.0,650.0,https://www.zillow.com/homedetails/80th-St-Brooklyn-NY-11228/2085400711_zpid/,40.6184579,-74.0120278
+"Rensselaer Ave,Staten Island,NY,10309",1300.0,1,1.0,650.0,https://www.zillow.com/homedetails/Rensselaer-Ave-Staten-Island-NY-10309/2085133067_zpid/,40.5406912,-74.1954283
+"Essex Dr,Staten Island,NY,10314",1300.0,1,1.0,650.0,https://www.zillow.com/homedetails/Essex-Dr-Staten-Island-NY-10314/2085164329_zpid/,40.581406,-74.1584549
+"62nd St,Brooklyn,NY,11204",1300.0,1,1.0,900.0,https://www.zillow.com/homedetails/62nd-St-Brooklyn-NY-11204/2093468234_zpid/,40.6277011,-73.9997301
+"2155 82nd Street # C FL 3,Brooklyn,NY,11214",1300.0,1,1.0,525.0,https://www.zillow.com/homedetails/2155-82nd-Street-C-FL-3-Brooklyn-NY-11214/2085145128_zpid/,40.6049334,-73.99235759999999
+"Coney Island Ave,Brooklyn,NY,11223",1300.0,1,1.0,900.0,https://www.zillow.com/homedetails/Coney-Island-Ave-Brooklyn-NY-11223/2085442555_zpid/,40.6136033,-73.9631313
+"21st Ave,Brooklyn,NY,11214",1300.0,1,1.0,900.0,https://www.zillow.com/homedetails/21st-Ave-Brooklyn-NY-11214/2105825954_zpid/,40.6095149,-73.9895787
+"204 Greenleaf Ave APT 4B,Staten Island,NY,10310",1300.0,1,1.0,2248.0,https://www.zillow.com/homedetails/204-Greenleaf-Ave-APT-4B-Staten-Island-NY-10310/2085137270_zpid/,40.6252853,-74.12651300000002
+"Cropsey Ave,Brooklyn,NY,11214",1300.0,1,1.0,2240.0,https://www.zillow.com/homedetails/Cropsey-Ave-Brooklyn-NY-11214/2086206519_zpid/,40.595627,-73.9968531
+"Bay 40th St,BROOKLYN,NY,11214",1300.0,1,1.0,2240.0,https://www.zillow.com/homedetails/Bay-40th-St-Brooklyn-NY-11214/2085568645_zpid/,40.5938955,-73.9901759
+"148 Sharrotts Rd,Staten Island,NY,10309",1300.0,1,1.0,2240.0,https://www.zillow.com/homedetails/148-Sharrotts-Rd-Staten-Island-NY-10309/32373681_zpid/,40.5370834,-74.22295369999999
+"Woodstock Ave,Staten Island,NY,10301",1300.0,1,1.0,600.0,https://www.zillow.com/homedetails/Woodstock-Ave-Staten-Island-NY-10301/2090438777_zpid/,40.6321935,-74.0888001
+"Benziger Ave,Staten Island,NY,10301",1300.0,1,1.0,600.0,https://www.zillow.com/homedetails/Benziger-Ave-Staten-Island-NY-10301/2085453216_zpid/,40.6397959,-74.0819322
+"Bement Ave,Staten Island,NY,10310",1300.0,1,1.0,600.0,https://www.zillow.com/homedetails/Bement-Ave-Staten-Island-NY-10310/2085426362_zpid/,40.6313418,-74.11156559999999
+"Shore Pkwy,Brooklyn,NY,11214",1300.0,1,1.0,600.0,https://www.zillow.com/homedetails/Shore-Pkwy-Brooklyn-NY-11214/2098947014_zpid/,40.6203344,-73.89756799999999
+"2082 W 8th St,Brooklyn,NY,11223",1300.0,1,1.0,700.0,https://www.zillow.com/homedetails/2082-W-8th-St-Brooklyn-NY-11223/2104307256_zpid/,40.5964541,-73.9795824
+"117 Ridgewood Ave # B,Staten Island,NY,10312",1300.0,1,1.0,700.0,https://www.zillow.com/homedetails/117-Ridgewood-Ave-B-Staten-Island-NY-10312/2085202839_zpid/,40.5498634,-74.1632873
+"2121 Shore Pkwy,Brooklyn,NY,11214",1300.0,1,1.0,500.0,https://www.zillow.com/homedetails/2121-Shore-Pkwy-Brooklyn-NY-11214/62649032_zpid/,40.5855205,-73.98802979999999
+"Excelsior Ave,Staten Island,NY,10309",1300.0,1,1.0,580.0,https://www.zillow.com/homedetails/Excelsior-Ave-Staten-Island-NY-10309/2098029532_zpid/,40.5208534,-74.2069209
+"2181 Ryer Ave,Bronx,NY,10457",1315.0,1,1.0,580.0,https://www.zillow.com/homedetails/2181-Ryer-Ave-Bronx-NY-10457/29785840_zpid/,40.8548935,-73.9002497
+"1575 Thieriot Ave # C,Bronx,NY,10460",1315.0,1,1.0,590.0,https://www.zillow.com/homedetails/1575-Thieriot-Ave-C-Bronx-NY-10460/2085035829_zpid/,40.8398645,-73.86625649999999
+"2103 Ryer Ave # 5,Bronx,NY,10457",1315.0,1,1.0,500.0,https://www.zillow.com/homedetails/2103-Ryer-Ave-5-Bronx-NY-10457/2092099027_zpid/,40.8536597,-73.9008338
+"2 E 167th St,Bronx,NY,10452",1325.0,1,1.0,500.0,https://www.zillow.com/homedetails/2-E-167th-St-Bronx-NY-10452/2103680057_zpid/,40.8359057,-73.92224399999999
+"1269 Olmstead Ave,Bronx,NY,10462",1325.0,1,1.0,500.0,https://www.zillow.com/homedetails/1269-Olmstead-Ave-Bronx-NY-10462/2098010214_zpid/,40.8333643,-73.8547849
+"2876 Jerome Ave APT 6B,Bronx,NY,10468",1325.0,1,1.0,500.0,https://www.zillow.com/homedetails/2876-Jerome-Ave-APT-6B-Bronx-NY-10468/2089526237_zpid/,40.87160009999999,-73.8918438
+"194 Tompkins Ave,Staten Island,NY,10304",1325.0,1,1.0,500.0,https://www.zillow.com/homedetails/194-Tompkins-Ave-Staten-Island-NY-10304/2104736994_zpid/,40.6198736,-74.0769502
+"2230 Ryer Ave # 1,Bronx,NY,10457",1325.0,1,1.0,500.0,https://www.zillow.com/homedetails/2230-Ryer-Ave-1-Bronx-NY-10457/2086013157_zpid/,40.8557637,-73.89949940000001
+"Knox Pl,Bronx,NY,10467",1350.0,1,1.0,500.0,https://www.zillow.com/homedetails/Knox-Pl-Bronx-NY-10467/2104136937_zpid/,40.8820523,-73.88336679999999
+"2909 Ocean Ave 1g FL 1,Brooklyn,NY,11235",1350.0,1,1.0,500.0,https://www.zillow.com/homedetails/2909-Ocean-Ave-1g-FL-1-Brooklyn-NY-11235/2086651671_zpid/,40.5903457,-73.9495027
+"Neill Ave,Bronx,NY,10461",1350.0,1,1.0,1998.0,https://www.zillow.com/homedetails/Neill-Ave-Bronx-NY-10461/2085549200_zpid/,40.8530772,-73.8568832
+"Frisby Ave,Bronx,NY,10461",1350.0,1,1.0,3075.0,https://www.zillow.com/homedetails/Frisby-Ave-Bronx-NY-10461/2085369632_zpid/,40.8401324,-73.8461159
+"Rowland St,Bronx,NY,10461",1350.0,1,1.0,3075.0,https://www.zillow.com/homedetails/Rowland-St-Bronx-NY-10461/2104134223_zpid/,40.8389862,-73.8474445
+"Frisby Ave,Bronx,NY,10461",1350.0,1,1.0,3075.0,https://www.zillow.com/homedetails/Frisby-Ave-Bronx-NY-10461/2085418064_zpid/,40.8401324,-73.8461159
+"Oakley St,Bronx,NY,10469",1350.0,1,1.0,3075.0,https://www.zillow.com/homedetails/Oakley-St-Bronx-NY-10469/2085048823_zpid/,40.87976,-73.85044859999999
+"Grand Concourse,Bronx,NY,10457",1350.0,1,1.0,450.0,https://www.zillow.com/homedetails/Grand-Concourse-Bronx-NY-10457/2091789726_zpid/,40.8470382,-73.90825389999999
+"Grand Concourse,Bronx,NY,10457",1350.0,1,1.0,800.0,https://www.zillow.com/homedetails/Grand-Concourse-Bronx-NY-10457/2102521726_zpid/,40.8470382,-73.90825389999999
+"Cromwell Ave,Bronx,NY,10452",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/Cromwell-Ave-Bronx-NY-10452/2091775451_zpid/,40.8381761,-73.9211952
+"82nd Dr,Jamaica,NY,11435",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/82nd-Dr-Jamaica-NY-11435/2085038667_zpid/,40.713655,-73.8196712
+"Carpenter Ave,Bronx,NY,10466",1350.0,1,1.0,800.0,https://www.zillow.com/homedetails/Carpenter-Ave-Bronx-NY-10466/2105364840_zpid/,40.895794,-73.859445
+"117th St,College Pt,NY,11356",1350.0,1,1.0,800.0,https://www.zillow.com/homedetails/117th-St-College-Pt-NY-11356/2085184268_zpid/,40.7879866,-73.8505661
+"Throggs Neck Expy,BRONX,NY,10465",1350.0,1,1.0,800.0,https://www.zillow.com/homedetails/Throggs-Neck-Expy-Bronx-NY-10465/2089297317_zpid/,40.8258705,-73.81608709999999
+"Stadium Ave,Bronx,NY,10465",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/Stadium-Ave-Bronx-NY-10465/2085031715_zpid/,40.8415982,-73.8202542
+"300 Buttrick Ave,Bronx,NY,10465",1350.0,1,1.0,1998.0,https://www.zillow.com/homedetails/300-Buttrick-Ave-Bronx-NY-10465/2085075229_zpid/,40.8160239,-73.8249581
+"2713 Webb Ave,Bronx,NY,10468",1350.0,1,1.0,425.0,https://www.zillow.com/homedetails/2713-Webb-Ave-Bronx-NY-10468/2100268987_zpid/,40.8695827,-73.9022975
+"3081 Decatur Ave APT 1C,Bronx,NY,10467",1350.0,1,1.0,425.0,https://www.zillow.com/homedetails/3081-Decatur-Ave-APT-1C-Bronx-NY-10467/2085443809_zpid/,40.8713922,-73.87874049999999
+"Richardson Ave,Bronx,NY,10470",1350.0,1,1.0,650.0,https://www.zillow.com/homedetails/Richardson-Ave-Bronx-NY-10470/2085018944_zpid/,40.900488,-73.854106
+"3534 Bronx Blvd APT 3I,Bronx,NY,10467",1350.0,1,1.0,650.0,https://www.zillow.com/homedetails/3534-Bronx-Blvd-APT-3I-Bronx-NY-10467/2118947436_zpid/,40.87869,-73.8684616
+"2081 Grand Concourse # 1,Bronx,NY,10453",1350.0,1,1.0,650.0,https://www.zillow.com/homedetails/2081-Grand-Concourse-1-Bronx-NY-10453/2101446571_zpid/,40.8538073,-73.9030286
+"50 Fort Charles Pl # 1,Bronx,NY,10463",1350.0,1,1.0,650.0,https://www.zillow.com/homedetails/50-Fort-Charles-Pl-1-Bronx-NY-10463/2085024212_zpid/,40.876242,-73.9094554
+"Balcom Ave,Bronx,NY,10465",1350.0,1,1.0,1960.0,https://www.zillow.com/homedetails/Balcom-Ave-Bronx-NY-10465/2085292717_zpid/,40.818411,-73.82429359999999
+"Metropolitan Ave,Bronx,NY,10462",1350.0,1,1.0,700.0,https://www.zillow.com/homedetails/Metropolitan-Ave-Bronx-NY-10462/2085065152_zpid/,40.8384045,-73.8591794
+"1216 Grand Concourse,Bronx,NY,10456",1350.0,1,1.0,700.0,https://www.zillow.com/homedetails/1216-Grand-Concourse-Bronx-NY-10456/2085674313_zpid/,40.8346439,-73.9168815
+"1392 Bergen Ave,Brooklyn,NY,11234",1350.0,1,1.0,700.0,https://www.zillow.com/homedetails/1392-Bergen-Ave-Brooklyn-NY-11234/2085035476_zpid/,40.6257759,-73.90983349999999
+"148th Ave,Jamaica,NY,11422",1350.0,1,1.0,450.0,https://www.zillow.com/homedetails/148th-Ave-Jamaica-NY-11422/2085085552_zpid/,40.6552736,-73.7402073
+"Crabtree Ave,Staten Island,NY,10309",1350.0,1,1.0,450.0,https://www.zillow.com/homedetails/Crabtree-Ave-Staten-Island-NY-10309/2085264662_zpid/,40.5418841,-74.2198935
+"722 E 220th St APT 1F,Bronx,NY,10467",1350.0,1,1.0,2999.0,https://www.zillow.com/homedetails/722-E-220th-St-APT-1F-Bronx-NY-10467/2085119146_zpid/,40.883762,-73.86166
+"Bergen Ave,Brooklyn,NY,11234",1350.0,1,1.0,2999.0,https://www.zillow.com/homedetails/Bergen-Ave-Brooklyn-NY-11234/2107535737_zpid/,40.62456299999999,-73.9067669
+"E 29th St,Brooklyn,NY,11229",1350.0,1,1.0,900.0,https://www.zillow.com/homedetails/E-29th-St-Brooklyn-NY-11229/2085510155_zpid/,40.61549890000001,-73.9457671
+"Bedford Ave,BROOKLYN,NY,11229",1350.0,1,1.0,1022.0,https://www.zillow.com/homedetails/Bedford-Ave-Brooklyn-NY-11229/2085416187_zpid/,40.6537806,-73.956165
+"Demopolis Ave,Staten Island,NY,10308",1350.0,1,1.0,1022.0,https://www.zillow.com/homedetails/Demopolis-Ave-Staten-Island-NY-10308/2096617777_zpid/,40.549191,-74.161168
+"E 23rd St,Brooklyn,NY,11235",1350.0,1,1.0,1022.0,https://www.zillow.com/homedetails/E-23rd-St-Brooklyn-NY-11235/2085469498_zpid/,40.613801,-73.9511974
+"Eldert Ln,BROOKLYN,NY,11208",1350.0,1,1.0,1022.0,https://www.zillow.com/homedetails/Eldert-Ln-Brooklyn-NY-11208/2085485450_zpid/,40.676449,-73.864537
+"Poillon Ave,Staten Island,NY,10312",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/Poillon-Ave-Staten-Island-NY-10312/2085245997_zpid/,40.5308991,-74.1767018
+"W 11th St,BROOKLYN,NY,11223",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/W-11th-St-Brooklyn-NY-11223/2086361080_zpid/,40.6006301,-73.9830918
+"23 Latourette Ln # 1,Staten Island,NY,10314",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/23-Latourette-Ln-1-Staten-Island-NY-10314/2095716171_zpid/,40.5889604,-74.146106
+"228 Suffolk Ave,Staten Island,NY,10314",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/228-Suffolk-Ave-Staten-Island-NY-10314/32292375_zpid/,40.599824,-74.1276433
+"8814 Bay Pkwy,Brooklyn,NY,11214",1350.0,1,1.0,900.0,https://www.zillow.com/homedetails/8814-Bay-Pkwy-Brooklyn-NY-11214/30714360_zpid/,40.5977463,-73.9986587
+"166 Vanderbilt Ave APT 1B,Staten Island,NY,10304",1350.0,1,1.0,1100.0,https://www.zillow.com/homedetails/166-Vanderbilt-Ave-APT-1B-Staten-Island-NY-10304/2107532356_zpid/,40.6197779,-74.077187
+"9201 Kings Hwy APT 6F,Brooklyn,NY,11212",1350.0,1,1.0,1100.0,https://www.zillow.com/homedetails/9201-Kings-Hwy-APT-6F-Brooklyn-NY-11212/2103279426_zpid/,40.6570464,-73.9216991
+"5733 Arverne Blvd,Far Rockaway,NY,11692",1350.0,2,1.0,1100.0,https://www.zillow.com/homedetails/5733-Arverne-Blvd-Far-Rockaway-NY-11692/63060053_zpid/,40.592636,-73.788331
+"Cross Bronx Expy,Bronx,NY,10472",1350.0,1,1.0,2100.0,https://www.zillow.com/homedetails/Cross-Bronx-Expy-Bronx-NY-10472/2099937664_zpid/,40.8331301,-73.8603449
+"16420 Highland Ave APT 7K,Jamaica,NY,11432",1350.0,1,1.0,115312.0,https://www.zillow.com/homedetails/16420-Highland-Ave-APT-7K-Jamaica-NY-11432/245426257_zpid/,40.710029,-73.79889299999999
+"650 Ocean Ave APT 621,Brooklyn,NY,11226",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/650-Ocean-Ave-APT-621-Brooklyn-NY-11226/2085058942_zpid/,40.64668,-73.9605591
+"2549 E 18th St # WALKIN,Brooklyn,NY,11235",1350.0,1,1.0,600.0,https://www.zillow.com/homedetails/2549-E-18th-St-WALKIN-Brooklyn-NY-11235/2085091475_zpid/,40.5892177,-73.9514465
+"1325 82nd St # 1,Brooklyn,NY,11228",1350.0,1,1.0,500.0,https://www.zillow.com/homedetails/1325-82nd-St-1-Brooklyn-NY-11228/2085024604_zpid/,40.6160725,-74.01070949999999
+"254 57th St APT 3,Brooklyn,NY,11220",1350.0,1,1.0,300.0,https://www.zillow.com/homedetails/254-57th-St-APT-3-Brooklyn-NY-11220/2086992207_zpid/,40.6442176,-74.0196955
+"2682 West St # BHG,Brooklyn,NY,11223",1350.0,1,1.0,300.0,https://www.zillow.com/homedetails/2682-West-St-BHG-Brooklyn-NY-11223/2085402105_zpid/,40.5842626,-73.96961430000002
+"Kings Hwy,Brooklyn,NY,11212",1350.0,1,1.0,450.0,https://www.zillow.com/homedetails/Kings-Hwy-Brooklyn-NY-11212/2103240681_zpid/,40.6202587,-73.9417836
+"Victoria Rd,Staten Island,NY,10312",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Victoria-Rd-Staten-Island-NY-10312/2086433067_zpid/,40.54991769999999,-74.1955023
+"Poillon Ave,Staten Island,NY,10312",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Poillon-Ave-Staten-Island-NY-10312/2085208359_zpid/,40.5308991,-74.1767018
+"Poillon Ave,Staten Island,NY,10312",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Poillon-Ave-Staten-Island-NY-10312/2085208324_zpid/,40.5308991,-74.1767018
+"86th St,Brooklyn,NY,11214",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/86th-St-Brooklyn-NY-11214/2085264030_zpid/,40.609094,-74.005681
+"Davidson Ave,Bronx,NY,10468",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Davidson-Ave-Bronx-NY-10468/2094915022_zpid/,40.8567706,-73.90605219999999
+"Grand Concourse,Bronx,NY,10458",1350.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Grand-Concourse-Bronx-NY-10458/2104866668_zpid/,40.8470382,-73.90825389999999
+"Ocean Ave,BROOKLYN,NY,11229",1374.0,1,1.0,2356.0,https://www.zillow.com/homedetails/Ocean-Ave-Brooklyn-NY-11229/2085479203_zpid/,40.6190607,-73.95513869999999
+"Brighton 13th St,Brooklyn,NY,11235",1375.0,1,1.0,500.0,https://www.zillow.com/homedetails/Brighton-13th-St-Brooklyn-NY-11235/2099062319_zpid/,40.5795424,-73.9558435
+"657 Leverett Ave,Staten Island,NY,10312",1375.0,1,1.0,500.0,https://www.zillow.com/homedetails/657-Leverett-Ave-Staten-Island-NY-10312/2091864875_zpid/,40.5550523,-74.16896059999999
+"Fresh Meadow Ln,Fresh Meadows,NY,11365",1375.0,1,1.0,3000.0,https://www.zillow.com/homedetails/Fresh-Meadow-Ln-Fresh-Meadows-NY-11365/2085059815_zpid/,40.7421422,-73.7966533
+"1415 71st St,Brooklyn,NY,11228",1375.0,1,1.0,3000.0,https://www.zillow.com/homedetails/1415-71st-St-Brooklyn-NY-11228/30703247_zpid/,40.6211192,-74.002297
+"Leverett Ave,Staten Island,NY,10312",1375.0,1,1.0,700.0,https://www.zillow.com/homedetails/Leverett-Ave-Staten-Island-NY-10312/2088278488_zpid/,40.5558371,-74.1610444
+"Grand Concourse,Bronx,NY,10468",1375.0,1,1.0,700.0,https://www.zillow.com/homedetails/Grand-Concourse-Bronx-NY-10468/2092465076_zpid/,40.8470382,-73.90825389999999
+"11th Ave,BROOKLYN,NY,11228",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/11th-Ave-Brooklyn-NY-11228/2086309418_zpid/,40.62804000000001,-74.006554
+"1335 E 12th St APT E1,Brooklyn,NY,11230",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/1335-E-12th-St-APT-E1-Brooklyn-NY-11230/2085427459_zpid/,40.616751,-73.96236499999999
+"2120 Crotona Ave APT 27,Bronx,NY,10457",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/2120-Crotona-Ave-APT-27-Bronx-NY-10457/2094895407_zpid/,40.8486977,-73.8880222
+"Merriam Ave,Bronx,NY,10452",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/Merriam-Ave-Bronx-NY-10452/2086800737_zpid/,40.8416535,-73.9255775
+"199th St,Fresh Meadows,NY,11366",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/199th-St-Fresh-Meadows-NY-11366/2085057601_zpid/,40.7360311,-73.7735158
+"Bronx Blvd,Bronx,NY,10467",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/Bronx-Blvd-Bronx-NY-10467/2085138062_zpid/,40.8897135,-73.863827
+"Davidson Ave,Bronx,NY,10468",1375.0,1,1.0,560.0,https://www.zillow.com/homedetails/Davidson-Ave-Bronx-NY-10468/2097616804_zpid/,40.8567706,-73.90605219999999
+"5545 98th Pl,Corona,NY,11368",1395.0,1,1.0,750.0,https://www.zillow.com/homedetails/5545-98th-Pl-Corona-NY-11368/2085030118_zpid/,40.7386774,-73.86171759999999
+"Erika Loop,STATEN ISLAND,NY,10312",1395.0,1,1.0,750.0,https://www.zillow.com/homedetails/Erika-Loop-Staten-Island-NY-10312/2085939139_zpid/,40.5571939,-74.182005
+"Erika Loop,Staten Island,NY,10312",1395.0,1,1.0,750.0,https://www.zillow.com/homedetails/Erika-Loop-Staten-Island-NY-10312/2085483982_zpid/,40.5571939,-74.182005
+"142 Beach 96th St APT 1G,Rockaway Beach,NY,11693",1395.0,1,1.0,550.0,https://www.zillow.com/homedetails/142-Beach-96th-St-APT-1G-Rockaway-Beach-NY-11693/2086065057_zpid/,40.58399,-73.81693899999999
+"667 E 187th St APT 8,Bronx,NY,10458",1395.0,1,1.0,1200.0,https://www.zillow.com/homedetails/667-E-187th-St-APT-8-Bronx-NY-10458/2085858714_zpid/,40.8547441,-73.88549739999999
+"Webster Ave,BRONX,NY,10470",1395.0,1,1.0,1200.0,https://www.zillow.com/homedetails/Webster-Ave-Bronx-NY-10470/2088757237_zpid/,40.8648841,-73.8873042
+"2989 Marion Ave # 1,Bronx,NY,10458",1395.0,1,1.0,1102.0,https://www.zillow.com/homedetails/2989-Marion-Ave-1-Bronx-NY-10458/2094267603_zpid/,40.869924,-73.883189
+"E 34th St,Brooklyn,NY,11234",1400.0,1,1.0,1102.0,https://www.zillow.com/homedetails/E-34th-St-Brooklyn-NY-11234/2085844822_zpid/,40.6295672,-73.9434144
+"W 9th St,Brooklyn,NY,11223",1400.0,1,1.0,1102.0,https://www.zillow.com/homedetails/W-9th-St-Brooklyn-NY-11223/2092205881_zpid/,40.60316,-73.981679
+"1222 Bergen Ave FL 1ST,Brooklyn,NY,11234",1400.0,1,1.0,1102.0,https://www.zillow.com/homedetails/1222-Bergen-Ave-FL-1ST-Brooklyn-NY-11234/2085359354_zpid/,40.62713160000001,-73.9130071
+"353 Autumn Ave,Brooklyn,NY,11208",1400.0,1,1.0,1102.0,https://www.zillow.com/homedetails/353-Autumn-Ave-Brooklyn-NY-11208/30644059_zpid/,40.6813887,-73.8693693
+"34 Ramblewood Ave # 1,Staten Island,NY,10308",1400.0,1,1.0,576.0,https://www.zillow.com/homedetails/34-Ramblewood-Ave-1-Staten-Island-NY-10308/2091630905_zpid/,40.5433125,-74.15311539999999
+"27 Franklin Ln # A,Staten Island,NY,10306",1400.0,1,1.0,576.0,https://www.zillow.com/homedetails/27-Franklin-Ln-A-Staten-Island-NY-10306/32339982_zpid/,40.570205,-74.15029799999999
+"6503 20th Ave,Brooklyn,NY,11204",1400.0,1,1.0,900.0,https://www.zillow.com/homedetails/6503-20th-Ave-Brooklyn-NY-11204/30682060_zpid/,40.6162328,-73.9858381
+"9 Cebra Ave FL 2ND,Staten Island,NY,10301",1400.0,1,1.0,600.0,https://www.zillow.com/homedetails/9-Cebra-Ave-FL-2ND-Staten-Island-NY-10301/2085354784_zpid/,40.6343054,-74.0860387
+"Lincoln Ave,Staten Island,NY,10306",1400.0,1,1.0,600.0,https://www.zillow.com/homedetails/Lincoln-Ave-Staten-Island-NY-10306/2085040851_zpid/,40.5756061,-74.1014818
+"Beach 120th St,Rockaway Park,NY,11694",1400.0,1,1.0,600.0,https://www.zillow.com/homedetails/Beach-120th-St-Rockaway-Park-NY-11694/2100219651_zpid/,40.578792,-73.84062469999999
+"174 Exeter St # 2ND,Staten Island,NY,10308",1400.0,1,1.0,600.0,https://www.zillow.com/homedetails/174-Exeter-St-2ND-Staten-Island-NY-10308/2098148569_zpid/,40.5563559,-74.1484787
+"68th St,Brooklyn,NY,11219",1400.0,1,1.0,600.0,https://www.zillow.com/homedetails/68th-St-Brooklyn-NY-11219/2086423616_zpid/,40.626809,-74.007834
+"314 Bay Ridge Ave # 2,Brooklyn,NY,11220",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/314-Bay-Ridge-Ave-2-Brooklyn-NY-11220/2098724499_zpid/,40.6354304,-74.0255827
+"136 Laredo Ave,Staten Island,NY,10312",1400.0,1,1.0,2220.0,https://www.zillow.com/homedetails/136-Laredo-Ave-Staten-Island-NY-10312/32356993_zpid/,40.54906889999999,-74.1722774
+"192 Gervil St,Staten Island,NY,10309",1400.0,1,1.0,2496.0,https://www.zillow.com/homedetails/192-Gervil-St-Staten-Island-NY-10309/32371407_zpid/,40.545597,-74.211827
+"94 Stroud Ave # 1F,Staten Island,NY,10312",1400.0,1,1.0,750.0,https://www.zillow.com/homedetails/94-Stroud-Ave-1F-Staten-Island-NY-10312/2087080808_zpid/,40.553487,-74.17172699999999
+"Rutland Rd,Brooklyn,NY,11212",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/Rutland-Rd-Brooklyn-NY-11212/2085443993_zpid/,40.6598981,-73.94256340000001
+"4 Depew Pl # 1,Staten Island,NY,10309",1400.0,1,1.0,650.0,https://www.zillow.com/homedetails/4-Depew-Pl-1-Staten-Island-NY-10309/2086099850_zpid/,40.5284668,-74.21066429999999
+"Benziger Ave,Staten Island,NY,10301",1400.0,1,1.0,650.0,https://www.zillow.com/homedetails/Benziger-Ave-Staten-Island-NY-10301/2085147931_zpid/,40.6397959,-74.0819322
+"Bay 35th St,Brooklyn,NY,11214",1400.0,1,1.0,2290.0,https://www.zillow.com/homedetails/Bay-35th-St-Brooklyn-NY-11214/2085783055_zpid/,40.598004,-73.991906
+"Crispi Ln,STATEN ISLAND,NY,10308",1400.0,1,1.0,2290.0,https://www.zillow.com/homedetails/Crispi-Ln-Staten-Island-NY-10308/2087789305_zpid/,40.5407576,-74.14545000000001
+"8610 25th Ave APT 2F,Brooklyn,NY,11214",1400.0,1,1.0,630.0,https://www.zillow.com/homedetails/8610-25th-Ave-APT-2F-Brooklyn-NY-11214/2086452629_zpid/,40.5977615,-73.98770900000001
+"68th St,Brooklyn,NY,11219",1400.0,1,1.0,630.0,https://www.zillow.com/homedetails/68th-St-Brooklyn-NY-11219/2085269477_zpid/,40.626809,-74.007834
+"78th St,Howard Beach,NY,11414",1400.0,1,1.0,630.0,https://www.zillow.com/homedetails/78th-St-Howard-Beach-NY-11414/2085130402_zpid/,40.6670458,-73.8564608
+"E 28th St,Brooklyn,NY,11229",1400.0,2,1.0,630.0,https://www.zillow.com/homedetails/E-28th-St-Brooklyn-NY-11229/2103740759_zpid/,40.607184,-73.9451304
+"Wiman Ave,Staten Island,NY,10308",1400.0,1,1.0,10000000.0,https://www.zillow.com/homedetails/Wiman-Ave-Staten-Island-NY-10308/2085370599_zpid/,40.54045929999999,-74.1466336
+"Avenue J,Brooklyn,NY,11234",1400.0,1,1.0,10000000.0,https://www.zillow.com/homedetails/Avenue-J-Brooklyn-NY-11234/2092185463_zpid/,40.6266661,-73.94788369999999
+"Valentine Ave,Bronx,NY,10458",1400.0,1,1.0,800.0,https://www.zillow.com/homedetails/Valentine-Ave-Bronx-NY-10458/2105906472_zpid/,40.8622688,-73.8958937
+"916 Faile St,Bronx,NY,10474",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/916-Faile-St-Bronx-NY-10474/2094868756_zpid/,40.82039229999999,-73.8877093
+"68th St,Glendale,NY,11385",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/68th-St-Glendale-NY-11385/2085044407_zpid/,40.703586,-73.885457
+"Lamoka Ave,Staten Island,NY,10312",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/Lamoka-Ave-Staten-Island-NY-10312/2116350048_zpid/,40.5496831,-74.1592326
+"53 Marne Ave,Staten Island,NY,10312",1400.0,1,1.0,500.0,https://www.zillow.com/homedetails/53-Marne-Ave-Staten-Island-NY-10312/32357284_zpid/,40.555116,-74.17500299999999
+"Beach 120th St,Rockaway Park,NY,11694",1400.0,1,1.0,550.0,https://www.zillow.com/homedetails/Beach-120th-St-Rockaway-Park-NY-11694/2085018858_zpid/,40.578792,-73.84062469999999
+"2430 E 23rd St APT 2F,Brooklyn,NY,11235",1400.0,1,1.0,550.0,https://www.zillow.com/homedetails/2430-E-23rd-St-APT-2F-Brooklyn-NY-11235/2085265254_zpid/,40.59229699999999,-73.9473825
+"85th Ave,Woodhaven,NY,11421",1400.0,1,1.0,550.0,https://www.zillow.com/homedetails/85th-Ave-Woodhaven-NY-11421/2085157975_zpid/,40.6989217,-73.8438397
+"7th Ave,Brooklyn,NY,11228",1400.0,1,1.0,550.0,https://www.zillow.com/homedetails/7th-Ave-Brooklyn-NY-11228/2086332839_zpid/,40.631038,-74.0160382
+"2258 43rd St # LL,Astoria,NY,11105",1400.0,1,1.0,400.0,https://www.zillow.com/homedetails/2258-43rd-St-LL-Astoria-NY-11105/2085024277_zpid/,40.770238,-73.905657
+"1922 85th St APT B1,Brooklyn,NY,11214",1400.0,1,1.0,1700.0,https://www.zillow.com/homedetails/1922-85th-St-APT-B1-Brooklyn-NY-11214/2095455499_zpid/,40.6060315,-73.9993703
+"Exeter St,Staten Island,NY,10308",1400.0,1,1.0,1700.0,https://www.zillow.com/homedetails/Exeter-St-Staten-Island-NY-10308/2085307936_zpid/,40.55547199999999,-74.1474866
+"Vineland Ave,Staten Island,NY,10312",1400.0,2,1.0,1700.0,https://www.zillow.com/homedetails/Vineland-Ave-Staten-Island-NY-10312/2085082066_zpid/,40.5469328,-74.1879275
+"42nd St,Brooklyn,NY,11219",1400.0,1,1.0,586.0,https://www.zillow.com/homedetails/42nd-St-Brooklyn-NY-11219/2100914304_zpid/,40.64426599999999,-73.996844
+"Skyline Dr,Staten Island,NY,10304",1400.0,1,1.0,586.0,https://www.zillow.com/homedetails/Skyline-Dr-Staten-Island-NY-10304/2085014318_zpid/,40.6148089,-74.0799652
+"20th Ave,Brooklyn,NY,11204",1400.0,1,1.0,586.0,https://www.zillow.com/homedetails/20th-Ave-Brooklyn-NY-11204/2085492719_zpid/,40.612004,-73.99055899999999
+"1797 Lexington Ave APT 5C,New York,NY,10029",1400.0,1,1.0,586.0,https://www.zillow.com/homedetails/1797-Lexington-Ave-APT-5C-New-York-NY-10029/2100259539_zpid/,40.7957477,-73.9434447
+"8201 4th Ave APT 5A,Brooklyn,NY,11209",1400.0,1,1.0,586.0,https://www.zillow.com/homedetails/8201-4th-Ave-APT-5A-Brooklyn-NY-11209/2105399179_zpid/,40.6253535,-74.02694009999999
+"1463 Saint Lawrence Ave # 2R,Bronx,NY,10460",1407.0,1,1.0,586.0,https://www.zillow.com/homedetails/1463-Saint-Lawrence-Ave-2R-Bronx-NY-10460/2087184684_zpid/,40.8367994,-73.8683927
+"Vincent Ave,Bronx,NY,10465",1425.0,1,1.0,625.0,https://www.zillow.com/homedetails/Vincent-Ave-Bronx-NY-10465/2085016595_zpid/,40.830551,-73.8181182
+"315 Ovington Ave # L,Brooklyn,NY,11209",1425.0,1,1.0,625.0,https://www.zillow.com/homedetails/315-Ovington-Ave-L-Brooklyn-NY-11209/2095305665_zpid/,40.634918,-74.0256515
+"2769 Matthews Ave # 1F1,Bronx,NY,10467",1426.0,1,1.0,800.0,https://www.zillow.com/homedetails/2769-Matthews-Ave-1F1-Bronx-NY-10467/2085017547_zpid/,40.8676205,-73.8628112
+"218th St,Queens Village,NY,11428",1450.0,1,1.0,800.0,https://www.zillow.com/homedetails/218th-St-Queens-Village-NY-11428/2107076996_zpid/,40.72434820000001,-73.7425023
+"62nd St,Flushing,NY,11379",1450.0,1,1.0,122.0,https://www.zillow.com/homedetails/62nd-St-Flushing-NY-11379/2085015420_zpid/,40.7290028,-73.9040151
+"Bay 34th St,Brooklyn,NY,11214",1450.0,1,1.0,122.0,https://www.zillow.com/homedetails/Bay-34th-St-Brooklyn-NY-11214/2101266762_zpid/,40.5973062,-73.9937952
+"Commonwealth Ave,Bronx,NY,10472",1500.0,1,1.0,700.0,https://www.zillow.com/homedetails/Commonwealth-Ave-Bronx-NY-10472/2085016227_zpid/,40.8326872,-73.8684625
+"45th Dr,Flushing,NY,11361",1500.0,1,1.0,700.0,https://www.zillow.com/homedetails/45th-Dr-Flushing-NY-11361/2087580682_zpid/,40.7560877,-73.77933670000002
+"1235 Teller Ave,Bronx,NY,10456",1500.0,2,1.0,700.0,https://www.zillow.com/homedetails/1235-Teller-Ave-Bronx-NY-10456/2100771462_zpid/,40.8332066,-73.9113251
+"Hillside Ave,Jamaica,NY,11432",1515.0,1,1.0,700.0,https://www.zillow.com/homedetails/Hillside-Ave-Jamaica-NY-11432/2085016921_zpid/,40.7339554,-73.7240478
+"359 Ovington Ave APT B5,Brooklyn,NY,11209",1525.0,1,1.0,700.0,https://www.zillow.com/homedetails/359-Ovington-Ave-APT-B5-Brooklyn-NY-11209/112747113_zpid/,40.6343298,-74.02475079999999
+"243 78th St # 3,Brooklyn,NY,11209",1549.0,1,1.0,650.0,https://www.zillow.com/homedetails/243-78th-St-3-Brooklyn-NY-11209/2085012813_zpid/,40.629789,-74.0301594
+"517 W 161st St APT 24,New York,NY,10032",1550.0,1,1.0,650.0,https://www.zillow.com/homedetails/517-W-161st-St-APT-24-New-York-NY-10032/2102111984_zpid/,40.8359733,-73.9411485
+"417 Brighton Beach Ave # 2F,Brooklyn,NY,11235",1575.0,1,1.0,650.0,https://www.zillow.com/homedetails/417-Brighton-Beach-Ave-2F-Brooklyn-NY-11235/2085016722_zpid/,40.5775698,-73.9627656
+"Burden Cres,Jamaica,NY,11435",1575.0,1,1.0,475.0,https://www.zillow.com/homedetails/Burden-Cres-Jamaica-NY-11435/2085018147_zpid/,40.7108569,-73.8169109
+"221 Wadsworth Ave # 1A,New York,NY,10033",1582.0,1,1.0,475.0,https://www.zillow.com/homedetails/221-Wadsworth-Ave-1A-New-York-NY-10033/2085017093_zpid/,40.851708,-73.933263
+"3063 Bainbridge Ave,Bronx,NY,10467",1595.0,1,1.0,550.0,https://www.zillow.com/homedetails/3063-Bainbridge-Ave-Bronx-NY-10467/2085014134_zpid/,40.8737261,-73.87967789999999
+"2179 3rd Ave # 5,New York,NY,10035",1599.0,1,1.0,550.0,https://www.zillow.com/homedetails/2179-3rd-Ave-5-New-York-NY-10035/2092309803_zpid/,40.7996301,-73.938485
+"1352 Prospect Pl # 1,Brooklyn,NY,11213",1599.0,1,1.0,800.0,https://www.zillow.com/homedetails/1352-Prospect-Pl-1-Brooklyn-NY-11213/2085955231_zpid/,40.6731079,-73.9316996
+"2120 St Raymonds Ave,Bronx,NY,10462",1600.0,1,1.0,470.0,https://www.zillow.com/homedetails/2120-St-Raymonds-Ave-Bronx-NY-10462/2085017812_zpid/,40.8371603,-73.85463310000002
+"71st Pl,Glendale,NY,11385",1600.0,2,1.0,470.0,https://www.zillow.com/homedetails/71st-Pl-Glendale-NY-11385/2085016601_zpid/,40.7038395,-73.8798896
+"5855 Amboy Rd,Staten Island,NY,10309",1600.0,2,1.0,470.0,https://www.zillow.com/homedetails/5855-Amboy-Rd-Staten-Island-NY-10309/124439239_zpid/,40.5261946,-74.2025498
+"Amboy Rd,Staten Island,NY,10306",1600.0,1,1.0,750.0,https://www.zillow.com/homedetails/Amboy-Rd-Staten-Island-NY-10306/2085014123_zpid/,40.5347955,-74.1843641
+"E Mosholu Pkwy N,Bronx,NY,10467",1600.0,2,1.0,750.0,https://www.zillow.com/homedetails/E-Mosholu-Pkwy-N-Bronx-NY-10467/2101049916_zpid/,40.874812,-73.88148100000001
+"7143 166th St,Flushing,NY,11365",1600.0,1,1.0,1725.0,https://www.zillow.com/homedetails/7143-166th-St-Flushing-NY-11365/32075136_zpid/,40.729199,-73.80301399999999
+"362 Midwood St # 1,Brooklyn,NY,11225",1600.0,1,1.0,39600.0,https://www.zillow.com/homedetails/362-Midwood-St-1-Brooklyn-NY-11225/2100311033_zpid/,40.660004,-73.94873
+"Horace Harding Expy,Oakland Gardens,NY,11364",1600.0,1,1.0,39600.0,https://www.zillow.com/homedetails/Horace-Harding-Expy-Oakland-Gardens-NY-11364/2085016854_zpid/,40.745377,-73.77248449999999
+"946 Bronx Park S APT 1A,Bronx,NY,10460",1625.0,1,1.0,39600.0,https://www.zillow.com/homedetails/946-Bronx-Park-S-APT-1A-Bronx-NY-10460/2085012814_zpid/,40.8454054,-73.8795428
+"3205 81st St APT DD4,East Elmhurst,NY,11370",1629.0,1,1.0,39600.0,https://www.zillow.com/homedetails/3205-81st-St-APT-DD4-East-Elmhurst-NY-11370/245390767_zpid/,40.7575899,-73.88668
+"12th Ave,Brooklyn,NY,11219",1650.0,1,1.0,2730.0,https://www.zillow.com/homedetails/12th-Ave-Brooklyn-NY-11219/2105599147_zpid/,40.6313026,-73.99956499999999
+"14345 Sanford Ave APT 108,Flushing,NY,11355",1650.0,1,1.0,600.0,https://www.zillow.com/homedetails/14345-Sanford-Ave-APT-108-Flushing-NY-11355/2110708530_zpid/,40.7588836,-73.8216429
+"Beach 117th St,Rockaway Park,NY,11694",1675.0,1,1.0,750.0,https://www.zillow.com/homedetails/Beach-117th-St-Rockaway-Park-NY-11694/2107071496_zpid/,40.5795009,-73.83810679999999
+"330 89th St APT 2R,Brooklyn,NY,11209",1675.0,1,1.0,750.0,https://www.zillow.com/homedetails/330-89th-St-APT-2R-Brooklyn-NY-11209/245026064_zpid/,40.62097139999999,-74.03097629999999
+"1539 Park Pl # D,Brooklyn,NY,11213",1695.0,1,1.0,37345.0,https://www.zillow.com/homedetails/1539-Park-Pl-D-Brooklyn-NY-11213/2085017107_zpid/,40.6723992,-73.9263837
+"2790 Broadway APT 1F,New York,NY,10025",1695.0,1,1.0,37345.0,https://www.zillow.com/homedetails/2790-Broadway-APT-1F-New-York-NY-10025/244892940_zpid/,40.8025988,-73.9673459
+"675 Avenue Z # 8K,Brooklyn,NY,11223",1695.0,1,1.0,650.0,https://www.zillow.com/homedetails/675-Avenue-Z-8K-Brooklyn-NY-11223/2085018747_zpid/,40.58661499999999,-73.96902299999999
+"8740 Elmhurst Ave APT 602,Elmhurst,NY,11373",1695.0,1,1.0,300.0,https://www.zillow.com/homedetails/8740-Elmhurst-Ave-APT-602-Elmhurst-NY-11373/2095108092_zpid/,40.7450684,-73.87796879999999
+"Beach 121st St,Rockaway Park,NY,11694",1700.0,1,1.0,300.0,https://www.zillow.com/homedetails/Beach-121st-St-Rockaway-Park-NY-11694/2098148762_zpid/,40.5785404,-73.8414663
+"Memphis Ave,Staten Island,NY,10312",1700.0,2,1.0,700.0,https://www.zillow.com/homedetails/Memphis-Ave-Staten-Island-NY-10312/2085014147_zpid/,40.5486546,-74.171324
+"13538 78th Ave # 1,Flushing,NY,11367",1700.0,1,1.0,700.0,https://www.zillow.com/homedetails/13538-78th-Ave-1-Flushing-NY-11367/2091848547_zpid/,40.7197274,-73.8239164
+"Borden Ave,Maspeth,NY,11378",1700.0,1,1.0,650.0,https://www.zillow.com/homedetails/Borden-Ave-Maspeth-NY-11378/2090363136_zpid/,40.7368297,-73.93159849999999
+"2363 Holland Ave,Bronx,NY,10467",1700.0,1,1.0,650.0,https://www.zillow.com/homedetails/2363-Holland-Ave-Bronx-NY-10467/2085018974_zpid/,40.8612025,-73.8658212
+"719 5th Ave STE B,Brooklyn,NY,11215",1700.0,1,1.0,650.0,https://www.zillow.com/homedetails/719-5th-Ave-STE-B-Brooklyn-NY-11215/2089201336_zpid/,40.6602858,-73.99414209999999
+"2962 Perry Ave,Bronx,NY,10458",1700.0,3,1.0,650.0,https://www.zillow.com/homedetails/2962-Perry-Ave-Bronx-NY-10458/2085019030_zpid/,40.8697026,-73.8843684
+"7707 138th St FL 2ND,Flushing,NY,11367",1700.0,1,1.0,650.0,https://www.zillow.com/homedetails/7707-138th-St-FL-2ND-Flushing-NY-11367/2086758737_zpid/,40.7206793,-73.8232538
+"1929 Hobart Ave,Bronx,NY,10461",1700.0,3,1.0,1262.0,https://www.zillow.com/homedetails/1929-Hobart-Ave-Bronx-NY-10461/29816729_zpid/,40.8501612,-73.8314647
+"18th Ave,Brooklyn,NY,11204",1700.0,2,1.0,700.0,https://www.zillow.com/homedetails/18th-Ave-Brooklyn-NY-11204/2085016053_zpid/,40.619131,-73.990182
+"1540 Rhinelander Ave,Bronx,NY,10461",1700.0,1,1.0,2352.0,https://www.zillow.com/homedetails/1540-Rhinelander-Ave-Bronx-NY-10461/2100407364_zpid/,40.855717,-73.842395
+"560 Isham St APT 3J,New York,NY,10034",1700.0,2,1.0,2352.0,https://www.zillow.com/homedetails/560-Isham-St-APT-3J-New-York-NY-10034/2085019203_zpid/,40.8673972,-73.9195864
+"91 Oberlin St,Staten Island,NY,10305",1700.0,2,1.0,2352.0,https://www.zillow.com/homedetails/91-Oberlin-St-Staten-Island-NY-10305/32327876_zpid/,40.5935413,-74.07941919999999
+"513 E 87th St # 5FW,New York,NY,10128",1725.0,1,1.0,750.0,https://www.zillow.com/homedetails/513-E-87th-St-5FW-New-York-NY-10128/2103071465_zpid/,40.7763852,-73.945603
+"275 Fort Washington Ave APT 2B,New York,NY,10032",1725.0,1,1.0,750.0,https://www.zillow.com/homedetails/275-Fort-Washington-Ave-APT-2B-New-York-NY-10032/2125011295_zpid/,40.8446109,-73.9411945
+"4305 65th St APT C6,Woodside,NY,11377",1735.0,1,1.0,750.0,https://www.zillow.com/homedetails/4305-65th-St-APT-C6-Woodside-NY-11377/2092509889_zpid/,40.7418872,-73.90031189999999
+"2922 Nostrand Ave # 4,Brooklyn,NY,11229",1750.0,1,1.0,640.0,https://www.zillow.com/homedetails/2922-Nostrand-Ave-4-Brooklyn-NY-11229/2085015049_zpid/,40.6133847,-73.94447749999999
+"Banner Ave,Brooklyn,NY,11235",1750.0,1,1.0,640.0,https://www.zillow.com/homedetails/Banner-Ave-Brooklyn-NY-11235/2085013673_zpid/,40.5835281,-73.9601818
+"3173 35th St APT 3F,Astoria,NY,11106",1750.0,1,1.0,640.0,https://www.zillow.com/homedetails/3173-35th-St-APT-3F-Astoria-NY-11106/2085018854_zpid/,40.760869,-73.92150699999999
+"715 119th St FL 2ND,College Point,NY,11356",1750.0,2,1.0,750.0,https://www.zillow.com/homedetails/715-119th-St-FL-2ND-College-Point-NY-11356/2085015897_zpid/,40.7903329,-73.84924199999999
+"1596 W 7th St FL 1ST,Brooklyn,NY,11204",1750.0,3,1.0,700.0,https://www.zillow.com/homedetails/1596-W-7th-St-FL-1ST-Brooklyn-NY-11204/2085018921_zpid/,40.6082432,-73.98092539999999
+"1002 Ditmas Ave # 3FF,Brooklyn,NY,11218",1750.0,1,1.0,800.0,https://www.zillow.com/homedetails/1002-Ditmas-Ave-3FF-Brooklyn-NY-11218/2085014911_zpid/,40.6350814,-73.96723450000002
+"8933 85th St # 1FL,Woodhaven,NY,11421",1750.0,1,1.0,800.0,https://www.zillow.com/homedetails/8933-85th-St-1FL-Woodhaven-NY-11421/2085016152_zpid/,40.68836599999999,-73.857276
+"Parsons Blvd,Jamaica,NY,11432",1750.0,1,1.0,800.0,https://www.zillow.com/homedetails/Parsons-Blvd-Jamaica-NY-11432/2085018162_zpid/,40.7216453,-73.80958869999999
+"25 Parade Pl # 3,Brooklyn,NY,11226",1799.0,1,1.0,800.0,https://www.zillow.com/homedetails/25-Parade-Pl-3-Brooklyn-NY-11226/2088890951_zpid/,40.6525257,-73.9655559
+"Beach 118th St,Rockaway Park,NY,11694",1800.0,2,1.0,800.0,https://www.zillow.com/homedetails/Beach-118th-St-Rockaway-Park-NY-11694/2085018155_zpid/,40.5792255,-73.838934
+"Commonwealth Ave,Bronx,NY,10472",1800.0,2,1.0,800.0,https://www.zillow.com/homedetails/Commonwealth-Ave-Bronx-NY-10472/2085016258_zpid/,40.8326872,-73.8684625
+"1140 Saint Johns Pl APT 3,Brooklyn,NY,11213",1800.0,1,1.0,550.0,https://www.zillow.com/homedetails/1140-Saint-Johns-Pl-APT-3-Brooklyn-NY-11213/2107277312_zpid/,40.6708096,-73.9405975
+"3203 Nostrand Ave APT 2T,Brooklyn,NY,11229",1800.0,1,1.0,970.0,https://www.zillow.com/homedetails/3203-Nostrand-Ave-APT-2T-Brooklyn-NY-11229/245026128_zpid/,40.6058583,-73.94268699999999
+"150 88th St APT B4,Brooklyn,NY,11209",1800.0,1,1.0,3750.0,https://www.zillow.com/homedetails/150-88th-St-APT-B4-Brooklyn-NY-11209/2085018502_zpid/,40.62271,-74.035484
+"19th Ave,Brooklyn,NY,11214",1800.0,2,1.0,3750.0,https://www.zillow.com/homedetails/19th-Ave-Brooklyn-NY-11214/2085015900_zpid/,40.61389399999999,-73.99217999999999
+"165 E 179th St,Bronx,NY,10453",1800.0,3,1.0,400.0,https://www.zillow.com/homedetails/165-E-179th-St-Bronx-NY-10453/2103538395_zpid/,40.851475,-73.905526
+"478 Union Ave APT 1F,Brooklyn,NY,11211",1800.0,1,1.0,400.0,https://www.zillow.com/homedetails/478-Union-Ave-APT-1F-Brooklyn-NY-11211/2093433629_zpid/,40.7148195,-73.9514865
+"Braddock Ave,Bellerose,NY,11426",1800.0,2,1.0,700.0,https://www.zillow.com/homedetails/Braddock-Ave-Bellerose-NY-11426/2085016899_zpid/,40.728006,-73.7341564
+"1104 Clarkson Ave # 1F,Brooklyn,NY,11212",1800.0,2,1.0,700.0,https://www.zillow.com/homedetails/1104-Clarkson-Ave-1F-Brooklyn-NY-11212/2085014918_zpid/,40.65996699999999,-73.921351
+"15311 73rd Ave APT 1H,Flushing,NY,11367",1825.0,1,1.0,700.0,https://www.zillow.com/homedetails/15311-73rd-Ave-APT-1H-Flushing-NY-11367/2092056769_zpid/,40.72692259999999,-73.81372979999999
+"Sheridan Ave,Bronx,NY,10457",1850.0,2,1.0,700.0,https://www.zillow.com/homedetails/Sheridan-Ave-Bronx-NY-10457/2085018603_zpid/,40.834294,-73.9164898
+"190 72nd St # 4,Brooklyn,NY,11209",1850.0,1,1.0,700.0,https://www.zillow.com/homedetails/190-72nd-St-4-Brooklyn-NY-11209/2109373960_zpid/,40.6341186,-74.0299495
+"2050 E 18th St,Brooklyn,NY,11229",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/2050-E-18th-St-Brooklyn-NY-11229/2085014721_zpid/,40.5999264,-73.9540295
+"3121 29th St APT 3C,Astoria,NY,11106",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/3121-29th-St-APT-3C-Astoria-NY-11106/2085013475_zpid/,40.764247,-73.9253839
+"Jamaica Ave,Queens Village,NY,11428",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/Jamaica-Ave-Queens-Village-NY-11428/2090903322_zpid/,40.7023891,-73.80354
+"104th St,Flushing,NY,11369",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/104th-St-Flushing-NY-11369/2085013104_zpid/,40.7506548,-73.862104
+"88th Ave,Jamaica,NY,11432",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/88th-Ave-Jamaica-NY-11432/2085016643_zpid/,40.7070052,-73.80143110000002
+"1966 Lacombe Ave # 1F,Bronx,NY,10473",1850.0,2,1.0,850.0,https://www.zillow.com/homedetails/1966-Lacombe-Ave-1F-Bronx-NY-10473/2085016802_zpid/,40.8158052,-73.85423109999999
+"955 Coney Island Ave APT 106,Brooklyn,NY,11230",1850.0,1,1.0,850.0,https://www.zillow.com/homedetails/955-Coney-Island-Ave-APT-106-Brooklyn-NY-11230/2111558415_zpid/,40.6343261,-73.9669249
+"486 Kosciuszko St APT 3,Brooklyn,NY,11221",1850.0,2,1.0,850.0,https://www.zillow.com/homedetails/486-Kosciuszko-St-APT-3-Brooklyn-NY-11221/2106342266_zpid/,40.6923396,-73.9346759
+"3083 29th St # FF8,Astoria,NY,11102",1895.0,1,1.0,700.0,https://www.zillow.com/homedetails/3083-29th-St-FF8-Astoria-NY-11102/2085015050_zpid/,40.765457,-73.9244425
+"1619 E 15th St # 2,Brooklyn,NY,11229",1895.0,2,1.0,900.0,https://www.zillow.com/homedetails/1619-E-15th-St-2-Brooklyn-NY-11229/2100505367_zpid/,40.609991,-73.958254
+"606 Kosciuszko # 202D,Brooklyn,NY,11221",1899.0,2,1.0,900.0,https://www.zillow.com/homedetails/606-Kosciuszko-202D-Brooklyn-NY-11221/2085016025_zpid/,40.6930098,-73.9293553
+"88th Ave,Jamaica,NY,11432",1899.0,1,1.0,900.0,https://www.zillow.com/homedetails/88th-Ave-Jamaica-NY-11432/2085018120_zpid/,40.7070052,-73.80143110000002
+"10749 88th St,Jamaica,NY,11417",1900.0,2,1.0,1184.0,https://www.zillow.com/homedetails/10749-88th-St-Jamaica-NY-11417/32114649_zpid/,40.676724,-73.848803
+"52 Britton St # 1R,Staten Island,NY,10310",1900.0,2,1.0,3024.0,https://www.zillow.com/homedetails/52-Britton-St-1R-Staten-Island-NY-10310/2085016934_zpid/,40.6339467,-74.1162652
+"249 Thomas S Boyland St # 4,Brooklyn,NY,11233",1900.0,2,1.0,3024.0,https://www.zillow.com/homedetails/249-Thomas-S-Boyland-St-4-Brooklyn-NY-11233/2085013474_zpid/,40.6757587,-73.9137708
+"11019 Rockaway Blvd,Jamaica,NY,11420",1900.0,2,1.0,3024.0,https://www.zillow.com/homedetails/11019-Rockaway-Blvd-Jamaica-NY-11420/32169384_zpid/,40.6777323,-73.8280654
+"1401 66th St APT 8,Brooklyn,NY,11219",1900.0,2,1.0,850.0,https://www.zillow.com/homedetails/1401-66th-St-APT-8-Brooklyn-NY-11219/2106232021_zpid/,40.62403949999999,-73.9996334
+"60th Ln,Flushing,NY,11378",1900.0,2,1.0,4800.0,https://www.zillow.com/homedetails/60th-Ln-Flushing-NY-11378/2085015505_zpid/,40.7167431,-73.9037025
+"127th St,Flushing,NY,11356",1900.0,3,1.0,4800.0,https://www.zillow.com/homedetails/127th-St-Flushing-NY-11356/2085013051_zpid/,40.784493,-73.84124
+"Avenue U,Brooklyn,NY,11223",1900.0,2,1.0,4800.0,https://www.zillow.com/homedetails/Avenue-U-Brooklyn-NY-11223/2085017607_zpid/,40.60032,-73.94288619999999
+"275 Clarkson Ave # 724A,Brooklyn,NY,11226",1950.0,1,1.0,900.0,https://www.zillow.com/homedetails/275-Clarkson-Ave-724A-Brooklyn-NY-11226/2085016999_zpid/,40.6555902,-73.9507807
+"Yale St,Staten Island,NY,10303",1999.0,3,2.0,900.0,https://www.zillow.com/homedetails/Yale-St-Staten-Island-NY-10303/2085017620_zpid/,40.6250685,-74.1649434
+"661 Woodward Ave APT 3L,Ridgewood,NY,11385",1999.0,1,1.0,900.0,https://www.zillow.com/homedetails/661-Woodward-Ave-APT-3L-Ridgewood-NY-11385/2095493268_zpid/,40.7055991,-73.90650839999999
+"Yale St,Staten Island,NY,10303",1999.0,3,2.0,900.0,https://www.zillow.com/homedetails/Yale-St-Staten-Island-NY-10303/2085017601_zpid/,40.6250685,-74.1649434
+"202 Bay 11th St # 2,Brooklyn,NY,11228",2000.0,3,1.5,900.0,https://www.zillow.com/homedetails/202-Bay-11th-St-2-Brooklyn-NY-11228/2085013041_zpid/,40.6065303,-74.01245399999999
+"3025 42nd St # 1,Astoria,NY,11103",2000.0,2,1.0,950.0,https://www.zillow.com/homedetails/3025-42nd-St-1-Astoria-NY-11103/2085013473_zpid/,40.762299,-73.913724
+"12510 22nd Ave FL 2ND,Flushing,NY,11356",2000.0,3,1.0,950.0,https://www.zillow.com/homedetails/12510-22nd-Ave-FL-2ND-Flushing-NY-11356/2089851413_zpid/,40.779913,-73.842884
+"47 W 90th St APT 1,New York,NY,10024",2000.0,1,1.0,1100.0,https://www.zillow.com/homedetails/47-W-90th-St-APT-1-New-York-NY-10024/2111153316_zpid/,40.7887434,-73.9691022
+"Vincent Ave,Bronx,NY,10465",2000.0,2,1.0,2016.0,https://www.zillow.com/homedetails/Vincent-Ave-Bronx-NY-10465/2085016785_zpid/,40.830551,-73.8181182
+"7215 69th Street 2 FL 2,Glendale,NY,11385",2000.0,3,1.0,2016.0,https://www.zillow.com/homedetails/7215-69th-Street-2-FL-2-Glendale-NY-11385/2085013237_zpid/,40.70130899999999,-73.88233699999999
+"74th St,Glendale,NY,11385",2000.0,2,1.0,750.0,https://www.zillow.com/homedetails/74th-St-Glendale-NY-11385/2085016002_zpid/,40.7055284,-73.8757334
+"15328 75th Ave FL 2ND,Flushing,NY,11367",2025.0,2,1.0,1000.0,https://www.zillow.com/homedetails/15328-75th-Ave-FL-2ND-Flushing-NY-11367/2090407249_zpid/,40.7261018,-73.8128959
+"15040 72nd Rd APT 3E,Flushing,NY,11367",2025.0,2,1.0,1000.0,https://www.zillow.com/homedetails/15040-72nd-Rd-APT-3E-Flushing-NY-11367/2092766179_zpid/,40.72755069999999,-73.81575280000001
+"511 E 81st St APT 9,New York,NY,10028",2050.0,1,1.0,1000.0,https://www.zillow.com/homedetails/511-E-81st-St-APT-9-New-York-NY-10028/2120228118_zpid/,40.7725425,-73.94862239999999
+"171 W 83rd St APT 2A,New York,NY,10024",2050.0,1,1.0,1000.0,https://www.zillow.com/homedetails/171-W-83rd-St-APT-2A-New-York-NY-10024/2085014024_zpid/,40.7856893,-73.9757715
+"156 Allen St APT 18,New York,NY,10002",2050.0,1,1.0,1000.0,https://www.zillow.com/homedetails/156-Allen-St-APT-18-New-York-NY-10002/2085016447_zpid/,40.7208251,-73.9892855
+"332 Keap St APT 3J,Brooklyn,NY,11211",2086.0,2,1.0,1000.0,https://www.zillow.com/homedetails/332-Keap-St-APT-3J-Brooklyn-NY-11211/2085013471_zpid/,40.708729,-73.95465279999999
+"291 Bainbridge St # 3R,Brooklyn,NY,11233",2090.0,2,1.0,1000.0,https://www.zillow.com/homedetails/291-Bainbridge-St-3R-Brooklyn-NY-11233/2085017103_zpid/,40.681887,-73.925044
+"145 E 18th St APT 1C,Brooklyn,NY,11226",2099.0,3,1.0,1000.0,https://www.zillow.com/homedetails/145-E-18th-St-APT-1C-Brooklyn-NY-11226/245018639_zpid/,40.6477931,-73.96251269999999
+"139 Meserole Ave # 1,Brooklyn,NY,11222",2100.0,1,1.0,1000.0,https://www.zillow.com/homedetails/139-Meserole-Ave-1-Brooklyn-NY-11222/2085014142_zpid/,40.72774709999999,-73.9514116
+"4143 39th Pl APT 3M,Sunnyside,NY,11104",2100.0,1,1.0,1000.0,https://www.zillow.com/homedetails/4143-39th-Pl-APT-3M-Sunnyside-NY-11104/2085014919_zpid/,40.7459311,-73.9245388
+"2736 Sexton Pl # 2,Bronx,NY,10469",2100.0,2,1.0,500.0,https://www.zillow.com/homedetails/2736-Sexton-Pl-2-Bronx-NY-10469/2085018625_zpid/,40.867951,-73.848229
+"232nd St,Bayside,NY,11364",2100.0,3,2.0,500.0,https://www.zillow.com/homedetails/232nd-St-Bayside-NY-11364/2090380014_zpid/,40.7479508,-73.7450355
+"265 W 146th St APT 3,New York,NY,10039",2100.0,1,1.0,500.0,https://www.zillow.com/homedetails/265-W-146th-St-APT-3-New-York-NY-10039/2095656884_zpid/,40.8232796,-73.9405056
+"Westervelt Ave,STATEN ISLAND,NY,10301",2100.0,4,1.0,3800.0,https://www.zillow.com/homedetails/Westervelt-Ave-Staten-Island-NY-10301/2089236482_zpid/,40.6431538,-74.08394659999999
+"13751 56th Ave,Flushing,NY,11355",2100.0,2,1.0,33580.0,https://www.zillow.com/homedetails/13751-56th-Ave-Flushing-NY-11355/2085013022_zpid/,40.7485934,-73.82699389999999
+"3427 41st St # 5L,Long Island City,NY,11101",2100.0,1,1.0,33580.0,https://www.zillow.com/homedetails/3427-41st-St-5L-Long-Island-City-NY-11101/2085017091_zpid/,40.7555177,-73.9204354
+"3900 Kings Hwy APT 3M,Brooklyn,NY,11234",2125.0,2,1.0,33580.0,https://www.zillow.com/homedetails/3900-Kings-Hwy-APT-3M-Brooklyn-NY-11234/2094935694_zpid/,40.6226004,-73.9355688
+"330 E 83rd St APT 2K,New York,NY,10028",2129.0,1,1.0,33580.0,https://www.zillow.com/homedetails/330-E-83rd-St-APT-2K-New-York-NY-10028/244840592_zpid/,40.7751593,-73.9516081
+"7520 Edsall Ave # 3,Glendale,NY,11385",2150.0,3,1.5,1000.0,https://www.zillow.com/homedetails/7520-Edsall-Ave-3-Glendale-NY-11385/2085012810_zpid/,40.706531,-73.874315
+"731 6th Ave # 2L,Brooklyn,NY,11215",2150.0,2,1.0,500.0,https://www.zillow.com/homedetails/731-6th-Ave-2L-Brooklyn-NY-11215/2085014907_zpid/,40.6590869,-73.9918754
+"186 Lincoln Pl APT 8,Brooklyn,NY,11217",2150.0,1,1.0,500.0,https://www.zillow.com/homedetails/186-Lincoln-Pl-APT-8-Brooklyn-NY-11217/2101434462_zpid/,40.6753423,-73.9741185
+"230 E 87th St APT 2D,New York,NY,10128",2150.0,1,1.0,1000.0,https://www.zillow.com/homedetails/230-E-87th-St-APT-2D-New-York-NY-10128/2113653243_zpid/,40.7788311,-73.95235869999999
+"123 Pembroke St # 1,Brooklyn,NY,11235",2150.0,2,1.0,1000.0,https://www.zillow.com/homedetails/123-Pembroke-St-1-Brooklyn-NY-11235/2094829260_zpid/,40.5802426,-73.9367743
+"4203 156th St # 2FL,Flushing,NY,11355",2150.0,3,2.0,900.0,https://www.zillow.com/homedetails/4203-156th-St-2FL-Flushing-NY-11355/2085012996_zpid/,40.761029,-73.809277
+"943 Columbus Ave # DD,New York,NY,10025",2154.0,1,1.0,750.0,https://www.zillow.com/homedetails/943-Columbus-Ave-DD-New-York-NY-10025/2085013490_zpid/,40.7993844,-73.9625016
+"101 Kane St APT 1,Brooklyn,NY,11231",2190.0,1,1.0,750.0,https://www.zillow.com/homedetails/101-Kane-St-APT-1-Brooklyn-NY-11231/2085014921_zpid/,40.6877068,-74.0006949
+"1191 Ocean Ave APT 4B,Brooklyn,NY,11230",2199.0,1,1.0,750.0,https://www.zillow.com/homedetails/1191-Ocean-Ave-APT-4B-Brooklyn-NY-11230/2085017958_zpid/,40.6335113,-73.95749649999999
+"Parsons Blvd,Flushing,NY,11366",2200.0,2,2.0,750.0,https://www.zillow.com/homedetails/Parsons-Blvd-Flushing-NY-11366/2085016851_zpid/,40.7216453,-73.80958869999999
+"Tiemann Ave,Bronx,NY,10469",2200.0,3,2.0,750.0,https://www.zillow.com/homedetails/Tiemann-Ave-Bronx-NY-10469/2085016978_zpid/,40.868545,-73.83905299999999
+"148 Guernsey St APT 1L,Brooklyn,NY,11222",2200.0,2,1.0,750.0,https://www.zillow.com/homedetails/148-Guernsey-St-APT-1L-Brooklyn-NY-11222/2098393430_zpid/,40.7260009,-73.95382540000001
+"532 72nd St # 1A,Brooklyn,NY,11209",2200.0,2,1.0,645.0,https://www.zillow.com/homedetails/532-72nd-St-1A-Brooklyn-NY-11209/2085015241_zpid/,40.6310831,-74.0209101
+"117 Van Cortlandt Ave W # 2,Bronx,NY,10463",2200.0,2,1.0,645.0,https://www.zillow.com/homedetails/117-Van-Cortlandt-Ave-W-2-Bronx-NY-10463/2085016457_zpid/,40.884312,-73.893103
+"231 E 34th St APT 5C,New York,NY,10016",2200.0,1,1.0,645.0,https://www.zillow.com/homedetails/231-E-34th-St-APT-5C-New-York-NY-10016/2098986477_zpid/,40.7453558,-73.9765462
+"73A Cooper St APT 2,Brooklyn,NY,11207",2200.0,2,2.0,645.0,https://www.zillow.com/homedetails/73A-Cooper-St-APT-2-Brooklyn-NY-11207/2100859567_zpid/,40.6857543,-73.90968529999999
+"5640 142nd St FL 1ST,Flushing,NY,11355",2200.0,2,1.0,645.0,https://www.zillow.com/homedetails/5640-142nd-St-FL-1ST-Flushing-NY-11355/2085015222_zpid/,40.7464749,-73.823658
+"21st Ave,Brooklyn,NY,11214",2200.0,2,1.0,645.0,https://www.zillow.com/homedetails/21st-Ave-Brooklyn-NY-11214/2100632553_zpid/,40.6095149,-73.9895787
+"1360 Prospect Pl # 2,Brooklyn,NY,11213",2250.0,2,1.0,900.0,https://www.zillow.com/homedetails/1360-Prospect-Pl-2-Brooklyn-NY-11213/2097730434_zpid/,40.673104,-73.9314011
+"173 Pulaski St APT 3,Brooklyn,NY,11206",2250.0,2,1.0,450.0,https://www.zillow.com/homedetails/173-Pulaski-St-APT-3-Brooklyn-NY-11206/2095098714_zpid/,40.6931366,-73.94436309999999
+"339 W 44th St APT 4FW,New York,NY,10036",2250.0,1,1.0,450.0,https://www.zillow.com/homedetails/339-W-44th-St-APT-4FW-New-York-NY-10036/2113972297_zpid/,40.759418,-73.99050559999999
+"17 W 76th St APT 4B,New York,NY,10023",2250.0,1,1.0,450.0,https://www.zillow.com/homedetails/17-W-76th-St-APT-4B-New-York-NY-10023/2100912811_zpid/,40.779475,-73.97505699999999
+"235 W 102nd St APT 7B,New York,NY,10025",2250.0,1,1.0,221974.0,https://www.zillow.com/homedetails/235-W-102nd-St-APT-7B-New-York-NY-10025/244873238_zpid/,40.7988412,-73.9693618
+"223 E 21st St APT 1R,New York,NY,10010",2250.0,1,1.0,1000.0,https://www.zillow.com/homedetails/223-E-21st-St-APT-1R-New-York-NY-10010/2085015240_zpid/,40.7371839,-73.9828422
+"130th St,South Richmond Hill,NY,11419",2250.0,3,1.0,1000.0,https://www.zillow.com/homedetails/130th-St-South-Richmond-Hill-NY-11419/2085014145_zpid/,40.6849888,-73.8135678
+"336-338 Lincoln Rd # 2R,Brooklyn,NY,11225",2266.0,2,1.0,1200.0,https://www.zillow.com/homedetails/336-338-Lincoln-Rd-2R-Brooklyn-NY-11225/2085016996_zpid/,40.6613174,-73.9515728
+"78th St,Howard Beach,NY,11414",2300.0,3,1.5,1200.0,https://www.zillow.com/homedetails/78th-St-Howard-Beach-NY-11414/2085015579_zpid/,40.6670458,-73.8564608
+"7123 66th Street # Second Floor,Ridgewood,NY,11385",2300.0,3,1.0,1200.0,https://www.zillow.com/homedetails/7123-66th-Street-Second-Floor-Ridgewood-NY-11385/2085013274_zpid/,40.702089,-73.888336
+"14328 27th Avenue # FL 1ST,Whitestone,NY,11357",2300.0,3,2.0,1200.0,https://www.zillow.com/homedetails/14328-27th-Avenue-FL-1ST-Whitestone-NY-11357/2085013532_zpid/,27.6648274,-81.5157535
+"College Point Blvd,Flushing,NY,11355",2300.0,2,2.0,1100.0,https://www.zillow.com/homedetails/College-Point-Blvd-Flushing-NY-11355/2138666881_zpid/,40.7672938,-73.8395135
+"E 184th St,Bronx,NY,10458",2300.0,3,1.5,1100.0,https://www.zillow.com/homedetails/E-184th-St-Bronx-NY-10458/2085013887_zpid/,40.8570565,-73.8958595
+"1136 44th Dr APT 3,Long Island City,NY,11101",2300.0,2,1.0,1100.0,https://www.zillow.com/homedetails/1136-44th-Dr-APT-3-Long-Island-City-NY-11101/2087159198_zpid/,40.7481686,-73.94873199999999
+"W End Ave,Brooklyn,NY,11235",2350.0,2,2.0,1100.0,https://www.zillow.com/homedetails/W-End-Ave-Brooklyn-NY-11235/2085018745_zpid/,40.5780091,-73.95309309999999
+"111 Chrystie St APT 13,New York,NY,10002",2350.0,1,1.0,550.0,https://www.zillow.com/homedetails/111-Chrystie-St-APT-13-New-York-NY-10002/2120018021_zpid/,40.7185864,-73.9940512
+"2524 32nd St # 1,Astoria,NY,11102",2350.0,2,1.0,1500.0,https://www.zillow.com/homedetails/2524-32nd-St-1-Astoria-NY-11102/2085016022_zpid/,40.769368,-73.918306
+"42 W 85th St APT 2R,New York,NY,10024",2395.0,1,1.0,1500.0,https://www.zillow.com/homedetails/42-W-85th-St-APT-2R-New-York-NY-10024/2113479607_zpid/,40.784998,-73.971356
+"53 W 73rd St APT A,New York,NY,10023",2400.0,1,1.0,1500.0,https://www.zillow.com/homedetails/53-W-73rd-St-APT-A-New-York-NY-10023/2094930574_zpid/,40.7779794,-73.97750479999999
+"380 94th St APT 3F,Brooklyn,NY,11209",2400.0,2,1.0,1500.0,https://www.zillow.com/homedetails/380-94th-St-APT-3F-Brooklyn-NY-11209/2085017950_zpid/,40.616791,-74.0311889
+"7223 244th St FL 2ND,Little Neck,NY,11362",2400.0,3,1.0,1500.0,https://www.zillow.com/homedetails/7223-244th-St-FL-2ND-Little-Neck-NY-11362/2085012975_zpid/,40.748372,-73.730137
+"2062 23rd St # 2,Astoria,NY,11105",2400.0,2,1.0,1729.0,https://www.zillow.com/homedetails/2062-23rd-St-2-Astoria-NY-11105/2085014916_zpid/,40.782228,-73.91328399999999
+"1846 Edison Ave,Bronx,NY,10461",2400.0,3,1.0,1729.0,https://www.zillow.com/homedetails/1846-Edison-Ave-Bronx-NY-10461/145585707_zpid/,40.8486115,-73.8320046
+"7001 Ridge Blvd # 4FG,Brooklyn,NY,11209",2400.0,2,1.0,1200.0,https://www.zillow.com/homedetails/7001-Ridge-Blvd-4FG-Brooklyn-NY-11209/2085015231_zpid/,40.6351404,-74.0288647
+"6217 Almeda Ave,Far Rockaway,NY,11692",2400.0,3,2.0,1200.0,https://www.zillow.com/homedetails/6217-Almeda-Ave-Far-Rockaway-NY-11692/112518880_zpid/,40.5971279,-73.7918873
+"4712 Burling St FL 2ND,Flushing,NY,11355",2400.0,4,2.0,1000.0,https://www.zillow.com/homedetails/4712-Burling-St-FL-2ND-Flushing-NY-11355/2085013529_zpid/,40.7511889,-73.813418
+"Brighton 5th St,Brooklyn,NY,11235",2400.0,3,1.0,750.0,https://www.zillow.com/homedetails/Brighton-5th-St-Brooklyn-NY-11235/2100643808_zpid/,40.5781563,-73.96266179999999
+"259 W 18th St APT 7,New York,NY,10011",2425.0,1,1.0,750.0,https://www.zillow.com/homedetails/259-W-18th-St-APT-7-New-York-NY-10011/2110945451_zpid/,40.74222090000001,-74.0002399
+"337 44th St # 9,Brooklyn,NY,11220",2450.0,2,1.0,750.0,https://www.zillow.com/homedetails/337-44th-St-9-Brooklyn-NY-11220/2088649851_zpid/,40.6506929,-74.0100904
+"682 Union St # S201,Brooklyn,NY,11215",2450.0,1,1.0,750.0,https://www.zillow.com/homedetails/682-Union-St-S201-Brooklyn-NY-11215/2085017971_zpid/,40.6763651,-73.9810516
+"137 E 26th St APT B4,New York,NY,10010",2450.0,1,1.0,750.0,https://www.zillow.com/homedetails/137-E-26th-St-APT-B4-New-York-NY-10010/2100173140_zpid/,40.7413913,-73.9828012
+"475 Putnam Ave # 4,Brooklyn,NY,11221",2450.0,1,1.0,750.0,https://www.zillow.com/homedetails/475-Putnam-Ave-4-Brooklyn-NY-11221/2091174898_zpid/,40.6851096,-73.9422507
+"764 E 213th St,Bronx,NY,10467",2475.0,2,1.0,4980.0,https://www.zillow.com/homedetails/764-E-213th-St-Bronx-NY-10467/2106913995_zpid/,40.87827920000001,-73.86243189999999
+"324 W 47th St APT 4D,New York,NY,10036",2495.0,1,1.0,1400.0,https://www.zillow.com/homedetails/324-W-47th-St-APT-4D-New-York-NY-10036/2091866191_zpid/,40.7608421,-73.9888467
+"499 3rd Ave # 2,New York,NY,10016",2495.0,2,1.0,1400.0,https://www.zillow.com/homedetails/499-3rd-Ave-2-New-York-NY-10016/2085017953_zpid/,40.7453431,-73.97802759999999
+"7811 66th Road # Second Floor,Middle Village,NY,11379",2500.0,3,2.0,1400.0,https://www.zillow.com/homedetails/7811-66th-Road-Second-Floor-Middle-Village-NY-11379/2085013232_zpid/,40.714704,-73.874844
+"126 Cedarview Ave,Staten Island,NY,10306",2500.0,3,3.0,1400.0,https://www.zillow.com/homedetails/126-Cedarview-Ave-Staten-Island-NY-10306/64448966_zpid/,40.565259,-74.127568
+"185 Leonard St APT 2E,Brooklyn,NY,11206",2500.0,1,1.0,1000.0,https://www.zillow.com/homedetails/185-Leonard-St-APT-2E-Brooklyn-NY-11206/2097768516_zpid/,40.7100173,-73.94730899999999
+"3113 86th St # 2,East Elmhurst,NY,11369",2500.0,3,1.5,1000.0,https://www.zillow.com/homedetails/3113-86th-St-2-East-Elmhurst-NY-11369/2085012993_zpid/,40.759163,-73.881931
+"501 W 135th St APT 10A,New York,NY,10031",2500.0,3,1.0,1000.0,https://www.zillow.com/homedetails/501-W-135th-St-APT-10A-New-York-NY-10031/2085015257_zpid/,40.8192321,-73.95256619999999
+"112 Bay 8th St # 2,Brooklyn,NY,11228",2500.0,3,1.0,1000.0,https://www.zillow.com/homedetails/112-Bay-8th-St-2-Brooklyn-NY-11228/2092355683_zpid/,40.609717,-74.012816
+"107 Eldridge St APT 3A,New York,NY,10002",2500.0,1,1.0,1000.0,https://www.zillow.com/homedetails/107-Eldridge-St-APT-3A-New-York-NY-10002/2106915343_zpid/,40.7181012,-73.9922029
+"3738 Shore Pkwy # 3,Brooklyn,NY,11235",2500.0,2,2.0,1000.0,https://www.zillow.com/homedetails/3738-Shore-Pkwy-3-Brooklyn-NY-11235/2085018941_zpid/,40.5855186,-73.93747470000001
+"306 E 49th St APT 4A,New York,NY,10017",2500.0,1,1.0,1200.0,https://www.zillow.com/homedetails/306-E-49th-St-APT-4A-New-York-NY-10017/2115517827_zpid/,40.7538646,-73.9686335
+"2507 143rd St # 2F,Whitestone,NY,11357",2500.0,3,2.0,1200.0,https://www.zillow.com/homedetails/2507-143rd-St-2F-Whitestone-NY-11357/2085012797_zpid/,40.7762836,-73.8258326
+"229 Jefferson St # 3RC,Brooklyn,NY,11237",2500.0,3,1.0,1200.0,https://www.zillow.com/homedetails/229-Jefferson-St-3RC-Brooklyn-NY-11237/2085017098_zpid/,40.7026162,-73.92819779999999
+"525 Beach 43rd St,Far Rockaway,NY,11691",2500.0,3,1.0,1200.0,https://www.zillow.com/homedetails/525-Beach-43rd-St-Far-Rockaway-NY-11691/32224073_zpid/,40.5993089,-73.7753762
+"Byrd St,Flushing,NY,11355",2550.0,3,1.0,1000.0,https://www.zillow.com/homedetails/Byrd-St-Flushing-NY-11355/2136986863_zpid/,40.7524465,-73.8259867
+"69th Pl,Glendale,NY,11385",2550.0,3,1.0,1000.0,https://www.zillow.com/homedetails/69th-Pl-Glendale-NY-11385/2091492879_zpid/,40.70186,-73.88190999999999
+"173 Classon Ave # 3R,Brooklyn,NY,11205",2550.0,1,1.5,725.0,https://www.zillow.com/homedetails/173-Classon-Ave-3R-Brooklyn-NY-11205/2105927518_zpid/,40.6951402,-73.96117
+"207 Spencer St # 410,Brooklyn,NY,11205",2550.0,2,1.0,750.0,https://www.zillow.com/homedetails/207-Spencer-St-410-Brooklyn-NY-11205/2085016262_zpid/,40.6919347,-73.9545205
+"273 E 10th St APT E,New York,NY,10009",2575.0,1,1.0,750.0,https://www.zillow.com/homedetails/273-E-10th-St-APT-E-New-York-NY-10009/2085016264_zpid/,40.728389,-73.9828476
+"178 Meserole St APT 2R,Brooklyn,NY,11206",2595.0,2,1.0,750.0,https://www.zillow.com/homedetails/178-Meserole-St-APT-2R-Brooklyn-NY-11206/2115808701_zpid/,40.7080163,-73.9422082
+"3133 42nd St # 2,Astoria,NY,11103",2599.0,3,1.0,750.0,https://www.zillow.com/homedetails/3133-42nd-St-2-Astoria-NY-11103/2089282305_zpid/,40.759528,-73.9159729
+"88th Ave,Jamaica,NY,11435",2599.0,2,2.0,1100.0,https://www.zillow.com/homedetails/88th-Ave-Jamaica-NY-11435/2085017793_zpid/,40.7070052,-73.80143110000002
+"45 Frost St # 2,Brooklyn,NY,11211",2599.0,1,1.0,700.0,https://www.zillow.com/homedetails/45-Frost-St-2-Brooklyn-NY-11211/2104381570_zpid/,40.7177336,-73.9502242
+"88th Ave,Jamaica,NY,11432",2599.0,2,2.0,1100.0,https://www.zillow.com/homedetails/88th-Ave-Jamaica-NY-11432/2085017853_zpid/,40.7070052,-73.80143110000002
+"E 57th St,Brooklyn,NY,11234",2600.0,3,2.0,1575.0,https://www.zillow.com/homedetails/E-57th-St-Brooklyn-NY-11234/2085017855_zpid/,40.6360739,-73.9219304
+"133 N Railroad St # B,Staten Island,NY,10312",2600.0,3,2.0,1575.0,https://www.zillow.com/homedetails/133-N-Railroad-St-B-Staten-Island-NY-10312/2085012928_zpid/,40.5396335,-74.1836393
+"1148 Essex St # 2,Brooklyn,NY,11239",2600.0,3,2.0,750.0,https://www.zillow.com/homedetails/1148-Essex-St-2-Brooklyn-NY-11239/2085016806_zpid/,40.6557848,-73.8714966
+"Miles Ave,Bronx,NY,10465",2600.0,3,1.0,750.0,https://www.zillow.com/homedetails/Miles-Ave-Bronx-NY-10465/2085016183_zpid/,40.818662,-73.818111
+"158 Bedford Ave APT 3L,Brooklyn,NY,11249",2600.0,2,1.0,750.0,https://www.zillow.com/homedetails/158-Bedford-Ave-APT-3L-Brooklyn-NY-11249/2111047112_zpid/,40.7186651,-73.9570632
+"381 S 5th St APT 303,Brooklyn,NY,11211",2600.0,1,1.0,1300.0,https://www.zillow.com/homedetails/381-S-5th-St-APT-303-Brooklyn-NY-11211/2086144707_zpid/,40.70775520000001,-73.95318
+"1068 Lafayette Ave # 8,Brooklyn,NY,11221",2600.0,2,1.0,1300.0,https://www.zillow.com/homedetails/1068-Lafayette-Ave-8-Brooklyn-NY-11221/2097633508_zpid/,40.6922541,-73.92920819999999
+"22315 57th Ave # 2,Bayside,NY,11364",2600.0,3,2.0,1300.0,https://www.zillow.com/homedetails/22315-57th-Ave-2-Bayside-NY-11364/2093145023_zpid/,40.752864,-73.755579
+"153 Boerum St APT F,Brooklyn,NY,11206",2600.0,2,1.0,400.0,https://www.zillow.com/homedetails/153-Boerum-St-APT-F-Brooklyn-NY-11206/2105743768_zpid/,40.7060471,-73.94250819999999
+"508 W 136th St APT 2R,New York,NY,10031",2625.0,3,1.0,400.0,https://www.zillow.com/homedetails/508-W-136th-St-APT-2R-New-York-NY-10031/2085016437_zpid/,40.8197952,-73.9525831
+"297 Himrod St APT 3R,Brooklyn,NY,11237",2654.0,3,1.5,400.0,https://www.zillow.com/homedetails/297-Himrod-St-APT-3R-Brooklyn-NY-11237/2087233562_zpid/,40.7023672,-73.9180098
+"1436 Dekalb Ave # F2,Brooklyn,NY,11237",2692.0,3,1.5,400.0,https://www.zillow.com/homedetails/1436-Dekalb-Ave-F2-Brooklyn-NY-11237/2085018856_zpid/,40.700518,-73.92268659999999
+"441 W 22nd St APT 1A,New York,NY,10011",2695.0,1,1.0,400.0,https://www.zillow.com/homedetails/441-W-22nd-St-APT-1A-New-York-NY-10011/2105297087_zpid/,40.7465412,-74.0030127
+"301 W 151st St APT 3A,New York,NY,10039",2695.0,3,1.0,13256.0,https://www.zillow.com/homedetails/301-W-151st-St-APT-3A-New-York-NY-10039/2101521277_zpid/,40.8268546,-73.9393575
+"213 St,Bayside,NY,11361",2700.0,3,2.0,13256.0,https://www.zillow.com/homedetails/213-St-Bayside-NY-11361/2092625087_zpid/,40.7600724,-73.7702577
+"238 Stockholm St APT 1R,Brooklyn,NY,11237",2700.0,2,1.5,13256.0,https://www.zillow.com/homedetails/238-Stockholm-St-APT-1R-Brooklyn-NY-11237/2103000473_zpid/,40.7013821,-73.9206198
+"4111 25th Ave # 2,Astoria,NY,11103",2700.0,3,1.0,13256.0,https://www.zillow.com/homedetails/4111-25th-Ave-2-Astoria-NY-11103/2085014138_zpid/,40.76752,-73.9102939
+"47 Clifton Pl # 2F,Brooklyn,NY,11238",2700.0,2,1.0,13256.0,https://www.zillow.com/homedetails/47-Clifton-Pl-2F-Brooklyn-NY-11238/2085014472_zpid/,40.688074,-73.962408
+"12 W 9th St APT 2D,New York,NY,10011",2750.0,1,1.0,13256.0,https://www.zillow.com/homedetails/12-W-9th-St-APT-2D-New-York-NY-10011/244710000_zpid/,40.7330583,-73.99699009999999
+"295 W 150th St APT 21,New York,NY,10039",2750.0,3,1.0,700.0,https://www.zillow.com/homedetails/295-W-150th-St-APT-21-New-York-NY-10039/2123059607_zpid/,40.8258417,-73.93887529999999
+"678 Prospect Pl APT 2B,Brooklyn,NY,11216",2750.0,1,1.0,700.0,https://www.zillow.com/homedetails/678-Prospect-Pl-APT-2B-Brooklyn-NY-11216/2100694786_zpid/,40.674286,-73.95434399999999
+"749 Rosedale Ave,Bronx,NY,10473",2750.0,3,1.5,1776.0,https://www.zillow.com/homedetails/749-Rosedale-Ave-Bronx-NY-10473/29792569_zpid/,40.820322,-73.866868
+"112 Lincoln Ave APT 205,Bronx,NY,10454",2750.0,2,1.0,900.0,https://www.zillow.com/homedetails/112-Lincoln-Ave-APT-205-Bronx-NY-10454/2085016028_zpid/,40.807735,-73.9290704
+"36 Broome St # 4,Brooklyn,NY,11222",2799.0,2,1.0,900.0,https://www.zillow.com/homedetails/36-Broome-St-4-Brooklyn-NY-11222/2085016269_zpid/,40.7220917,-73.945649
+"3215 46th St # 3,Astoria,NY,11103",2800.0,2,1.0,1100.0,https://www.zillow.com/homedetails/3215-46th-St-3-Astoria-NY-11103/2093565966_zpid/,40.756185,-73.914284
+"2253 24th St # 3F,Astoria,NY,11105",2800.0,3,1.0,900.0,https://www.zillow.com/homedetails/2253-24th-St-3F-Astoria-NY-11105/2085016439_zpid/,40.7779643,-73.9163641
+"1716 Fowler Ave,Bronx,NY,10462",2800.0,4,1.0,1300.0,https://www.zillow.com/homedetails/1716-Fowler-Ave-Bronx-NY-10462/29814196_zpid/,40.8463358,-73.8577802
+"E 69th St,Brooklyn,NY,11234",2800.0,3,2.0,600.0,https://www.zillow.com/homedetails/E-69th-St-Brooklyn-NY-11234/2085016466_zpid/,40.6188933,-73.90890929999999
+"326 W 45th St APT 4R,New York,NY,10036",2800.0,2,1.0,600.0,https://www.zillow.com/homedetails/326-W-45th-St-APT-4R-New-York-NY-10036/219661045_zpid/,40.7595858,-73.98965729999999
+"318 E 93rd St APT C,New York,NY,10128",2850.0,2,2.0,600.0,https://www.zillow.com/homedetails/318-E-93rd-St-APT-C-New-York-NY-10128/2114395763_zpid/,40.7816807,-73.9475777
+"449 7th Ave # 3A,Brooklyn,NY,11215",2895.0,2,1.0,44385.0,https://www.zillow.com/homedetails/449-7th-Ave-3A-Brooklyn-NY-11215/2085012951_zpid/,40.6628411,-73.9846361
+"92 Horatio St APT 4C,New York,NY,10014",2900.0,1,1.0,44385.0,https://www.zillow.com/homedetails/92-Horatio-St-APT-4C-New-York-NY-10014/244740034_zpid/,40.7385868,-74.00784039999999
+"340 E 58th St APT 3F,New York,NY,10022",2900.0,2,1.0,750.0,https://www.zillow.com/homedetails/340-E-58th-St-APT-3F-New-York-NY-10022/2104958331_zpid/,40.7590689,-73.9632822
+"682 Prospect Pl APT 1F,Brooklyn,NY,11216",2900.0,2,1.5,800.0,https://www.zillow.com/homedetails/682-Prospect-Pl-APT-1F-Brooklyn-NY-11216/2101953419_zpid/,40.67437899999999,-73.9542821
+"178A Green St # 1,Brooklyn,NY,11222",2900.0,2,1.0,1100.0,https://www.zillow.com/homedetails/178A-Green-St-1-Brooklyn-NY-11222/2100037738_zpid/,40.733557,-73.954194
+"134 Jefferson St APT 2R,Brooklyn,NY,11206",2900.0,3,1.0,1100.0,https://www.zillow.com/homedetails/134-Jefferson-St-APT-2R-Brooklyn-NY-11206/2098201494_zpid/,40.69987100000001,-73.93025
+"153 W 10th St APT 5,New York,NY,10014",2910.0,1,1.0,1100.0,https://www.zillow.com/homedetails/153-W-10th-St-APT-5-New-York-NY-10014/2125094530_zpid/,40.7345972,-74.0013043
+"3627 31st St # 6F,Long Island City,NY,11106",2954.0,1,1.0,1100.0,https://www.zillow.com/homedetails/3627-31st-St-6F-Long-Island-City-NY-11106/2085015233_zpid/,40.7556977,-73.9299659
+"174 Roebling St # 3C,Brooklyn,NY,11211",2990.0,3,1.0,1100.0,https://www.zillow.com/homedetails/174-Roebling-St-3C-Brooklyn-NY-11211/2085017942_zpid/,40.7135962,-73.9583519
+"328 E 55th St APT 2A,New York,NY,10022",2995.0,2,1.0,1100.0,https://www.zillow.com/homedetails/328-E-55th-St-APT-2A-New-York-NY-10022/2085014915_zpid/,40.7573296,-73.96512539999999
+"420 Herkimer St # 7,Brooklyn,NY,11213",2999.0,2,2.0,1100.0,https://www.zillow.com/homedetails/420-Herkimer-St-7-Brooklyn-NY-11213/2085018845_zpid/,40.6788885,-73.9395373
+"150 E 18th St # B,Brooklyn,NY,11226",2999.0,2,1.0,1100.0,https://www.zillow.com/homedetails/150-E-18th-St-B-Brooklyn-NY-11226/2085012812_zpid/,40.6475372,-73.962998
+"145 George St # 2F,Brooklyn,NY,11237",3000.0,3,1.5,1100.0,https://www.zillow.com/homedetails/145-George-St-2F-Brooklyn-NY-11237/2085015048_zpid/,40.7042271,-73.9289326
+"8135 255th St,Queens,NY,11004",3000.0,3,1.5,1100.0,https://www.zillow.com/homedetails/8135-255th-St-Queens-NY-11004/32102961_zpid/,40.741055,-73.71428399999999
+"1980 Starr St APT 3C,Flushing,NY,11385",3000.0,2,2.0,1200.0,https://www.zillow.com/homedetails/1980-Starr-St-APT-3C-Flushing-NY-11385/117614325_zpid/,40.71314,-73.91477110000001
+"1562 Lurting Ave,Bronx,NY,10461",3000.0,3,1.5,2664.0,https://www.zillow.com/homedetails/1562-Lurting-Ave-Bronx-NY-10461/29813770_zpid/,40.8453074,-73.8505326
+"260 Skillman Ave APT 1L,Brooklyn,NY,11211",3000.0,3,1.5,1000.0,https://www.zillow.com/homedetails/260-Skillman-Ave-APT-1L-Brooklyn-NY-11211/2085013477_zpid/,40.716111,-73.9405419
+"847 46th St # 2,Brooklyn,NY,11220",3000.0,4,2.0,1350.0,https://www.zillow.com/homedetails/847-46th-St-2-Brooklyn-NY-11220/2085014025_zpid/,40.642781,-74.0000612
+"227 Mott St APT 16,New York,NY,10012",3050.0,1,1.0,700.0,https://www.zillow.com/homedetails/227-Mott-St-APT-16-New-York-NY-10012/2126597596_zpid/,40.722527,-73.995468
+"4117 Crescent St APT 7J,Long Island City,NY,11101",3070.0,1,1.0,700.0,https://www.zillow.com/homedetails/4117-Crescent-St-APT-7J-Long-Island-City-NY-11101/2104628832_zpid/,40.75156,-73.939369
+"547 2nd Ave # F,New York,NY,10016",3075.0,1,1.0,1200.0,https://www.zillow.com/homedetails/547-2nd-Ave-F-New-York-NY-10016/2085017957_zpid/,40.7425776,-73.97784419999999
+"264 6th Ave APT 30,New York,NY,10014",3095.0,2,1.0,1200.0,https://www.zillow.com/homedetails/264-6th-Ave-APT-30-New-York-NY-10014/2103603893_zpid/,40.728994,-74.002083
+"146 Wyckoff Ave # 301F,Brooklyn,NY,11237",3100.0,3,1.0,1200.0,https://www.zillow.com/homedetails/146-Wyckoff-Ave-301F-Brooklyn-NY-11237/2085016024_zpid/,40.7027377,-73.9170856
+"172 Suydam St # 2LL,Brooklyn,NY,11221",3100.0,3,2.0,1200.0,https://www.zillow.com/homedetails/172-Suydam-St-2LL-Brooklyn-NY-11221/2085016027_zpid/,40.6994507,-73.92603919999999
+"1526 Lurting Ave # 1,Bronx,NY,10461",3100.0,5,1.0,1200.0,https://www.zillow.com/homedetails/1526-Lurting-Ave-1-Bronx-NY-10461/2085018999_zpid/,40.8436809,-73.849836
+"282 Schaefer St APT 3,Brooklyn,NY,11237",3100.0,4,1.5,2016.0,https://www.zillow.com/homedetails/282-Schaefer-St-APT-3-Brooklyn-NY-11237/2101655154_zpid/,40.6923192,-73.90489459999999
+"44 Burton Ct,Staten Island,NY,10306",3200.0,5,3.0,2016.0,https://www.zillow.com/homedetails/44-Burton-Ct-Staten-Island-NY-10306/32295755_zpid/,40.582901,-74.12805
+"322 E 4th St APT 2F,New York,NY,10009",3200.0,2,1.0,650.0,https://www.zillow.com/homedetails/322-E-4th-St-APT-2F-New-York-NY-10009/2085013476_zpid/,40.7217642,-73.97941019999999
+"500 4th Ave APT 11B,Brooklyn,NY,11215",3200.0,1,1.0,650.0,https://www.zillow.com/homedetails/500-4th-Ave-APT-11B-Brooklyn-NY-11215/94639625_zpid/,40.6684089,-73.9907614
+"96 N 5th St # 2B,Brooklyn,NY,11249",3200.0,1,1.0,600.0,https://www.zillow.com/homedetails/96-N-5th-St-2B-Brooklyn-NY-11249/2085019215_zpid/,40.7176298,-73.96072389999999
+"77 Lexington Ave APT 4E,New York,NY,10010",3250.0,1,1.0,700.0,https://www.zillow.com/homedetails/77-Lexington-Ave-APT-4E-New-York-NY-10010/2100213409_zpid/,40.7412185,-73.9832138
+"124 E 24th St APT 3B,New York,NY,10010",3250.0,1,1.0,609.0,https://www.zillow.com/homedetails/124-E-24th-St-APT-3B-New-York-NY-10010/2127384099_zpid/,40.74041,-73.98525649999999
+"547 W 157th St APT 36,New York,NY,10032",3250.0,3,2.0,1050.0,https://www.zillow.com/homedetails/547-W-157th-St-APT-36-New-York-NY-10032/2094990072_zpid/,40.8337896,-73.9436743
+"221 S 3rd St APT 2C,Brooklyn,NY,11211",3250.0,3,1.0,1575.0,https://www.zillow.com/homedetails/221-S-3rd-St-APT-2C-Brooklyn-NY-11211/2100016469_zpid/,40.7112138,-73.9584988
+"610 W 139th St APT 4A,New York,NY,10031",3295.0,4,1.0,1575.0,https://www.zillow.com/homedetails/610-W-139th-St-APT-4A-New-York-NY-10031/2118586874_zpid/,40.8228959,-73.95432799999999
+"230 N 5th St # A,Brooklyn,NY,11211",3299.0,3,1.0,1041.0,https://www.zillow.com/homedetails/230-N-5th-St-A-Brooklyn-NY-11211/2085014141_zpid/,40.7147128,-73.9558906
+"403 W 57th St # A,New York,NY,10019",3300.0,1,1.0,1041.0,https://www.zillow.com/homedetails/403-W-57th-St-A-New-York-NY-10019/2085018853_zpid/,40.768229,-73.98595569999999
+"1278 1st Ave APT 23,New York,NY,10065",3300.0,1,1.0,1041.0,https://www.zillow.com/homedetails/1278-1st-Ave-APT-23-New-York-NY-10065/2111920206_zpid/,40.76551,-73.95725200000001
+"195 Spencer St APT 4A,Brooklyn,NY,11205",3300.0,2,2.0,1041.0,https://www.zillow.com/homedetails/195-Spencer-St-APT-4A-Brooklyn-NY-11205/64554585_zpid/,40.692321,-73.9544969
+"179 E 3rdstreet # 19,Manhattan,NY,10009",3300.0,2,1.0,800.0,https://www.zillow.com/homedetails/179-E-3rdstreet-19-Manhattan-NY-10009/2085019213_zpid/,40.7232732,-73.9838523
+"350 W 51st St APT 12H,New York,NY,10019",3300.0,1,1.0,700.0,https://www.zillow.com/homedetails/350-W-51st-St-APT-12H-New-York-NY-10019/2085017096_zpid/,40.7636078,-73.9877372
+"125 Lexington Ave APT 3B,Brooklyn,NY,11238",3300.0,2,2.0,700.0,https://www.zillow.com/homedetails/125-Lexington-Ave-APT-3B-Brooklyn-NY-11238/2108808057_zpid/,40.6870923,-73.957224
+"234 E 87th St APT 3C,New York,NY,10128",3350.0,2,1.0,700.0,https://www.zillow.com/homedetails/234-E-87th-St-APT-3C-New-York-NY-10128/2111593757_zpid/,40.7787891,-73.9522529
+"5931 Catalpa Ave # 2,Flushing,NY,11385",3350.0,3,2.0,1100.0,https://www.zillow.com/homedetails/5931-Catalpa-Ave-2-Flushing-NY-11385/2097493764_zpid/,40.702957,-73.899889
+"511A Greene Ave # 1,Brooklyn,NY,11216",3400.0,4,1.0,750.0,https://www.zillow.com/homedetails/511A-Greene-Ave-1-Brooklyn-NY-11216/2085016799_zpid/,40.6886629,-73.9504592
+"234 Skillman Ave APT 4E,Brooklyn,NY,11211",3400.0,2,1.0,750.0,https://www.zillow.com/homedetails/234-Skillman-Ave-APT-4E-Brooklyn-NY-11211/94718275_zpid/,40.7160088,-73.9417023
+"361 E 50th St APT 6G,New York,NY,10022",3415.0,1,1.0,1400.0,https://www.zillow.com/homedetails/361-E-50th-St-APT-6G-New-York-NY-10022/2102068976_zpid/,40.7543148,-73.96618149999999
+"183 Chauncey St # 3,Brooklyn,NY,11233",3447.0,4,2.0,1400.0,https://www.zillow.com/homedetails/183-Chauncey-St-3-Brooklyn-NY-11233/2085674549_zpid/,40.6808421,-73.92773609999999
+"328 Eldert St APT 1,Brooklyn,NY,11237",3450.0,3,1.5,1400.0,https://www.zillow.com/homedetails/328-Eldert-St-APT-1-Brooklyn-NY-11237/2085012950_zpid/,40.6932199,-73.90631599999999
+"3169 38th St # 2,Astoria,NY,11103",3450.0,3,1.5,1400.0,https://www.zillow.com/homedetails/3169-38th-St-2-Astoria-NY-11103/2099826204_zpid/,40.75985,-73.919018
+"132 Nostrand Ave # 1,Brooklyn,NY,11205",3475.0,4,3.0,3200.0,https://www.zillow.com/homedetails/132-Nostrand-Ave-1-Brooklyn-NY-11205/2121179510_zpid/,40.6956584,-73.9528586
+"27 W 16th St APT 4K,New York,NY,10011",3495.0,1,1.0,1400.0,https://www.zillow.com/homedetails/27-W-16th-St-APT-4K-New-York-NY-10011/2132308436_zpid/,40.7383077,-73.994435
+"842 Ocean Pkwy # 4A,Brooklyn,NY,11230",3500.0,3,2.0,1400.0,https://www.zillow.com/homedetails/842-Ocean-Pkwy-4A-Brooklyn-NY-11230/121710848_zpid/,40.6278115,-73.9718228
+"3416 30th Ave # 3R,Astoria,NY,11103",3500.0,3,1.0,1000.0,https://www.zillow.com/homedetails/3416-30th-Ave-3R-Astoria-NY-11103/2085017935_zpid/,40.76533,-73.918617
+"109 S 3rd St APT 2,Brooklyn,NY,11249",3500.0,3,1.0,1000.0,https://www.zillow.com/homedetails/109-S-3rd-St-APT-2-Brooklyn-NY-11249/2104383472_zpid/,40.7129951,-73.9631445
+"11459 Lefferts Blvd,Jamaica,NY,11420",3500.0,5,2.0,1480.0,https://www.zillow.com/homedetails/11459-Lefferts-Blvd-Jamaica-NY-11420/32172986_zpid/,40.67721299999999,-73.81939899999999
+"423 E 78th St APT 1E,New York,NY,10075",3575.0,3,1.0,1000.0,https://www.zillow.com/homedetails/423-E-78th-St-APT-1E-New-York-NY-10075/2121562053_zpid/,40.7712493,-73.95180239999999
+"499 Washington Ave APT 4R,Brooklyn,NY,11238",3600.0,3,1.0,1000.0,https://www.zillow.com/homedetails/499-Washington-Ave-APT-4R-Brooklyn-NY-11238/2085017937_zpid/,40.6833307,-73.964522
+"121 Oceana Dr W # 3,Brooklyn,NY,11235",3650.0,2,1.0,1400.0,https://www.zillow.com/homedetails/121-Oceana-Dr-W-3-Brooklyn-NY-11235/2087212100_zpid/,40.5766271,-73.9587933
+"585 W End Ave # 13C,New York,NY,10024",3650.0,1,1.0,2000.0,https://www.zillow.com/homedetails/585-W-End-Ave-13C-New-York-NY-10024/2107786876_zpid/,40.7905775,-73.9770571
+"215 Lewis Ave # 1,Brooklyn,NY,11221",3750.0,4,2.0,2000.0,https://www.zillow.com/homedetails/215-Lewis-Ave-1-Brooklyn-NY-11221/2098125237_zpid/,40.68904180000001,-73.9360166
+"105 W 74th St APT 4A,New York,NY,10023",3775.0,2,2.0,500.0,https://www.zillow.com/homedetails/105-W-74th-St-APT-4A-New-York-NY-10023/2120058059_zpid/,40.7791319,-73.9782853
+"65 4th Ave APT 3E,New York,NY,10003",3795.0,1,1.0,500.0,https://www.zillow.com/homedetails/65-4th-Ave-APT-3E-New-York-NY-10003/2091323235_zpid/,40.730948,-73.990287
+"240 W 15th St APT 11,New York,NY,10011",3795.0,2,1.0,500.0,https://www.zillow.com/homedetails/240-W-15th-St-APT-11-New-York-NY-10011/2125727641_zpid/,40.7398213,-74.00108469999999
+"71 Lafayette Ave APT 2F,Brooklyn,NY,11217",3800.0,2,1.0,500.0,https://www.zillow.com/homedetails/71-Lafayette-Ave-APT-2F-Brooklyn-NY-11217/2100822262_zpid/,40.6873847,-73.97548429999999
+"137 Thompson St APT 11,New York,NY,10012",3850.0,2,1.0,500.0,https://www.zillow.com/homedetails/137-Thompson-St-APT-11-New-York-NY-10012/2127582665_zpid/,40.7266942,-74.0013963
+"237 Elizabeth St APT 4,New York,NY,10012",3875.0,1,1.0,500.0,https://www.zillow.com/homedetails/237-Elizabeth-St-APT-4-New-York-NY-10012/2085016800_zpid/,40.7231983,-73.9940786
+"174 7th Ave # 3W,New York,NY,10011",3900.0,2,1.5,992.0,https://www.zillow.com/homedetails/174-7th-Ave-3W-New-York-NY-10011/2103331198_zpid/,40.742521,-73.997039
+"478 Central Park W APT 6B,New York,NY,10025",3995.0,2,1.0,992.0,https://www.zillow.com/homedetails/478-Central-Park-W-APT-6B-New-York-NY-10025/121191010_zpid/,40.7996,-73.95927999999999
+"1053 Lexington Ave # 4B,New York,NY,10021",4100.0,2,1.0,708.0,https://www.zillow.com/homedetails/1053-Lexington-Ave-4B-New-York-NY-10021/2085017929_zpid/,40.7721691,-73.9607108
+"107 W 126th St APT 3,New York,NY,10027",4100.0,5,1.0,708.0,https://www.zillow.com/homedetails/107-W-126th-St-APT-3-New-York-NY-10027/2107540515_zpid/,40.8088043,-73.9455112
+"7 Rivington St APT 7,New York,NY,10002",4100.0,2,1.0,708.0,https://www.zillow.com/homedetails/7-Rivington-St-APT-7-New-York-NY-10002/2098350038_zpid/,40.7212291,-73.9928511
+"255 W 14th St APT 4J,New York,NY,10011",4170.0,1,1.0,708.0,https://www.zillow.com/homedetails/255-W-14th-St-APT-4J-New-York-NY-10011/2114574296_zpid/,40.7397696,-74.0018061
+"713 E 9th St APT 3D,New York,NY,10009",4200.0,3,2.0,708.0,https://www.zillow.com/homedetails/713-E-9th-St-APT-3D-New-York-NY-10009/2111804097_zpid/,40.7249916,-73.9771981
+"149 Powers St APT 1,Brooklyn,NY,11211",4200.0,4,1.5,708.0,https://www.zillow.com/homedetails/149-Powers-St-APT-1-Brooklyn-NY-11211/2085014912_zpid/,40.7124802,-73.94481460000002
+"65 Cooper Sq APT 3G,New York,NY,10003",4200.0,1,1.5,708.0,https://www.zillow.com/homedetails/65-Cooper-Sq-APT-3G-New-York-NY-10003/2132164701_zpid/,40.7290692,-73.9898668
+"201 E 12th St APT 507,New York,NY,10003",4250.0,1,1.0,1000.0,https://www.zillow.com/homedetails/201-E-12th-St-APT-507-New-York-NY-10003/2097499644_zpid/,40.73188589999999,-73.9875069
+"133 E 36th St APT 5,New York,NY,10016",4595.0,2,2.0,930.0,https://www.zillow.com/homedetails/133-E-36th-St-APT-5-New-York-NY-10016/2099612710_zpid/,40.7479323,-73.9789084
+"36 Peck Slip APT 2A,New York,NY,10038",4800.0,1,1.0,930.0,https://www.zillow.com/homedetails/36-Peck-Slip-APT-2A-New-York-NY-10038/2101978846_zpid/,40.7075433,-74.0016978
+"460 W 42nd St APT 56A,New York,NY,10036",4800.0,1,1.0,608.0,https://www.zillow.com/homedetails/460-W-42nd-St-APT-56A-New-York-NY-10036/2110508381_zpid/,40.7590905,-73.99485109999999
+"108 Ellery Brooklyn,Brooklyn,NY,11202",4999.0,4,3.5,1200.0,https://www.zillow.com/homedetails/108-Ellery-Brooklyn-Brooklyn-NY-11202/2089177511_zpid/,40.698174,-73.948882
+"164 Prospect Park W APT 2L,Brooklyn,NY,11215",5350.0,3,1.0,1200.0,https://www.zillow.com/homedetails/164-Prospect-Park-W-APT-2L-Brooklyn-NY-11215/55676475_zpid/,40.6633805,-73.978256
+"413 E 12th St APT 1,New York,NY,10009",5995.0,4,2.0,1100.0,https://www.zillow.com/homedetails/413-E-12th-St-APT-1-New-York-NY-10009/2130015612_zpid/,40.7297969,-73.98270939999999
+"342 E 22nd St APT 2A,New York,NY,10010",5995.0,4,1.5,1324.0,https://www.zillow.com/homedetails/342-E-22nd-St-APT-2A-New-York-NY-10010/2095219186_zpid/,40.7363136,-73.97945109999999
+"512 E 81st St APT 1R,New York,NY,10028",6100.0,4,2.0,1324.0,https://www.zillow.com/homedetails/512-E-81st-St-APT-1R-New-York-NY-10028/2110758528_zpid/,40.7721447,-73.9488216
+"4540 Center Blvd APT 410,Long Island City,NY,11109",6130.0,2,2.0,1324.0,https://www.zillow.com/homedetails/4540-Center-Blvd-APT-410-Long-Island-City-NY-11109/2085016261_zpid/,40.74820190000001,-73.95694379999999
+"449 Keap St APT 2,Brooklyn,NY,11211",6200.0,4,2.0,1600.0,https://www.zillow.com/homedetails/449-Keap-St-APT-2-Brooklyn-NY-11211/2085015242_zpid/,40.7124466,-73.9527667
+"202 E 25th St # 2,New York,NY,10010",6500.0,3,1.0,1600.0,https://www.zillow.com/homedetails/202-E-25th-St-2-New-York-NY-10010/2085014909_zpid/,40.7398737,-73.9818612
+"112 W 56th St APT 22S,New York,NY,10019",6500.0,2,2.5,1600.0,https://www.zillow.com/homedetails/112-W-56th-St-APT-22S-New-York-NY-10019/31512723_zpid/,40.7637733,-73.9785307
+"145 W 67th St APT 11C,New York,NY,10023",6695.0,3,2.0,2133.0,https://www.zillow.com/homedetails/145-W-67th-St-APT-11C-New-York-NY-10023/2121593151_zpid/,40.77542,-73.98343969999999
+"135 Sackett St # 1,Brooklyn,NY,11231",7900.0,3,2.5,2133.0,https://www.zillow.com/homedetails/135-Sackett-St-1-Brooklyn-NY-11231/2085014582_zpid/,40.6849357,-74.0021111
+"376 Bleecker St # A,New York,NY,10014",8400.0,4,2.0,1380.0,https://www.zillow.com/homedetails/376-Bleecker-St-A-New-York-NY-10014/2085019207_zpid/,40.7349666,-74.005056
+"8 E 76th St # C,New York,NY,10021",9495.0,1,1.0,1380.0,https://www.zillow.com/homedetails/8-E-76th-St-C-New-York-NY-10021/31534066_zpid/,40.7745627,-73.964522
+"845 W End Ave APT 15B,New York,NY,10025",10500.0,3,3.0,1942.0,https://www.zillow.com/homedetails/845-W-End-Ave-APT-15B-New-York-NY-10025/117458612_zpid/,40.798751,-73.9712029
+"350 W 14th St # 2ABC,New York,NY,10014",10900.0,3,3.0,1800.0,https://www.zillow.com/homedetails/350-W-14th-St-2ABC-New-York-NY-10014/2085015235_zpid/,40.7404531,-74.0048716
+"200 E 95th St # 26C,New York,NY,10128",14775.0,3,3.0,1959.0,https://www.zillow.com/homedetails/200-E-95th-St-26C-New-York-NY-10128/2090329458_zpid/,40.7842824,-73.9495982
+"270 Broadway # C,New York,NY,10007",17500.0,3,3.5,2590.0,https://www.zillow.com/homedetails/270-Broadway-C-New-York-NY-10007/2101324544_zpid/,40.7142311,-74.00684679999999
+"413 Degraw St # TWHS,Brooklyn,NY,11217",20000.0,4,5.0,4500.0,https://www.zillow.com/homedetails/413-Degraw-St-TWHS-Brooklyn-NY-11217/2085015875_zpid/,40.6820656,-73.99038329999999
