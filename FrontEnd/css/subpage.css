@@ -21,7 +21,7 @@ table.tbl-entry{
 }
 
 table.tbl-map{
-	width:100%;
+	width:85%;
 }
 
 #map{
@@ -31,5 +31,6 @@ table.tbl-map{
 
 #panel-direction{
 	height:600px;
-    overflow-x:hidden;
+  float: none;
+  width: 100%;
 }
