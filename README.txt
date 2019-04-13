@@ -8,6 +8,7 @@ By Yuting Lu; Lei Fan; Mingting Lu; Dun Li; Chenxi Yu
 - Our app provides filtering options for rental seekers based on commute time and informing crime rates severity via data footprint heatmap in the Google map 
 - Besides, as soon as rental seekers click on the location and landmarks pointers at the map, related location information will appear within a tooltip.
 - After determining the starting and the destination, an optimal path will appear in the map in shallow blue color.
+- Three commute options are available:Walking,Driving and Transit.
 
 
 ## Required Dependencies
@@ -60,4 +61,4 @@ If you catch errors with our implementation, please feel free to give pull reque
 
 - Our project is built upon Python 3+ environment and not yet supporting python 3 below version environment built, though we suggest Python 3.6 is the best compatible.Our Web browser compatible is either Chrome or FireFox.
 ## Potential Errors:
-- Not supporting all the locations users fill into the search
+- Not supporting all the locations users fill into the search bar
