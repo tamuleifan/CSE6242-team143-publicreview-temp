@@ -63,11 +63,10 @@ pip install numpy pandas geopy
 git clone https://github.com/Morek999/CSE6242team143.git
 ```
 
-- Scrape the properties-New-York-NY.csv dataset by running the following command and ensure the dataset in the main directory of the repository's folder and run the following command to clean the data yielding cleaned_zillow_data.csv at the FrontEnd folder:
+- Scrape the properties-New-York-NY.csv dataset by running the following command and ensure the dataset in the main directory of the repository's folder and run the following command in sequential to clean the data yielding cleaned_zillow_data.csv at the FrontEnd folder:
 ```
 python zillow.py
 python zillow_clean.py
-
 ```
 
 - Open terminal inside the cse6242-project folder. Run the following command line in a python 3.6 default commond line prompt:
