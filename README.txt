@@ -5,7 +5,7 @@ CSE 6242 course project assisting office workers and students to find rentals wi
 By Yuting Lu; Lei Fan; Mingting Lu; Dun Li; Chenxi Yu
 
 ## Descriptions
-- Our app provides filtering options for rent seekers based on commute time and informing crime rates severity via data footprint size in the Google map 
+- Our app provides filtering options for rent seekers based on commute time and informing crime rates severity via data footprint heatmap in the Google map 
 
 
 ## Required Dependencies
