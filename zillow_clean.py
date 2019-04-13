@@ -117,10 +117,13 @@ df['longitude']=0
 
 for i in range(df.shape[0]):
         print(df.iloc[i,0])
-        target=g.geocode(df.iloc[i,0],timeout=10)
+        try:
+                target=g.geocode(df.iloc[i,0],timeout=10)
 
-        df.iloc[i,6] = target.latitude
-        df.iloc[i,7] = target.longitude
+                df.iloc[i,6] = target.latitude
+                df.iloc[i,7] = target.longitude
+        except:
+                pass
 
 #create an input address string
 #you can also build this by reading from an input database and building a string
@@ -134,8 +137,9 @@ for i in range(df.shape[0]):
 # print(location.raw)
 # print(location.address)
 
-
-df.to_csv('cleaned_zillow_data.csv',index=False,index_label=False)
+# delete the rows which has zero latitute, which represetns google map request fail
+df=df[df['latitude']!=0]
+df.to_csv('FrontEnd/cleaned_zillow_data.csv',index=False,index_label=False)
 
 
 
