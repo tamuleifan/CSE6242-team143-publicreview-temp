@@ -208,7 +208,7 @@ function sliderVal(val, dataset = housesInBound) {
       if (housesMarkers[i].getIcon() === iconGray) housesMarkers[i].setIcon(iconBlue);
     }
   }
-  //document.getElementById("mask").style.visibility = "hidden";
+  document.getElementById("mask").style.visibility = "hidden";
 }
 
 function calculateAndDisplayRoute(dirService, dirDisplay, start) {
