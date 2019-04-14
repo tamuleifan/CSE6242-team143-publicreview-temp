@@ -52,6 +52,7 @@ By Yuting Lu; Lei Fan; Mingting Lu; Dun Li; Chenxi Yu
 
 ## Required Dependencies
 
+- Our project is built upon Python 3+ environment and not yet supporting python 3 below version environment built, though we suggest Python 3.6 is the best compatible.Our Web browser compatible is either Chrome or FireFox.
 - Please install Numpy, Pandas and geopy libraries in order to use our application via the following command:
 pip install numpy pandas geopy
 
@@ -69,6 +70,8 @@ python zillow.py
 python zillow_clean.py
 ```
 
+## Execution
+
 - Open terminal inside the cse6242-project folder. Run the following command line in a python 3.6 default commond line prompt:
 ```
 python -m http.server
@@ -79,7 +82,7 @@ python -m http.server
 ```
 - Open a web browser and type in http://localhost:8000/ at your search bar
 
-## Experimenting
+## User Manual
 
 - First,after the above steps,you can click on the "Explore" Botton at our welcoming page.
 
@@ -93,10 +96,7 @@ python -m http.server
 
 - After determining the starting and the destination, an optimal path will appear in the map in shallow blue color with 3 commute modes available: walking, driving and transiting(a combination of walking and using public transit tools)
 
-If you catch errors with our implementation, please feel free to give pull requests on our Github page. If you want to build-upon our work, fork us (and star us if you appreciate our work!).
-
-## Environment Compatibility
-
-- Our project is built upon Python 3+ environment and not yet supporting python 3 below version environment built, though we suggest Python 3.6 is the best compatible.Our Web browser compatible is either Chrome or FireFox.
 ## Potential Errors:
 - Not supporting all the locations users fill into the search bar
+
+If you catch errors with our implementation, please feel free to give pull requests on our Github page. If you want to build-upon our work, fork us (and star us if you appreciate our work!).
