@@ -37,28 +37,29 @@
 
 ---
 ---
-# 	Interactive Map for House Rental
+# Interactive Map for House Rental
 
 CSE 6242 course project assisting office workers and students to find rentals with safety and commuting comfort in mind
 
 By Yuting Lu; Lei Fan; Mingting Lu; Dun Li; Chenxi Yu
 
-## Descriptions
+## DESCRIPTION
 - Our app provides filtering options for rental seekers based on commute time and informing crime rates severity via data footprint heatmap in the Google map 
 - Besides, as soon as rental seekers click on the location and landmarks pointers at the map, related location information will appear within a tooltip.
 - After determining the starting and the destination, an optimal path will appear in the map in shallow blue color.
 - Three commute options are available:Walking,Driving and Transit.
 
 
-## Required Dependencies
+## INSTALLATION
+
+### Required Dependencies
 
 - Our project is built upon Python 3+ environment and not yet supporting python 3 below version environment built, though we suggest Python 3.6 is the best compatible.Our Web browser compatible is either Chrome or FireFox.
 - Please install Numpy, Pandas and geopy libraries in order to use our application via the following command:
 pip install numpy pandas geopy
-
-## Installation
-
 - You can choose to download the entire zip file for this repository to your system or use terminal:
+
+### Installation Steps
 
 ```
 git clone https://github.com/Morek999/CSE6242team143.git
@@ -70,19 +71,22 @@ python FrontEnd/src/zillow.py
 python FrontEnd/src/zillow_clean.py
 ```
 
-## Execution
 
-- Open terminal inside the cse6242-project folder. Run the following command line in a python 3.6 or above default commond line prompt:
+## EXECUTION
+
+- Open terminal and move to \CSE6242team143\FrontEnd. Run the following command line in a python 3.6 or above default commond line prompt:
 ```
 python -m http.server
 ```
-- The next step hosts a port for running your interative APP:
+- The next step hosts a port for running your interative APP, displaying:
 ```
 * Running on http://localhost:8000/ (Press CTRL+C to quit)
+or
+* Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 - Open a web browser (Chrome or FireFox are recommended) and type in http://localhost:8000/ at your search bar
 
-## User Manual
+### User Manual
 
 - First, after the above steps, you can click on the "Explore" Botton at our welcoming page.
 
@@ -96,7 +100,7 @@ python -m http.server
 
 - After determining the starting and the destination, an optimal path will appear in the map in shallow blue color with 3 commute modes available: walking, driving and transiting(a combination of walking and using public transit tools)
 
-## Potential Errors:
-- Not supporting all the locations users fill into the search bar
+### Potential Errors:
+- Not supporting all the locations users fill into the search bar (limiting to New York City)
 
 If you catch errors with our implementation, please feel free to give pull requests on our Github page. If you want to build-upon our work, fork us (and star us if you appreciate our work!).

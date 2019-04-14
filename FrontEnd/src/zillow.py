@@ -137,7 +137,7 @@ if __name__=="__main__":
     #print(scraped_data)
     print(len(scraped_data))
     print ("Writing data to output file")
-    with open("properties-%s.csv"%(location),'wb')as csvfile:
+    with open("properties-New-York-NY.csv",'wb')as csvfile:
         fieldnames = ['title','address','city','state','postal_code','price','facts and features','real estate provider','url']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
