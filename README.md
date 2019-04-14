@@ -72,7 +72,7 @@ python FrontEnd/src/zillow_clean.py
 
 ## Execution
 
-- Open terminal inside the cse6242-project folder. Run the following command line in a python 3.6 default commond line prompt:
+- Open terminal inside the cse6242-project folder. Run the following command line in a python 3.6 or above default commond line prompt:
 ```
 python -m http.server
 ```
@@ -80,13 +80,13 @@ python -m http.server
 ```
 * Running on http://localhost:8000/ (Press CTRL+C to quit)
 ```
-- Open a web browser and type in http://localhost:8000/ at your search bar
+- Open a web browser (Chrome or FireFox are recommended) and type in http://localhost:8000/ at your search bar
 
 ## User Manual
 
-- First,after the above steps,you can click on the "Explore" Botton at our welcoming page.
+- First, after the above steps, you can click on the "Explore" Botton at our welcoming page.
 
-- Second, this page will provide instructions and a search map, a slide bar and a search bar and a event option controler.
+- The following page will provide instructions and a search map, a slide bar and a search bar and a event option controler.
 
 - The destination search bar allows you to fill in your destination and the commute time slide bar option enables you to show avalible options meeting the commute time requirement.
 
