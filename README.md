@@ -66,8 +66,8 @@ git clone https://github.com/Morek999/CSE6242team143.git
 
 - Scrape the properties-New-York-NY.csv dataset by running the following command and ensure the dataset in the main directory of the repository's folder and run the following command in sequential to clean the data yielding cleaned_zillow_data.csv at the FrontEnd folder:
 ```
-python zillow.py
-python zillow_clean.py
+python FrontEnd/src/zillow.py
+python FrontEnd/src/zillow_clean.py
 ```
 
 ## Execution
