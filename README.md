@@ -41,7 +41,7 @@
 
 CSE 6242 course project assisting office workers and students to find rentals with safety and commuting comfort in mind
 
-By Yuting Lu; Lei Fan; Mingting Lu; Dun Li; Chenxi Yu
+By [Yuting Lu](ylu467@gatech.edu); [Lei Fan](lfan45@gatech.edu); [Mingting Lu](mlu305@gatech.edu); [Dun Li](dli424@gatech.edu); [Chenxi Yu](cyu321@gatech.edu)
 
 ## DESCRIPTION
 - Our app provides filtering options for rental seekers based on commute time and informing crime rates severity via data footprint heatmap in the Google map 
