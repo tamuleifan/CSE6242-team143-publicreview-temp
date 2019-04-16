@@ -1,1 +1,1 @@
-<?php include("FrontEnd/index.html"); include("FrontEnd/subpage.html");?>
+<?php include_once("index.html"); ?>z
