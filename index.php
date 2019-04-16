@@ -1,2 +1,1 @@
-<?php include_once("FrontEnd/index.html"); ?>
-<?php include_once("FrontEnd/subpage.html"); ?>
+<?php include("FrontEnd/index.html"); include("includes/subpage.html");?>
