@@ -11,7 +11,7 @@ var iconBlue = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
 var iconGray = "http://labs.google.com/ridefinder/images/mm_20_gray.png";
 var destination = {};
 var travelMode = 'DRIVING';
-var houseLoad = [d3.csv('cleaned_zillow_data.csv').then(function (data) {
+var houseLoad = [d3.csv('data/cleaned_zillow_data.csv').then(function (data) {
   data.forEach(function (d) {
     houses.push({
       address: d['location'],
