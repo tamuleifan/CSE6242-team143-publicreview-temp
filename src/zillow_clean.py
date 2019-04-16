@@ -139,7 +139,7 @@ for i in range(df.shape[0]):
 
 # delete the rows which has zero latitute, which represetns google map request fail
 df=df[df['latitude']!=0]
-df.to_csv('../cleaned_zillow_data.csv',index=False,index_label=False)
+df.to_csv('../data/cleaned_zillow_data.csv',index=False,index_label=False)
 
 
 
