@@ -129,7 +129,7 @@ function houseMarker() {
 
     service.getDistanceMatrix(getCommute, function (response, status) {
       i += 1;   // counter for data processing index
-      console.log(i);
+      //console.log(i);
 
       if (status === 'OK') {
         k.commute = response.rows[0].elements[0].duration.value;    // [value] is second; [text] would be in chinese
@@ -203,9 +203,9 @@ function sliderVal(val, dataset = housesInBound) {
 
   for (var i = 0; i < dataset.length; i++) {
     if (dataset[i].commute > sliderValue * 60) {
-      if (housesMarkers[i].getIcon() === iconBlue) housesMarkers[i].setIcon(iconGray);
+      housesMarkers[i].setIcon(iconGray);
     } else {
-      if (housesMarkers[i].getIcon() === iconGray) housesMarkers[i].setIcon(iconBlue);
+      housesMarkers[i].setIcon(iconBlue);
     }
   }
   document.getElementById("mask").style.visibility = "hidden";
