@@ -26,9 +26,9 @@ pip install numpy pandas geopy
 ### Installation Steps
 
 ```
-git clone https://github.com/Morek999/CSE6242team143.git
+cd CSE6242team143
 ```
-
+- Make sure the command directory is at CSE6242team143 where includes "css","data","index.html"...etc
 - Scrape the properties-New-York-NY.csv dataset by running the following command and ensure the dataset is in the main directory of the repository's folder. 
 - Run the following command in sequential to clean the data, and the cleaned_zillow_data.csv will be generated in the src folder:
 ```
@@ -50,7 +50,10 @@ or
 * Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 - Open a web browser (Chrome or FireFox are recommended) and type in http://localhost:8000/ at your search bar
-
+## Video demo: 
+```
+ https://youtu.be/yL_cUxeNhVQ
+```
 ### User Manual
 
 - Following the above steps, you can click on the "Explore" Botton at our welcoming page.
@@ -68,6 +71,7 @@ or
 ## POTENTIAL ERRORS
 - Not supporting all the locations users fill into the search bar (limiting to New York City)
 - A stable access to the Internet is needed. Otherwise,web scraping data from zillow may end up being interrupted therefore failing to render sufficient data for the app running in the front end.
+- Marginal errors on commute time may occasionally occur due to data rounding and collections via the Google API. 
 
 If you catch errors with our implementation, please feel free to give pull requests on our Github page. If you want to build-upon our work, fork us (and star us if you appreciate our work!).
 
