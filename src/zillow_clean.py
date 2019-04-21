@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 from geopy import geocoders
 
-df = pd.read_csv('properties-New-York-NY.csv')
+df = pd.read_csv('data/properties-New-York-NY.csv')
 
 to_drop=['title','real estate provider']
 df.drop(columns=to_drop, inplace=True)
@@ -139,7 +139,7 @@ for i in range(df.shape[0]):
 
 # delete the rows which has zero latitute, which represetns google map request fail
 df=df[df['latitude']!=0]
-df.to_csv('../data/cleaned_zillow_data.csv',index=False,index_label=False)
+df.to_csv('data/cleaned_zillow_data.csv',index=False,index_label=False)
 
 
 
