@@ -53,7 +53,7 @@ or
 
 ### User Manual
 
-- First, after the above steps, you can click on the "Explore" Botton at our welcoming page.
+- Following the above steps, you can click on the "Explore" Botton at our welcoming page.
 
 - The following page will provide instructions and a search map, a slide bar and a search bar and a event option controler.
 
@@ -67,6 +67,7 @@ or
 
 ## POTENTIAL ERRORS
 - Not supporting all the locations users fill into the search bar (limiting to New York City)
+- A stable access to the Internet is needed. Otherwise,web scraping data from zillow may end up being interrupted therefore failing to render sufficient data for the app running in the front end.
 
 If you catch errors with our implementation, please feel free to give pull requests on our Github page. If you want to build-upon our work, fork us (and star us if you appreciate our work!).
 
