@@ -202,7 +202,7 @@ function sliderVal(val, dataset = housesInBound) {
   //var data = dataset.filter(function(d) {return d.commute <= sliderValue*60;});
 
   for (var i = 0; i < dataset.length; i++) {
-    if (dataset[i].commute > sliderValue * 60) {
+    if (Math.round(dataset[i].commute / 60) > sliderValue) {
       housesMarkers[i].setIcon(iconGray);
     } else {
       housesMarkers[i].setIcon(iconBlue);
@@ -294,7 +294,7 @@ function searchAddress(address) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
 
-    dataRefresh()
+    setTimeout(dataRefresh(), 200);
 
   });
 }
