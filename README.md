@@ -50,11 +50,11 @@ or
 * Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ```
 - Open a web browser (Chrome or FireFox are recommended) and type in http://localhost:8000/ at your search bar
-## Video demo: 
+## VIDEO DEMO 
 ```
  https://youtu.be/yL_cUxeNhVQ
 ```
-### User Manual
+## USER MANUAL
 
 - Following the above steps, you can click on the "Explore" Botton at our welcoming page.
 
