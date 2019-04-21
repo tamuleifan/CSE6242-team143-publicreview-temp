@@ -17,7 +17,9 @@ By [Yuting Lu](ylu467@gatech.edu); [Lei Fan](lfan45@gatech.edu); [Mingting Lu](m
 
 - Our project is built upon Python 3+ environment and not yet supporting versions below python 3 environment, though we suggest Python 3.6 is the best compatible. Our Web browser compatible is either Chrome or FireFox.
 - Please install Numpy, Pandas and geopy libraries in order to use our application via the following command:
+```
 pip install numpy pandas geopy
+```
 - You can choose to download the entire zip file of this repository to your system or use terminal:
 
 ### Installation Steps
