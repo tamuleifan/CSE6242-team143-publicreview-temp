@@ -1,18 +1,3 @@
-# Timeline
--  4/16 (Tue.): Compelete evaluation survey (5 responses for each member) 
--  **4/19 (Fri.) : Next Meeting**
--  4/19 (Fri.): Finish all the requirements, inclduing final report, poster, code, and README.txt
--  4/21 (Sun.): Recording poster presentation ([**_requirements_**](https://docs.google.com/document/d/e/2PACX-1vTc_2yqk8QfK-SkdDPxJVJcM31kogiVFsZKOuJ2qHHnRn5aaA4r74u-gErMTsE8jGVoYeVB83MtjFTN/pub#h.l9wzpzeec46p)) and uplaod assignment
--  **4/22 (Mon.) 20:00 : Deadline for everything**
-
-# Meeying Note 2019/04/12
-- 晨曦: 撰寫README.txt
-- 樊磊: 4/16收集完evaluation之後，處理問卷數據並在4/19前將分析結果放入final report (圖片、文字)
-- 李盾: 周末產出conclusion草稿
-- Mingting, Yuting, 李盾: 4/19前完成final report
-  - 4/16前修改proposed method的部分
-  - 4/19潤稿
-
 # Interactive Map for House Rental
 
 CSE 6242 course project assisting office workers and students to find rentals with safety and commuting comfort in mind
